@@ -1,0 +1,224 @@
+\NeedsTeXFormat{LaTeX2e}[1994/06/01]
+\ProvidesPackage{Andrew}[2018/01/30]
+
+% Inspired by Evan Chen (vEnhance).
+
+% Features are defined in a roughly "top-down" manner, and
+% I mean this physically. Aside from colour definitions,
+% we start with the header, then the body, 
+% and finally the footer.
+
+%%%%%%%%%% Packages to be used
+\RequirePackage[T1]{fontenc}
+% Using amsthm before thmtools avoids conflict.
+\RequirePackage{amssymb, amsmath, amsthm, thmtools, hyperref, titling} 
+\RequirePackage{xpatch, indentfirst}
+\RequirePackage[framemethod=TikZ]{mdframed} % uses xcolor by defaults
+\RequirePackage[calcwidth]{titlesec}
+%-------------------------------------------------------------------------------
+% These define the options that come built in with Andrew.sty
+% All of the if's are defined with "andrew" in them, so that
+% there is no clash.
+
+%%%%%%%%%% Default Arguments
+\newif\ifandrewspecialsection\andrewspecialsectiontrue
+\newif\ifandrewmdthm\andrewmdthmtrue
+\newif\ifandrewtoc\andrewtocfalse
+\newif\ifandrewtitlesf\andrewtitlesftrue
+\newif\ifandrewindentfirst\andrewindentfirsttrue
+\newif\ifandrewabstract\andrewabstracttrue
+
+\newif\ifandrewlinkblue\andrewlinkbluefalse
+\newif\ifandrewlinkpink\andrewlinkpinkfalse
+\newif\ifandrewlinkcarmine\andrewlinkcarminefalse
+
+%%%%%%%%%% Receive Arguments
+\DeclareOption{notes}{\andrewmdthmtrue\andrewspecialsectiontrue
+\andrewabstracttrue}
+
+\DeclareOption{toc}{\andrewtoctrue}
+\DeclareOption{titlesf}{\andrewtitlesftrue}
+
+\DeclareOption{linkpink}{\andrewlinkpinktrue}
+\DeclareOption{linkblue}{\andrewlinkbluetrue}
+\DeclareOption{linkcarmine}{\andrewlinkcarminetrue}
+
+\ExecuteOptions{notes}       %<--- defines the default option
+\ProcessOptions\relax
+%-------------------------------------------------------------------------------
+%%%%%%%%%% Colour Definitions
+\definecolor{midnightblue}{rgb}{0.1, 0.1, 0.44}
+\definecolor{tealblue}{rgb}{0.21, 0.46, 0.53}
+\definecolor{linkblue}{RGB}{51, 102, 187}
+
+\definecolor{charcoal}{rgb}{0.21, 0.27, 0.31}
+
+\definecolor{salmon}{rgb}{1.0, 0.55, 0.41}
+\definecolor{sienna}{rgb}{0.53, 0.18, 0.09}
+\definecolor{carmine}{rgb}{0.68, 0.0, 0.09}
+
+%%%%%%%%%% Title
+\ifandrewtitlesf
+	% Adjust the title spacing 
+	\posttitle{\par\end{center}}
+	\setlength{\droptitle}{-50pt}
+
+	% Usage: \xpatchcmd{<command>}{<search>}{<replace>}{<success>}{<failure>}
+	\xpatchcmd{\@maketitle}
+	{\@title}
+	{\large\sffamily\bfseries\@title}
+	{}{}
+
+	\xpatchcmd{\@maketitle}
+	{\@author}
+	{\normalsize\scshape\@author}
+	{}{}
+
+	\xpatchcmd{\@maketitle}
+	{\@date}
+	{\normalsize\@date}
+	{}{}
+\fi
+
+%%%%%%%%%% Heading Customization
+\ifandrewspecialsection
+	%%%%% Sections
+	\titleformat{\section}[block]{\fontsize{15}{16}\sffamily\bfseries}
+	{\color{carmine}\S$\,$\thesection}{0.5em}{\color{black}}
+	[\vspace{-1.5ex}\color{charcoal}\rule{1.05\titlewidth}{0.1pt}]
+	
+	%%%%% Subsections
+	\titleformat{\subsection}[block]{\fontsize{12.5}{14}\sffamily\bfseries}
+	{\color{carmine}\S$\,$\thesubsection}{0.5em}{\color{black}}
+\fi
+
+%%%%%%%%%% On-page Table of Contents
+\ifandrewtoc
+	\newcommand*{\optoc}{\@starttoc{toc}\vspace{1.5em}}
+\fi
+
+%%%%%%%%%% Link setup
+\ifandrewlinkpink
+	\hypersetup{
+	    colorlinks = true,
+	    linkcolor =[rgb]{1, 0.26, 0.70},
+	    urlcolor = [rgb]{1, 0.26, 0.70}
+	}
+\fi
+\ifandrewlinkblue
+	\hypersetup{
+		colorlinks = true,
+		linkbordercolor = linkblue,
+		linkcolor = linkblue,
+		pdfborderstyle={/S/U/W 1},
+		urlcolor = linkblue,
+		urlbordercolor = gray
+	}
+\fi 
+\ifandrewlinkcarmine
+	\hypersetup{
+		colorlinks = true,
+    	linkcolor = carmine,
+    	urlcolor = carmine
+	}
+\fi
+
+%%%%%%%%%% Indentation
+\ifandrewindentfirst
+	\RequirePackage{indentfirst}
+\fi
+
+%-------------------------------------------------------------------------------
+%%%%%%%%%% Environments
+
+%%%%% Theorem Definitions
+\ifandrewmdthm
+	\mdfdefinestyle{mdbluebox}{
+		roundcorner=3pt,
+		linewidth=1pt,
+		skipabove=12pt,
+		innerbottommargin=9pt,
+		skipbelow=2pt,
+		linecolor=blue,
+		nobreak=true,
+		backgroundcolor=tealblue!5
+	}
+	\declaretheoremstyle[
+		headfont=\sffamily\bfseries\color{midnightblue},
+		mdframed={style=mdbluebox},
+		headpunct={\\[3pt]},
+		postheadspace={0pt}
+	]{thmbluebox}
+	\mdfdefinestyle{mdrecbox}{
+		linewidth=0.5pt,
+		skipabove=12pt,
+		frametitleaboveskip=5pt,
+		frametitlebelowskip=0pt,
+		skipbelow=2pt,
+		frametitlefont=\bfseries,
+		innertopmargin=4pt,
+		innerbottommargin=8pt,
+		nobreak=true,
+		backgroundcolor=salmon!5
+	}
+	\declaretheoremstyle[
+		headfont=\bfseries\color{sienna},
+		mdframed={style=mdrecbox},
+		headpunct={\\[3pt]},
+		postheadspace={0pt}
+	]{thmrecbox}
+
+	\declaretheorem[style=definition, numberwithin=section]{definition}
+	\declaretheorem[style=thmrecbox, sibling=definition]{example}
+	\declaretheorem[style=thmbluebox, sibling=definition]{theorem}
+	\declaretheorem[style=plain, sibling=definition]{lemma}
+\fi
+
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+
+% unnamed
+\newtheorem*{theorem*}{Theorem}
+\newtheorem*{lemma*}{Lemma}
+\newtheorem*{proposition*}{Proposition}
+\newtheorem*{corollary*}{Corollary}
+\newtheorem*{assumption}{Assumption}
+\newtheorem*{remark}{Remark}
+\newtheorem*{observation}{Observation}
+\newtheorem*{axiom}{Axiom}
+\newtheorem*{notation}{Notation}
+\newtheorem*{summary}{Summary}
+\newtheorem*{claim}{Claim}
+\newtheorem*{property}{Property}
+
+%%%%% Abstract Redefinition
+\ifandrewabstract
+	\renewenvironment{abstract}
+	{\vspace{-0.5em} 
+	  	\list{\hspace{0.5in}}
+	  	{
+	    	\setlength{\leftmargin}{0.5in}
+	    	\setlength{\rightmargin}{\leftmargin}%
+		}
+		\item\relax
+	}
+	{\endlist\vspace{0.5ex}}
+\fi
+
+%%%%%%%%%% Tables
+%%%%%%%%%% Figures
+
+\endinput % must be last command
+
+
+
+
+
+
+
+
+
+
+
+
+
