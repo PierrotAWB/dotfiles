@@ -163,9 +163,11 @@
 	}
 	\declaretheoremstyle[
 		headfont=\bfseries\color{sienna},
-		mdframed={style=mdrecbox},
+		skipabove=24pt,
+		mdframed={style=mdrecbox, innertopmargin = \topskip},
 		headpunct={\\[3pt]},
-		postheadspace={0pt}
+		postheadspace={0pt},
+		skipbelow=12pt
 	]{thmrecbox}
 
 	\declaretheorem[style=definition, numberwithin=section]{definition}

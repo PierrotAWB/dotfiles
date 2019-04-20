@@ -1,62 +1,126 @@
+"           /$$
+"          |__/
+" /$$    /$$/$$ /$$$$$$/$$$$   /$$$$$$  /$$$$$$$
+"|  $$  /$$/ $$| $$_  $$_  $$ /$$__  $$/$$_____/
+" \  $$/$$/| $$| $$ \ $$ \ $$| $$  \__/ $$
+"  \  $$$/ | $$| $$ | $$ | $$| $$     | $$
+"   \  $/  | $$| $$ | $$ | $$| $$     |  $$$$$$$
+"    \_/   |__/|__/ |__/ |__/|__/      \_______/
+
 execute pathogen#infect()
+
+filetype plugin on
+filetype indent on
 syntax on
 
-"""""""""""""""""""""""""""""""""""""""""" ENVIRONMENT CONFIGURATIONS
+"hi! Normal ctermbg=NONE guibg=NONE
+"hi! NonText ctermbg=NONE guibg=NONE
 
+set autoindent
+set confirm 
+set cmdheight=2
 set incsearch
-set relativenumber
-
-" GUI Font for Powerline
-set guifont=InputMono-RegularForPowerline
-
-" New symbols in Powerline:
-let g:Powerline_symbols='fancy'
-
-" Powerline to work not only in split
+set iskeyword+=:
 set laststatus=2
+set nocompatible
+set mouse=a
+set number
+set relativenumber
+set rtp+=/usr/share/powerline/bindings/vim
+set shellslash
+set shiftwidth=4
+set tabstop=4
+set termguicolors
+set t_Co=256
+set updatetime=500
+"set visualbell
 
-" Default colour scheme
-colors zenburn
+set timeoutlen=1000
+set ttimeoutlen=0
 
-" Use relative line numbering outside
-" of insert and absolute within.
-au InsertEnter * :set number
-au InsertLeave * :set relativenumber
+let &t_8f="\<Esc>[38;2;%lu;%lu;%lum"
+let &t_8b="\<Esc>[48;2;%lu;%lu;%lum"
+set termguicolors
+colorscheme Synthwave "OceanicNext Sidonia
 
-"""""""""""""""""""""""""""""""""""""""""" KEYMAPPINGS
+"python3 from powerline.vim import setup as powerline_setup
+"python3 powerline_setup()
+"python3 del powerline_setup
 
-" To save, command-s
-nmap <D-s> :w<CR>
-imap <D-s> <Esc>:w<Cr>a
+let g:ale_fix_on_save = 1
+let g:livepreview_engine = 'pdflatex'
+let g:livepreview_previewer = 'open -a Preview'
+let g:Powerline_symbols='fancy'
+let g:Tex_DefaultTargetFormat = 'pdf'
+let g:tex_flavor = 'latex'
+let g:Tex_GotoError=0
+"let g:Tex_ViewRule_pdf = 'zathura'
+let g:Tex_ViewRule_pdf = 'open -a /Applications/Preview.app'
+let g:UltiSnipsEditSplit="context"
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<c-k>"
+let g:UltiSnipsJumpForwardTrigger="<c-j>"
+let g:UltiSnipsSnippetsDir="~/.vim/UltiSnips"
+
+"
+"  _              _     _           _ _                 
+" | |            | |   (_)         | (_)                
+" | | _____ _   _| |__  _ _ __   __| |_ _ __   __ _ ___ 
+" | |/ / _ \ | | | '_ \| | '_ \ / _` | | '_ \ / _` / __|
+" |   <  __/ |_| | |_) | | | | | (_| | | | | | (_| \__ \
+" |_|\_\___|\__, |_.__/|_|_| |_|\__,_|_|_| |_|\__, |___/
+"           __/ |                             __/ |     
+"           |___/                             |___/     
+
+" Note: mappings are temporarily to control; it seems very difficult to map to
+" command in the terminal. What's more, using control conflicts with XOFF;
+" using it tends to freeze the current terminal window.
+
+" Navigate to front and end of line in normal mode
+nmap <C-a> ^
+nmap <C-e> $ 
+
+" Navigate to front and end of line in insert mode
+imap <C-a> <Esc>I
+imap <C-e> <Esc>A
+
+" Delete everything from the cursor to the end of the line
+nmap <C-k> lD
+imap <C-k> <Esc>2ld$a
+
+" Delete everything from beginning of the line to the cursor
+nmap <C-u> d^x
+imap <C-u> <Esc>d^xi
+
+" To save, option-s
+nnoremap s :w<CR> 
+inoremap s <Esc>:w<CR>
+
+" To undo, option-z
+nnoremap z :undo<CR>
+inoremap z <Esc>:undo<CR>
+
+" To redo, option-y
+nnoremap y :redo<CR>
+inoremap y <Esc>:redo<CR>
+
+" To write-quit, option-w
+nnoremap w :wq<CR>
+inoremap w <Esc>:wq<Cr>
+
+" Strictly map escape key
+inoremap jk <Esc>
+cnoremap jk <Esc>
+vnoremap jk <Esc>
+
+" Map ctrl-l to :LLP (Live Preview)
+imap <C-l> <Esc>:LLP
+nmap <C-l> :LLP
 
 " To alternate folds, use space (normal mode)
 nmap <space> za
 
-"""""""""""""""""""""""""""""""""""""""""" VIM LATEX
 
-" REQUIRED. This makes vim invoke Latex
-" -Suite when you open a tex file.
-filetype plugin on
+" Autocommand 
+au BufReadPost,BufNewFile *.md,*.txt,*.tex setlocal nofoldenable
 
-
-" " IMPORTANT: win32 users will need to
-" have 'shellslash' set so that latex
-" " can be called correctly.
-set shellslash
-
-" " OPTIONAL: This enables automatic
-" indentation as you type.
-filetype indent on
-
-
-" " OPTIONAL: Starting with Vim 7, the
-" filetype of empty .tex files defaults
-" to 'plaintex' instead of 'tex', which
-" results in vim-latex not being loaded.
-"
-" The following changes the default 
-" filetype back to 'tex':
-let g:tex_flavor='latex'
-
-" DEFAULT Output viewer (Mac OS)
-let g:Tex_ViewRule_pdf = 'open -a /Applications/Preview.app'
