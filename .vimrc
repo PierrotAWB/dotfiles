@@ -62,6 +62,10 @@ let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 let g:UltiSnipsJumpForwardTrigger="<c-j>"
 let g:UltiSnipsSnippetsDir="~/.vim/UltiSnips"
 
+let g:UltiSnipsUsePythonVersion = 3
+
+
+inoremap jk <Esc>
 "
 "  _              _     _           _ _                 
 " | |            | |   (_)         | (_)                
@@ -92,21 +96,17 @@ imap <C-k> <Esc>2ld$a
 nmap <C-u> d^x
 imap <C-u> <Esc>d^xi
 
-" To save, option-s
-nnoremap s :w<CR> 
-inoremap s <Esc>:w<CR>
-
 " To undo, option-z
-nnoremap z :undo<CR>
-inoremap z <Esc>:undo<CR>
+nnoremap <C-z> :undo<CR>
+inoremap <C-z> <Esc>:undo<CR>
 
 " To redo, option-y
-nnoremap y :redo<CR>
-inoremap y <Esc>:redo<CR>
+nnoremap <C-y> :redo<CR>
+inoremap <C-y> <Esc>:redo<CR>
 
 " To write-quit, option-w
-nnoremap w :wq<CR>
-inoremap w <Esc>:wq<Cr>
+nnoremap <C-w> :wq<CR>
+inoremap <C-w> <Esc>:wq<Cr>
 
 " Strictly map escape key
 inoremap jk <Esc>
