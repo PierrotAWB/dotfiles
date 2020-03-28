@@ -1,0 +1,397 @@
+[
+{
+  "directory": "/home/andrew/.config/polybar/build/lib/i3ipcpp",
+  "command": "/usr/bin/c++   -I/home/andrew/.config/polybar/lib/i3ipcpp/3rd/auss/include -I/home/andrew/.config/polybar/lib/i3ipcpp/include -I/home/andrew/.config/polybar/lib/i3ipcpp/libs/jsoncpp-1.7.7/include -I/home/andrew/.config/polybar/lib/i3ipcpp/libs/jsoncpp-1.7.7/src/lib_json/../../include   -Wall -Wextra -Werror -Wno-noexcept-type -O2 -pedantic -pedantic-errors -O2 -g -DNDEBUG   -std=c++11 -Wall -Wextra -Wno-unused-parameter -Wno-deprecated-declarations -std=c++14 -o CMakeFiles/i3ipc++.dir/src/ipc.cpp.o -c /home/andrew/.config/polybar/lib/i3ipcpp/src/ipc.cpp",
+  "file": "/home/andrew/.config/polybar/lib/i3ipcpp/src/ipc.cpp"
+},
+{
+  "directory": "/home/andrew/.config/polybar/build/lib/i3ipcpp",
+  "command": "/usr/bin/c++   -I/home/andrew/.config/polybar/lib/i3ipcpp/3rd/auss/include -I/home/andrew/.config/polybar/lib/i3ipcpp/include -I/home/andrew/.config/polybar/lib/i3ipcpp/libs/jsoncpp-1.7.7/include -I/home/andrew/.config/polybar/lib/i3ipcpp/libs/jsoncpp-1.7.7/src/lib_json/../../include   -Wall -Wextra -Werror -Wno-noexcept-type -O2 -pedantic -pedantic-errors -O2 -g -DNDEBUG   -std=c++11 -Wall -Wextra -Wno-unused-parameter -Wno-deprecated-declarations -std=c++14 -o CMakeFiles/i3ipc++.dir/src/ipc-util.cpp.o -c /home/andrew/.config/polybar/lib/i3ipcpp/src/ipc-util.cpp",
+  "file": "/home/andrew/.config/polybar/lib/i3ipcpp/src/ipc-util.cpp"
+},
+{
+  "directory": "/home/andrew/.config/polybar/build/lib/i3ipcpp/libs/jsoncpp-1.7.7/src/lib_json",
+  "command": "/usr/bin/c++   -I/home/andrew/.config/polybar/lib/i3ipcpp/libs/jsoncpp-1.7.7/include -I/home/andrew/.config/polybar/lib/i3ipcpp/libs/jsoncpp-1.7.7/src/lib_json/../../include   -Wall -Wextra -Werror -Wno-noexcept-type -O2 -pedantic -pedantic-errors -std=c++11 -Wall -Wconversion -Wshadow -Wextra -Werror=conversion -pedantic -Werror=strict-aliasing -O2 -g -DNDEBUG   -std=c++14 -o CMakeFiles/jsoncpp_lib_static.dir/json_reader.cpp.o -c /home/andrew/.config/polybar/lib/i3ipcpp/libs/jsoncpp-1.7.7/src/lib_json/json_reader.cpp",
+  "file": "/home/andrew/.config/polybar/lib/i3ipcpp/libs/jsoncpp-1.7.7/src/lib_json/json_reader.cpp"
+},
+{
+  "directory": "/home/andrew/.config/polybar/build/lib/i3ipcpp/libs/jsoncpp-1.7.7/src/lib_json",
+  "command": "/usr/bin/c++   -I/home/andrew/.config/polybar/lib/i3ipcpp/libs/jsoncpp-1.7.7/include -I/home/andrew/.config/polybar/lib/i3ipcpp/libs/jsoncpp-1.7.7/src/lib_json/../../include   -Wall -Wextra -Werror -Wno-noexcept-type -O2 -pedantic -pedantic-errors -std=c++11 -Wall -Wconversion -Wshadow -Wextra -Werror=conversion -pedantic -Werror=strict-aliasing -O2 -g -DNDEBUG   -std=c++14 -o CMakeFiles/jsoncpp_lib_static.dir/json_value.cpp.o -c /home/andrew/.config/polybar/lib/i3ipcpp/libs/jsoncpp-1.7.7/src/lib_json/json_value.cpp",
+  "file": "/home/andrew/.config/polybar/lib/i3ipcpp/libs/jsoncpp-1.7.7/src/lib_json/json_value.cpp"
+},
+{
+  "directory": "/home/andrew/.config/polybar/build/lib/i3ipcpp/libs/jsoncpp-1.7.7/src/lib_json",
+  "command": "/usr/bin/c++   -I/home/andrew/.config/polybar/lib/i3ipcpp/libs/jsoncpp-1.7.7/include -I/home/andrew/.config/polybar/lib/i3ipcpp/libs/jsoncpp-1.7.7/src/lib_json/../../include   -Wall -Wextra -Werror -Wno-noexcept-type -O2 -pedantic -pedantic-errors -std=c++11 -Wall -Wconversion -Wshadow -Wextra -Werror=conversion -pedantic -Werror=strict-aliasing -O2 -g -DNDEBUG   -std=c++14 -o CMakeFiles/jsoncpp_lib_static.dir/json_writer.cpp.o -c /home/andrew/.config/polybar/lib/i3ipcpp/libs/jsoncpp-1.7.7/src/lib_json/json_writer.cpp",
+  "file": "/home/andrew/.config/polybar/lib/i3ipcpp/libs/jsoncpp-1.7.7/src/lib_json/json_writer.cpp"
+},
+{
+  "directory": "/home/andrew/.config/polybar/build/lib/i3ipcpp/libs/jsoncpp-1.7.7/src/jsontestrunner",
+  "command": "/usr/bin/c++   -I/home/andrew/.config/polybar/lib/i3ipcpp/libs/jsoncpp-1.7.7/include -I/home/andrew/.config/polybar/lib/i3ipcpp/libs/jsoncpp-1.7.7/src/lib_json/../../include   -Wall -Wextra -Werror -Wno-noexcept-type -O2 -pedantic -pedantic-errors -std=c++11 -Wall -Wconversion -Wshadow -Wextra -Werror=conversion -pedantic -O2 -g -DNDEBUG   -std=c++14 -o CMakeFiles/jsontestrunner_exe.dir/main.cpp.o -c /home/andrew/.config/polybar/lib/i3ipcpp/libs/jsoncpp-1.7.7/src/jsontestrunner/main.cpp",
+  "file": "/home/andrew/.config/polybar/lib/i3ipcpp/libs/jsoncpp-1.7.7/src/jsontestrunner/main.cpp"
+},
+{
+  "directory": "/home/andrew/.config/polybar/build/lib/i3ipcpp/libs/jsoncpp-1.7.7/src/test_lib_json",
+  "command": "/usr/bin/c++   -I/home/andrew/.config/polybar/lib/i3ipcpp/libs/jsoncpp-1.7.7/include -I/home/andrew/.config/polybar/lib/i3ipcpp/libs/jsoncpp-1.7.7/src/lib_json/../../include   -Wall -Wextra -Werror -Wno-noexcept-type -O2 -pedantic -pedantic-errors -std=c++11 -Wall -Wconversion -Wshadow -Wextra -Werror=conversion -pedantic -O2 -g -DNDEBUG   -std=c++14 -o CMakeFiles/jsoncpp_test.dir/jsontest.cpp.o -c /home/andrew/.config/polybar/lib/i3ipcpp/libs/jsoncpp-1.7.7/src/test_lib_json/jsontest.cpp",
+  "file": "/home/andrew/.config/polybar/lib/i3ipcpp/libs/jsoncpp-1.7.7/src/test_lib_json/jsontest.cpp"
+},
+{
+  "directory": "/home/andrew/.config/polybar/build/lib/i3ipcpp/libs/jsoncpp-1.7.7/src/test_lib_json",
+  "command": "/usr/bin/c++   -I/home/andrew/.config/polybar/lib/i3ipcpp/libs/jsoncpp-1.7.7/include -I/home/andrew/.config/polybar/lib/i3ipcpp/libs/jsoncpp-1.7.7/src/lib_json/../../include   -Wall -Wextra -Werror -Wno-noexcept-type -O2 -pedantic -pedantic-errors -std=c++11 -Wall -Wconversion -Wshadow -Wextra -Werror=conversion -pedantic -O2 -g -DNDEBUG   -std=c++14 -o CMakeFiles/jsoncpp_test.dir/main.cpp.o -c /home/andrew/.config/polybar/lib/i3ipcpp/libs/jsoncpp-1.7.7/src/test_lib_json/main.cpp",
+  "file": "/home/andrew/.config/polybar/lib/i3ipcpp/libs/jsoncpp-1.7.7/src/test_lib_json/main.cpp"
+},
+{
+  "directory": "/home/andrew/.config/polybar/build/bin",
+  "command": "/usr/bin/c++   -I/usr/include/cairo -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/freetype2 -I/usr/include/libpng16 -I/home/andrew/.config/polybar/include -I/home/andrew/.config/polybar/lib/concurrentqueue/include -I/home/andrew/.config/polybar/lib/xpp/include   -Wall -Wextra -Werror -Wno-noexcept-type -O2 -pedantic -pedantic-errors -O2 -g -DNDEBUG   -std=c++14 -o CMakeFiles/polybar-msg.dir/ipc.cpp.o -c /home/andrew/.config/polybar/src/ipc.cpp",
+  "file": "/home/andrew/.config/polybar/src/ipc.cpp"
+},
+{
+  "directory": "/home/andrew/.config/polybar/build/bin",
+  "command": "/usr/bin/c++   -I/usr/include/cairo -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/freetype2 -I/usr/include/libpng16 -I/home/andrew/.config/polybar/include -I/home/andrew/.config/polybar/lib/concurrentqueue/include -I/home/andrew/.config/polybar/lib/xpp/include   -Wall -Wextra -Werror -Wno-noexcept-type -O2 -pedantic -pedantic-errors -O2 -g -DNDEBUG   -std=c++14 -o CMakeFiles/polybar-msg.dir/utils/env.cpp.o -c /home/andrew/.config/polybar/src/utils/env.cpp",
+  "file": "/home/andrew/.config/polybar/src/utils/env.cpp"
+},
+{
+  "directory": "/home/andrew/.config/polybar/build/bin",
+  "command": "/usr/bin/c++   -I/usr/include/cairo -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/freetype2 -I/usr/include/libpng16 -I/home/andrew/.config/polybar/include -I/home/andrew/.config/polybar/lib/concurrentqueue/include -I/home/andrew/.config/polybar/lib/xpp/include   -Wall -Wextra -Werror -Wno-noexcept-type -O2 -pedantic -pedantic-errors -O2 -g -DNDEBUG   -std=c++14 -o CMakeFiles/polybar-msg.dir/utils/file.cpp.o -c /home/andrew/.config/polybar/src/utils/file.cpp",
+  "file": "/home/andrew/.config/polybar/src/utils/file.cpp"
+},
+{
+  "directory": "/home/andrew/.config/polybar/build/bin",
+  "command": "/usr/bin/c++   -I/usr/include/cairo -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/freetype2 -I/usr/include/libpng16 -I/home/andrew/.config/polybar/include -I/home/andrew/.config/polybar/lib/concurrentqueue/include -I/home/andrew/.config/polybar/lib/xpp/include   -Wall -Wextra -Werror -Wno-noexcept-type -O2 -pedantic -pedantic-errors -O2 -g -DNDEBUG   -std=c++14 -o CMakeFiles/polybar-msg.dir/utils/string.cpp.o -c /home/andrew/.config/polybar/src/utils/string.cpp",
+  "file": "/home/andrew/.config/polybar/src/utils/string.cpp"
+},
+{
+  "directory": "/home/andrew/.config/polybar/build/bin",
+  "command": "/usr/bin/c++   -I/usr/include/cairo -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/freetype2 -I/usr/include/libpng16 -I/home/andrew/.config/polybar/include -I/home/andrew/.config/polybar/lib/concurrentqueue/include -I/home/andrew/.config/polybar/lib/xpp/include -I/home/andrew/.config/polybar/lib/i3ipcpp/3rd/auss/include -I/home/andrew/.config/polybar/lib/i3ipcpp/include -I/home/andrew/.config/polybar/lib/i3ipcpp/libs/jsoncpp-1.7.7/include -I/home/andrew/.config/polybar/lib/i3ipcpp/libs/jsoncpp-1.7.7/src/lib_json/../../include   -Wall -Wextra -Werror -Wno-noexcept-type -O2 -pedantic -pedantic-errors -O2 -g -DNDEBUG   -pthread -std=c++14 -o CMakeFiles/polybar.dir/cairo/utils.cpp.o -c /home/andrew/.config/polybar/src/cairo/utils.cpp",
+  "file": "/home/andrew/.config/polybar/src/cairo/utils.cpp"
+},
+{
+  "directory": "/home/andrew/.config/polybar/build/bin",
+  "command": "/usr/bin/c++   -I/usr/include/cairo -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/freetype2 -I/usr/include/libpng16 -I/home/andrew/.config/polybar/include -I/home/andrew/.config/polybar/lib/concurrentqueue/include -I/home/andrew/.config/polybar/lib/xpp/include -I/home/andrew/.config/polybar/lib/i3ipcpp/3rd/auss/include -I/home/andrew/.config/polybar/lib/i3ipcpp/include -I/home/andrew/.config/polybar/lib/i3ipcpp/libs/jsoncpp-1.7.7/include -I/home/andrew/.config/polybar/lib/i3ipcpp/libs/jsoncpp-1.7.7/src/lib_json/../../include   -Wall -Wextra -Werror -Wno-noexcept-type -O2 -pedantic -pedantic-errors -O2 -g -DNDEBUG   -pthread -std=c++14 -o CMakeFiles/polybar.dir/components/bar.cpp.o -c /home/andrew/.config/polybar/src/components/bar.cpp",
+  "file": "/home/andrew/.config/polybar/src/components/bar.cpp"
+},
+{
+  "directory": "/home/andrew/.config/polybar/build/bin",
+  "command": "/usr/bin/c++   -I/usr/include/cairo -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/freetype2 -I/usr/include/libpng16 -I/home/andrew/.config/polybar/include -I/home/andrew/.config/polybar/lib/concurrentqueue/include -I/home/andrew/.config/polybar/lib/xpp/include -I/home/andrew/.config/polybar/lib/i3ipcpp/3rd/auss/include -I/home/andrew/.config/polybar/lib/i3ipcpp/include -I/home/andrew/.config/polybar/lib/i3ipcpp/libs/jsoncpp-1.7.7/include -I/home/andrew/.config/polybar/lib/i3ipcpp/libs/jsoncpp-1.7.7/src/lib_json/../../include   -Wall -Wextra -Werror -Wno-noexcept-type -O2 -pedantic -pedantic-errors -O2 -g -DNDEBUG   -pthread -std=c++14 -o CMakeFiles/polybar.dir/components/builder.cpp.o -c /home/andrew/.config/polybar/src/components/builder.cpp",
+  "file": "/home/andrew/.config/polybar/src/components/builder.cpp"
+},
+{
+  "directory": "/home/andrew/.config/polybar/build/bin",
+  "command": "/usr/bin/c++   -I/usr/include/cairo -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/freetype2 -I/usr/include/libpng16 -I/home/andrew/.config/polybar/include -I/home/andrew/.config/polybar/lib/concurrentqueue/include -I/home/andrew/.config/polybar/lib/xpp/include -I/home/andrew/.config/polybar/lib/i3ipcpp/3rd/auss/include -I/home/andrew/.config/polybar/lib/i3ipcpp/include -I/home/andrew/.config/polybar/lib/i3ipcpp/libs/jsoncpp-1.7.7/include -I/home/andrew/.config/polybar/lib/i3ipcpp/libs/jsoncpp-1.7.7/src/lib_json/../../include   -Wall -Wextra -Werror -Wno-noexcept-type -O2 -pedantic -pedantic-errors -O2 -g -DNDEBUG   -pthread -std=c++14 -o CMakeFiles/polybar.dir/components/command_line.cpp.o -c /home/andrew/.config/polybar/src/components/command_line.cpp",
+  "file": "/home/andrew/.config/polybar/src/components/command_line.cpp"
+},
+{
+  "directory": "/home/andrew/.config/polybar/build/bin",
+  "command": "/usr/bin/c++   -I/usr/include/cairo -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/freetype2 -I/usr/include/libpng16 -I/home/andrew/.config/polybar/include -I/home/andrew/.config/polybar/lib/concurrentqueue/include -I/home/andrew/.config/polybar/lib/xpp/include -I/home/andrew/.config/polybar/lib/i3ipcpp/3rd/auss/include -I/home/andrew/.config/polybar/lib/i3ipcpp/include -I/home/andrew/.config/polybar/lib/i3ipcpp/libs/jsoncpp-1.7.7/include -I/home/andrew/.config/polybar/lib/i3ipcpp/libs/jsoncpp-1.7.7/src/lib_json/../../include   -Wall -Wextra -Werror -Wno-noexcept-type -O2 -pedantic -pedantic-errors -O2 -g -DNDEBUG   -pthread -std=c++14 -o CMakeFiles/polybar.dir/components/config.cpp.o -c /home/andrew/.config/polybar/src/components/config.cpp",
+  "file": "/home/andrew/.config/polybar/src/components/config.cpp"
+},
+{
+  "directory": "/home/andrew/.config/polybar/build/bin",
+  "command": "/usr/bin/c++   -I/usr/include/cairo -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/freetype2 -I/usr/include/libpng16 -I/home/andrew/.config/polybar/include -I/home/andrew/.config/polybar/lib/concurrentqueue/include -I/home/andrew/.config/polybar/lib/xpp/include -I/home/andrew/.config/polybar/lib/i3ipcpp/3rd/auss/include -I/home/andrew/.config/polybar/lib/i3ipcpp/include -I/home/andrew/.config/polybar/lib/i3ipcpp/libs/jsoncpp-1.7.7/include -I/home/andrew/.config/polybar/lib/i3ipcpp/libs/jsoncpp-1.7.7/src/lib_json/../../include   -Wall -Wextra -Werror -Wno-noexcept-type -O2 -pedantic -pedantic-errors -O2 -g -DNDEBUG   -pthread -std=c++14 -o CMakeFiles/polybar.dir/components/controller.cpp.o -c /home/andrew/.config/polybar/src/components/controller.cpp",
+  "file": "/home/andrew/.config/polybar/src/components/controller.cpp"
+},
+{
+  "directory": "/home/andrew/.config/polybar/build/bin",
+  "command": "/usr/bin/c++   -I/usr/include/cairo -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/freetype2 -I/usr/include/libpng16 -I/home/andrew/.config/polybar/include -I/home/andrew/.config/polybar/lib/concurrentqueue/include -I/home/andrew/.config/polybar/lib/xpp/include -I/home/andrew/.config/polybar/lib/i3ipcpp/3rd/auss/include -I/home/andrew/.config/polybar/lib/i3ipcpp/include -I/home/andrew/.config/polybar/lib/i3ipcpp/libs/jsoncpp-1.7.7/include -I/home/andrew/.config/polybar/lib/i3ipcpp/libs/jsoncpp-1.7.7/src/lib_json/../../include   -Wall -Wextra -Werror -Wno-noexcept-type -O2 -pedantic -pedantic-errors -O2 -g -DNDEBUG   -pthread -std=c++14 -o CMakeFiles/polybar.dir/components/ipc.cpp.o -c /home/andrew/.config/polybar/src/components/ipc.cpp",
+  "file": "/home/andrew/.config/polybar/src/components/ipc.cpp"
+},
+{
+  "directory": "/home/andrew/.config/polybar/build/bin",
+  "command": "/usr/bin/c++   -I/usr/include/cairo -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/freetype2 -I/usr/include/libpng16 -I/home/andrew/.config/polybar/include -I/home/andrew/.config/polybar/lib/concurrentqueue/include -I/home/andrew/.config/polybar/lib/xpp/include -I/home/andrew/.config/polybar/lib/i3ipcpp/3rd/auss/include -I/home/andrew/.config/polybar/lib/i3ipcpp/include -I/home/andrew/.config/polybar/lib/i3ipcpp/libs/jsoncpp-1.7.7/include -I/home/andrew/.config/polybar/lib/i3ipcpp/libs/jsoncpp-1.7.7/src/lib_json/../../include   -Wall -Wextra -Werror -Wno-noexcept-type -O2 -pedantic -pedantic-errors -O2 -g -DNDEBUG   -pthread -std=c++14 -o CMakeFiles/polybar.dir/components/logger.cpp.o -c /home/andrew/.config/polybar/src/components/logger.cpp",
+  "file": "/home/andrew/.config/polybar/src/components/logger.cpp"
+},
+{
+  "directory": "/home/andrew/.config/polybar/build/bin",
+  "command": "/usr/bin/c++   -I/usr/include/cairo -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/freetype2 -I/usr/include/libpng16 -I/home/andrew/.config/polybar/include -I/home/andrew/.config/polybar/lib/concurrentqueue/include -I/home/andrew/.config/polybar/lib/xpp/include -I/home/andrew/.config/polybar/lib/i3ipcpp/3rd/auss/include -I/home/andrew/.config/polybar/lib/i3ipcpp/include -I/home/andrew/.config/polybar/lib/i3ipcpp/libs/jsoncpp-1.7.7/include -I/home/andrew/.config/polybar/lib/i3ipcpp/libs/jsoncpp-1.7.7/src/lib_json/../../include   -Wall -Wextra -Werror -Wno-noexcept-type -O2 -pedantic -pedantic-errors -O2 -g -DNDEBUG   -pthread -std=c++14 -o CMakeFiles/polybar.dir/components/parser.cpp.o -c /home/andrew/.config/polybar/src/components/parser.cpp",
+  "file": "/home/andrew/.config/polybar/src/components/parser.cpp"
+},
+{
+  "directory": "/home/andrew/.config/polybar/build/bin",
+  "command": "/usr/bin/c++   -I/usr/include/cairo -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/freetype2 -I/usr/include/libpng16 -I/home/andrew/.config/polybar/include -I/home/andrew/.config/polybar/lib/concurrentqueue/include -I/home/andrew/.config/polybar/lib/xpp/include -I/home/andrew/.config/polybar/lib/i3ipcpp/3rd/auss/include -I/home/andrew/.config/polybar/lib/i3ipcpp/include -I/home/andrew/.config/polybar/lib/i3ipcpp/libs/jsoncpp-1.7.7/include -I/home/andrew/.config/polybar/lib/i3ipcpp/libs/jsoncpp-1.7.7/src/lib_json/../../include   -Wall -Wextra -Werror -Wno-noexcept-type -O2 -pedantic -pedantic-errors -O2 -g -DNDEBUG   -pthread -std=c++14 -o CMakeFiles/polybar.dir/components/renderer.cpp.o -c /home/andrew/.config/polybar/src/components/renderer.cpp",
+  "file": "/home/andrew/.config/polybar/src/components/renderer.cpp"
+},
+{
+  "directory": "/home/andrew/.config/polybar/build/bin",
+  "command": "/usr/bin/c++   -I/usr/include/cairo -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/freetype2 -I/usr/include/libpng16 -I/home/andrew/.config/polybar/include -I/home/andrew/.config/polybar/lib/concurrentqueue/include -I/home/andrew/.config/polybar/lib/xpp/include -I/home/andrew/.config/polybar/lib/i3ipcpp/3rd/auss/include -I/home/andrew/.config/polybar/lib/i3ipcpp/include -I/home/andrew/.config/polybar/lib/i3ipcpp/libs/jsoncpp-1.7.7/include -I/home/andrew/.config/polybar/lib/i3ipcpp/libs/jsoncpp-1.7.7/src/lib_json/../../include   -Wall -Wextra -Werror -Wno-noexcept-type -O2 -pedantic -pedantic-errors -O2 -g -DNDEBUG   -pthread -std=c++14 -o CMakeFiles/polybar.dir/components/screen.cpp.o -c /home/andrew/.config/polybar/src/components/screen.cpp",
+  "file": "/home/andrew/.config/polybar/src/components/screen.cpp"
+},
+{
+  "directory": "/home/andrew/.config/polybar/build/bin",
+  "command": "/usr/bin/c++   -I/usr/include/cairo -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/freetype2 -I/usr/include/libpng16 -I/home/andrew/.config/polybar/include -I/home/andrew/.config/polybar/lib/concurrentqueue/include -I/home/andrew/.config/polybar/lib/xpp/include -I/home/andrew/.config/polybar/lib/i3ipcpp/3rd/auss/include -I/home/andrew/.config/polybar/lib/i3ipcpp/include -I/home/andrew/.config/polybar/lib/i3ipcpp/libs/jsoncpp-1.7.7/include -I/home/andrew/.config/polybar/lib/i3ipcpp/libs/jsoncpp-1.7.7/src/lib_json/../../include   -Wall -Wextra -Werror -Wno-noexcept-type -O2 -pedantic -pedantic-errors -O2 -g -DNDEBUG   -pthread -std=c++14 -o CMakeFiles/polybar.dir/components/taskqueue.cpp.o -c /home/andrew/.config/polybar/src/components/taskqueue.cpp",
+  "file": "/home/andrew/.config/polybar/src/components/taskqueue.cpp"
+},
+{
+  "directory": "/home/andrew/.config/polybar/build/bin",
+  "command": "/usr/bin/c++   -I/usr/include/cairo -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/freetype2 -I/usr/include/libpng16 -I/home/andrew/.config/polybar/include -I/home/andrew/.config/polybar/lib/concurrentqueue/include -I/home/andrew/.config/polybar/lib/xpp/include -I/home/andrew/.config/polybar/lib/i3ipcpp/3rd/auss/include -I/home/andrew/.config/polybar/lib/i3ipcpp/include -I/home/andrew/.config/polybar/lib/i3ipcpp/libs/jsoncpp-1.7.7/include -I/home/andrew/.config/polybar/lib/i3ipcpp/libs/jsoncpp-1.7.7/src/lib_json/../../include   -Wall -Wextra -Werror -Wno-noexcept-type -O2 -pedantic -pedantic-errors -O2 -g -DNDEBUG   -pthread -std=c++14 -o CMakeFiles/polybar.dir/drawtypes/animation.cpp.o -c /home/andrew/.config/polybar/src/drawtypes/animation.cpp",
+  "file": "/home/andrew/.config/polybar/src/drawtypes/animation.cpp"
+},
+{
+  "directory": "/home/andrew/.config/polybar/build/bin",
+  "command": "/usr/bin/c++   -I/usr/include/cairo -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/freetype2 -I/usr/include/libpng16 -I/home/andrew/.config/polybar/include -I/home/andrew/.config/polybar/lib/concurrentqueue/include -I/home/andrew/.config/polybar/lib/xpp/include -I/home/andrew/.config/polybar/lib/i3ipcpp/3rd/auss/include -I/home/andrew/.config/polybar/lib/i3ipcpp/include -I/home/andrew/.config/polybar/lib/i3ipcpp/libs/jsoncpp-1.7.7/include -I/home/andrew/.config/polybar/lib/i3ipcpp/libs/jsoncpp-1.7.7/src/lib_json/../../include   -Wall -Wextra -Werror -Wno-noexcept-type -O2 -pedantic -pedantic-errors -O2 -g -DNDEBUG   -pthread -std=c++14 -o CMakeFiles/polybar.dir/drawtypes/iconset.cpp.o -c /home/andrew/.config/polybar/src/drawtypes/iconset.cpp",
+  "file": "/home/andrew/.config/polybar/src/drawtypes/iconset.cpp"
+},
+{
+  "directory": "/home/andrew/.config/polybar/build/bin",
+  "command": "/usr/bin/c++   -I/usr/include/cairo -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/freetype2 -I/usr/include/libpng16 -I/home/andrew/.config/polybar/include -I/home/andrew/.config/polybar/lib/concurrentqueue/include -I/home/andrew/.config/polybar/lib/xpp/include -I/home/andrew/.config/polybar/lib/i3ipcpp/3rd/auss/include -I/home/andrew/.config/polybar/lib/i3ipcpp/include -I/home/andrew/.config/polybar/lib/i3ipcpp/libs/jsoncpp-1.7.7/include -I/home/andrew/.config/polybar/lib/i3ipcpp/libs/jsoncpp-1.7.7/src/lib_json/../../include   -Wall -Wextra -Werror -Wno-noexcept-type -O2 -pedantic -pedantic-errors -O2 -g -DNDEBUG   -pthread -std=c++14 -o CMakeFiles/polybar.dir/drawtypes/label.cpp.o -c /home/andrew/.config/polybar/src/drawtypes/label.cpp",
+  "file": "/home/andrew/.config/polybar/src/drawtypes/label.cpp"
+},
+{
+  "directory": "/home/andrew/.config/polybar/build/bin",
+  "command": "/usr/bin/c++   -I/usr/include/cairo -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/freetype2 -I/usr/include/libpng16 -I/home/andrew/.config/polybar/include -I/home/andrew/.config/polybar/lib/concurrentqueue/include -I/home/andrew/.config/polybar/lib/xpp/include -I/home/andrew/.config/polybar/lib/i3ipcpp/3rd/auss/include -I/home/andrew/.config/polybar/lib/i3ipcpp/include -I/home/andrew/.config/polybar/lib/i3ipcpp/libs/jsoncpp-1.7.7/include -I/home/andrew/.config/polybar/lib/i3ipcpp/libs/jsoncpp-1.7.7/src/lib_json/../../include   -Wall -Wextra -Werror -Wno-noexcept-type -O2 -pedantic -pedantic-errors -O2 -g -DNDEBUG   -pthread -std=c++14 -o CMakeFiles/polybar.dir/drawtypes/progressbar.cpp.o -c /home/andrew/.config/polybar/src/drawtypes/progressbar.cpp",
+  "file": "/home/andrew/.config/polybar/src/drawtypes/progressbar.cpp"
+},
+{
+  "directory": "/home/andrew/.config/polybar/build/bin",
+  "command": "/usr/bin/c++   -I/usr/include/cairo -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/freetype2 -I/usr/include/libpng16 -I/home/andrew/.config/polybar/include -I/home/andrew/.config/polybar/lib/concurrentqueue/include -I/home/andrew/.config/polybar/lib/xpp/include -I/home/andrew/.config/polybar/lib/i3ipcpp/3rd/auss/include -I/home/andrew/.config/polybar/lib/i3ipcpp/include -I/home/andrew/.config/polybar/lib/i3ipcpp/libs/jsoncpp-1.7.7/include -I/home/andrew/.config/polybar/lib/i3ipcpp/libs/jsoncpp-1.7.7/src/lib_json/../../include   -Wall -Wextra -Werror -Wno-noexcept-type -O2 -pedantic -pedantic-errors -O2 -g -DNDEBUG   -pthread -std=c++14 -o CMakeFiles/polybar.dir/drawtypes/ramp.cpp.o -c /home/andrew/.config/polybar/src/drawtypes/ramp.cpp",
+  "file": "/home/andrew/.config/polybar/src/drawtypes/ramp.cpp"
+},
+{
+  "directory": "/home/andrew/.config/polybar/build/bin",
+  "command": "/usr/bin/c++   -I/usr/include/cairo -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/freetype2 -I/usr/include/libpng16 -I/home/andrew/.config/polybar/include -I/home/andrew/.config/polybar/lib/concurrentqueue/include -I/home/andrew/.config/polybar/lib/xpp/include -I/home/andrew/.config/polybar/lib/i3ipcpp/3rd/auss/include -I/home/andrew/.config/polybar/lib/i3ipcpp/include -I/home/andrew/.config/polybar/lib/i3ipcpp/libs/jsoncpp-1.7.7/include -I/home/andrew/.config/polybar/lib/i3ipcpp/libs/jsoncpp-1.7.7/src/lib_json/../../include   -Wall -Wextra -Werror -Wno-noexcept-type -O2 -pedantic -pedantic-errors -O2 -g -DNDEBUG   -pthread -std=c++14 -o CMakeFiles/polybar.dir/events/signal_emitter.cpp.o -c /home/andrew/.config/polybar/src/events/signal_emitter.cpp",
+  "file": "/home/andrew/.config/polybar/src/events/signal_emitter.cpp"
+},
+{
+  "directory": "/home/andrew/.config/polybar/build/bin",
+  "command": "/usr/bin/c++   -I/usr/include/cairo -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/freetype2 -I/usr/include/libpng16 -I/home/andrew/.config/polybar/include -I/home/andrew/.config/polybar/lib/concurrentqueue/include -I/home/andrew/.config/polybar/lib/xpp/include -I/home/andrew/.config/polybar/lib/i3ipcpp/3rd/auss/include -I/home/andrew/.config/polybar/lib/i3ipcpp/include -I/home/andrew/.config/polybar/lib/i3ipcpp/libs/jsoncpp-1.7.7/include -I/home/andrew/.config/polybar/lib/i3ipcpp/libs/jsoncpp-1.7.7/src/lib_json/../../include   -Wall -Wextra -Werror -Wno-noexcept-type -O2 -pedantic -pedantic-errors -O2 -g -DNDEBUG   -pthread -std=c++14 -o CMakeFiles/polybar.dir/events/signal_receiver.cpp.o -c /home/andrew/.config/polybar/src/events/signal_receiver.cpp",
+  "file": "/home/andrew/.config/polybar/src/events/signal_receiver.cpp"
+},
+{
+  "directory": "/home/andrew/.config/polybar/build/bin",
+  "command": "/usr/bin/c++   -I/usr/include/cairo -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/freetype2 -I/usr/include/libpng16 -I/home/andrew/.config/polybar/include -I/home/andrew/.config/polybar/lib/concurrentqueue/include -I/home/andrew/.config/polybar/lib/xpp/include -I/home/andrew/.config/polybar/lib/i3ipcpp/3rd/auss/include -I/home/andrew/.config/polybar/lib/i3ipcpp/include -I/home/andrew/.config/polybar/lib/i3ipcpp/libs/jsoncpp-1.7.7/include -I/home/andrew/.config/polybar/lib/i3ipcpp/libs/jsoncpp-1.7.7/src/lib_json/../../include   -Wall -Wextra -Werror -Wno-noexcept-type -O2 -pedantic -pedantic-errors -O2 -g -DNDEBUG   -pthread -std=c++14 -o CMakeFiles/polybar.dir/main.cpp.o -c /home/andrew/.config/polybar/src/main.cpp",
+  "file": "/home/andrew/.config/polybar/src/main.cpp"
+},
+{
+  "directory": "/home/andrew/.config/polybar/build/bin",
+  "command": "/usr/bin/c++   -I/usr/include/cairo -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/freetype2 -I/usr/include/libpng16 -I/home/andrew/.config/polybar/include -I/home/andrew/.config/polybar/lib/concurrentqueue/include -I/home/andrew/.config/polybar/lib/xpp/include -I/home/andrew/.config/polybar/lib/i3ipcpp/3rd/auss/include -I/home/andrew/.config/polybar/lib/i3ipcpp/include -I/home/andrew/.config/polybar/lib/i3ipcpp/libs/jsoncpp-1.7.7/include -I/home/andrew/.config/polybar/lib/i3ipcpp/libs/jsoncpp-1.7.7/src/lib_json/../../include   -Wall -Wextra -Werror -Wno-noexcept-type -O2 -pedantic -pedantic-errors -O2 -g -DNDEBUG   -pthread -std=c++14 -o CMakeFiles/polybar.dir/modules/backlight.cpp.o -c /home/andrew/.config/polybar/src/modules/backlight.cpp",
+  "file": "/home/andrew/.config/polybar/src/modules/backlight.cpp"
+},
+{
+  "directory": "/home/andrew/.config/polybar/build/bin",
+  "command": "/usr/bin/c++   -I/usr/include/cairo -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/freetype2 -I/usr/include/libpng16 -I/home/andrew/.config/polybar/include -I/home/andrew/.config/polybar/lib/concurrentqueue/include -I/home/andrew/.config/polybar/lib/xpp/include -I/home/andrew/.config/polybar/lib/i3ipcpp/3rd/auss/include -I/home/andrew/.config/polybar/lib/i3ipcpp/include -I/home/andrew/.config/polybar/lib/i3ipcpp/libs/jsoncpp-1.7.7/include -I/home/andrew/.config/polybar/lib/i3ipcpp/libs/jsoncpp-1.7.7/src/lib_json/../../include   -Wall -Wextra -Werror -Wno-noexcept-type -O2 -pedantic -pedantic-errors -O2 -g -DNDEBUG   -pthread -std=c++14 -o CMakeFiles/polybar.dir/modules/battery.cpp.o -c /home/andrew/.config/polybar/src/modules/battery.cpp",
+  "file": "/home/andrew/.config/polybar/src/modules/battery.cpp"
+},
+{
+  "directory": "/home/andrew/.config/polybar/build/bin",
+  "command": "/usr/bin/c++   -I/usr/include/cairo -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/freetype2 -I/usr/include/libpng16 -I/home/andrew/.config/polybar/include -I/home/andrew/.config/polybar/lib/concurrentqueue/include -I/home/andrew/.config/polybar/lib/xpp/include -I/home/andrew/.config/polybar/lib/i3ipcpp/3rd/auss/include -I/home/andrew/.config/polybar/lib/i3ipcpp/include -I/home/andrew/.config/polybar/lib/i3ipcpp/libs/jsoncpp-1.7.7/include -I/home/andrew/.config/polybar/lib/i3ipcpp/libs/jsoncpp-1.7.7/src/lib_json/../../include   -Wall -Wextra -Werror -Wno-noexcept-type -O2 -pedantic -pedantic-errors -O2 -g -DNDEBUG   -pthread -std=c++14 -o CMakeFiles/polybar.dir/modules/bspwm.cpp.o -c /home/andrew/.config/polybar/src/modules/bspwm.cpp",
+  "file": "/home/andrew/.config/polybar/src/modules/bspwm.cpp"
+},
+{
+  "directory": "/home/andrew/.config/polybar/build/bin",
+  "command": "/usr/bin/c++   -I/usr/include/cairo -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/freetype2 -I/usr/include/libpng16 -I/home/andrew/.config/polybar/include -I/home/andrew/.config/polybar/lib/concurrentqueue/include -I/home/andrew/.config/polybar/lib/xpp/include -I/home/andrew/.config/polybar/lib/i3ipcpp/3rd/auss/include -I/home/andrew/.config/polybar/lib/i3ipcpp/include -I/home/andrew/.config/polybar/lib/i3ipcpp/libs/jsoncpp-1.7.7/include -I/home/andrew/.config/polybar/lib/i3ipcpp/libs/jsoncpp-1.7.7/src/lib_json/../../include   -Wall -Wextra -Werror -Wno-noexcept-type -O2 -pedantic -pedantic-errors -O2 -g -DNDEBUG   -pthread -std=c++14 -o CMakeFiles/polybar.dir/modules/counter.cpp.o -c /home/andrew/.config/polybar/src/modules/counter.cpp",
+  "file": "/home/andrew/.config/polybar/src/modules/counter.cpp"
+},
+{
+  "directory": "/home/andrew/.config/polybar/build/bin",
+  "command": "/usr/bin/c++   -I/usr/include/cairo -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/freetype2 -I/usr/include/libpng16 -I/home/andrew/.config/polybar/include -I/home/andrew/.config/polybar/lib/concurrentqueue/include -I/home/andrew/.config/polybar/lib/xpp/include -I/home/andrew/.config/polybar/lib/i3ipcpp/3rd/auss/include -I/home/andrew/.config/polybar/lib/i3ipcpp/include -I/home/andrew/.config/polybar/lib/i3ipcpp/libs/jsoncpp-1.7.7/include -I/home/andrew/.config/polybar/lib/i3ipcpp/libs/jsoncpp-1.7.7/src/lib_json/../../include   -Wall -Wextra -Werror -Wno-noexcept-type -O2 -pedantic -pedantic-errors -O2 -g -DNDEBUG   -pthread -std=c++14 -o CMakeFiles/polybar.dir/modules/cpu.cpp.o -c /home/andrew/.config/polybar/src/modules/cpu.cpp",
+  "file": "/home/andrew/.config/polybar/src/modules/cpu.cpp"
+},
+{
+  "directory": "/home/andrew/.config/polybar/build/bin",
+  "command": "/usr/bin/c++   -I/usr/include/cairo -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/freetype2 -I/usr/include/libpng16 -I/home/andrew/.config/polybar/include -I/home/andrew/.config/polybar/lib/concurrentqueue/include -I/home/andrew/.config/polybar/lib/xpp/include -I/home/andrew/.config/polybar/lib/i3ipcpp/3rd/auss/include -I/home/andrew/.config/polybar/lib/i3ipcpp/include -I/home/andrew/.config/polybar/lib/i3ipcpp/libs/jsoncpp-1.7.7/include -I/home/andrew/.config/polybar/lib/i3ipcpp/libs/jsoncpp-1.7.7/src/lib_json/../../include   -Wall -Wextra -Werror -Wno-noexcept-type -O2 -pedantic -pedantic-errors -O2 -g -DNDEBUG   -pthread -std=c++14 -o CMakeFiles/polybar.dir/modules/date.cpp.o -c /home/andrew/.config/polybar/src/modules/date.cpp",
+  "file": "/home/andrew/.config/polybar/src/modules/date.cpp"
+},
+{
+  "directory": "/home/andrew/.config/polybar/build/bin",
+  "command": "/usr/bin/c++   -I/usr/include/cairo -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/freetype2 -I/usr/include/libpng16 -I/home/andrew/.config/polybar/include -I/home/andrew/.config/polybar/lib/concurrentqueue/include -I/home/andrew/.config/polybar/lib/xpp/include -I/home/andrew/.config/polybar/lib/i3ipcpp/3rd/auss/include -I/home/andrew/.config/polybar/lib/i3ipcpp/include -I/home/andrew/.config/polybar/lib/i3ipcpp/libs/jsoncpp-1.7.7/include -I/home/andrew/.config/polybar/lib/i3ipcpp/libs/jsoncpp-1.7.7/src/lib_json/../../include   -Wall -Wextra -Werror -Wno-noexcept-type -O2 -pedantic -pedantic-errors -O2 -g -DNDEBUG   -pthread -std=c++14 -o CMakeFiles/polybar.dir/modules/fs.cpp.o -c /home/andrew/.config/polybar/src/modules/fs.cpp",
+  "file": "/home/andrew/.config/polybar/src/modules/fs.cpp"
+},
+{
+  "directory": "/home/andrew/.config/polybar/build/bin",
+  "command": "/usr/bin/c++   -I/usr/include/cairo -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/freetype2 -I/usr/include/libpng16 -I/home/andrew/.config/polybar/include -I/home/andrew/.config/polybar/lib/concurrentqueue/include -I/home/andrew/.config/polybar/lib/xpp/include -I/home/andrew/.config/polybar/lib/i3ipcpp/3rd/auss/include -I/home/andrew/.config/polybar/lib/i3ipcpp/include -I/home/andrew/.config/polybar/lib/i3ipcpp/libs/jsoncpp-1.7.7/include -I/home/andrew/.config/polybar/lib/i3ipcpp/libs/jsoncpp-1.7.7/src/lib_json/../../include   -Wall -Wextra -Werror -Wno-noexcept-type -O2 -pedantic -pedantic-errors -O2 -g -DNDEBUG   -pthread -std=c++14 -o CMakeFiles/polybar.dir/modules/i3.cpp.o -c /home/andrew/.config/polybar/src/modules/i3.cpp",
+  "file": "/home/andrew/.config/polybar/src/modules/i3.cpp"
+},
+{
+  "directory": "/home/andrew/.config/polybar/build/bin",
+  "command": "/usr/bin/c++   -I/usr/include/cairo -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/freetype2 -I/usr/include/libpng16 -I/home/andrew/.config/polybar/include -I/home/andrew/.config/polybar/lib/concurrentqueue/include -I/home/andrew/.config/polybar/lib/xpp/include -I/home/andrew/.config/polybar/lib/i3ipcpp/3rd/auss/include -I/home/andrew/.config/polybar/lib/i3ipcpp/include -I/home/andrew/.config/polybar/lib/i3ipcpp/libs/jsoncpp-1.7.7/include -I/home/andrew/.config/polybar/lib/i3ipcpp/libs/jsoncpp-1.7.7/src/lib_json/../../include   -Wall -Wextra -Werror -Wno-noexcept-type -O2 -pedantic -pedantic-errors -O2 -g -DNDEBUG   -pthread -std=c++14 -o CMakeFiles/polybar.dir/modules/ipc.cpp.o -c /home/andrew/.config/polybar/src/modules/ipc.cpp",
+  "file": "/home/andrew/.config/polybar/src/modules/ipc.cpp"
+},
+{
+  "directory": "/home/andrew/.config/polybar/build/bin",
+  "command": "/usr/bin/c++   -I/usr/include/cairo -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/freetype2 -I/usr/include/libpng16 -I/home/andrew/.config/polybar/include -I/home/andrew/.config/polybar/lib/concurrentqueue/include -I/home/andrew/.config/polybar/lib/xpp/include -I/home/andrew/.config/polybar/lib/i3ipcpp/3rd/auss/include -I/home/andrew/.config/polybar/lib/i3ipcpp/include -I/home/andrew/.config/polybar/lib/i3ipcpp/libs/jsoncpp-1.7.7/include -I/home/andrew/.config/polybar/lib/i3ipcpp/libs/jsoncpp-1.7.7/src/lib_json/../../include   -Wall -Wextra -Werror -Wno-noexcept-type -O2 -pedantic -pedantic-errors -O2 -g -DNDEBUG   -pthread -std=c++14 -o CMakeFiles/polybar.dir/modules/memory.cpp.o -c /home/andrew/.config/polybar/src/modules/memory.cpp",
+  "file": "/home/andrew/.config/polybar/src/modules/memory.cpp"
+},
+{
+  "directory": "/home/andrew/.config/polybar/build/bin",
+  "command": "/usr/bin/c++   -I/usr/include/cairo -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/freetype2 -I/usr/include/libpng16 -I/home/andrew/.config/polybar/include -I/home/andrew/.config/polybar/lib/concurrentqueue/include -I/home/andrew/.config/polybar/lib/xpp/include -I/home/andrew/.config/polybar/lib/i3ipcpp/3rd/auss/include -I/home/andrew/.config/polybar/lib/i3ipcpp/include -I/home/andrew/.config/polybar/lib/i3ipcpp/libs/jsoncpp-1.7.7/include -I/home/andrew/.config/polybar/lib/i3ipcpp/libs/jsoncpp-1.7.7/src/lib_json/../../include   -Wall -Wextra -Werror -Wno-noexcept-type -O2 -pedantic -pedantic-errors -O2 -g -DNDEBUG   -pthread -std=c++14 -o CMakeFiles/polybar.dir/modules/menu.cpp.o -c /home/andrew/.config/polybar/src/modules/menu.cpp",
+  "file": "/home/andrew/.config/polybar/src/modules/menu.cpp"
+},
+{
+  "directory": "/home/andrew/.config/polybar/build/bin",
+  "command": "/usr/bin/c++   -I/usr/include/cairo -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/freetype2 -I/usr/include/libpng16 -I/home/andrew/.config/polybar/include -I/home/andrew/.config/polybar/lib/concurrentqueue/include -I/home/andrew/.config/polybar/lib/xpp/include -I/home/andrew/.config/polybar/lib/i3ipcpp/3rd/auss/include -I/home/andrew/.config/polybar/lib/i3ipcpp/include -I/home/andrew/.config/polybar/lib/i3ipcpp/libs/jsoncpp-1.7.7/include -I/home/andrew/.config/polybar/lib/i3ipcpp/libs/jsoncpp-1.7.7/src/lib_json/../../include   -Wall -Wextra -Werror -Wno-noexcept-type -O2 -pedantic -pedantic-errors -O2 -g -DNDEBUG   -pthread -std=c++14 -o CMakeFiles/polybar.dir/modules/meta/base.cpp.o -c /home/andrew/.config/polybar/src/modules/meta/base.cpp",
+  "file": "/home/andrew/.config/polybar/src/modules/meta/base.cpp"
+},
+{
+  "directory": "/home/andrew/.config/polybar/build/bin",
+  "command": "/usr/bin/c++   -I/usr/include/cairo -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/freetype2 -I/usr/include/libpng16 -I/home/andrew/.config/polybar/include -I/home/andrew/.config/polybar/lib/concurrentqueue/include -I/home/andrew/.config/polybar/lib/xpp/include -I/home/andrew/.config/polybar/lib/i3ipcpp/3rd/auss/include -I/home/andrew/.config/polybar/lib/i3ipcpp/include -I/home/andrew/.config/polybar/lib/i3ipcpp/libs/jsoncpp-1.7.7/include -I/home/andrew/.config/polybar/lib/i3ipcpp/libs/jsoncpp-1.7.7/src/lib_json/../../include   -Wall -Wextra -Werror -Wno-noexcept-type -O2 -pedantic -pedantic-errors -O2 -g -DNDEBUG   -pthread -std=c++14 -o CMakeFiles/polybar.dir/modules/script.cpp.o -c /home/andrew/.config/polybar/src/modules/script.cpp",
+  "file": "/home/andrew/.config/polybar/src/modules/script.cpp"
+},
+{
+  "directory": "/home/andrew/.config/polybar/build/bin",
+  "command": "/usr/bin/c++   -I/usr/include/cairo -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/freetype2 -I/usr/include/libpng16 -I/home/andrew/.config/polybar/include -I/home/andrew/.config/polybar/lib/concurrentqueue/include -I/home/andrew/.config/polybar/lib/xpp/include -I/home/andrew/.config/polybar/lib/i3ipcpp/3rd/auss/include -I/home/andrew/.config/polybar/lib/i3ipcpp/include -I/home/andrew/.config/polybar/lib/i3ipcpp/libs/jsoncpp-1.7.7/include -I/home/andrew/.config/polybar/lib/i3ipcpp/libs/jsoncpp-1.7.7/src/lib_json/../../include   -Wall -Wextra -Werror -Wno-noexcept-type -O2 -pedantic -pedantic-errors -O2 -g -DNDEBUG   -pthread -std=c++14 -o CMakeFiles/polybar.dir/modules/systray.cpp.o -c /home/andrew/.config/polybar/src/modules/systray.cpp",
+  "file": "/home/andrew/.config/polybar/src/modules/systray.cpp"
+},
+{
+  "directory": "/home/andrew/.config/polybar/build/bin",
+  "command": "/usr/bin/c++   -I/usr/include/cairo -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/freetype2 -I/usr/include/libpng16 -I/home/andrew/.config/polybar/include -I/home/andrew/.config/polybar/lib/concurrentqueue/include -I/home/andrew/.config/polybar/lib/xpp/include -I/home/andrew/.config/polybar/lib/i3ipcpp/3rd/auss/include -I/home/andrew/.config/polybar/lib/i3ipcpp/include -I/home/andrew/.config/polybar/lib/i3ipcpp/libs/jsoncpp-1.7.7/include -I/home/andrew/.config/polybar/lib/i3ipcpp/libs/jsoncpp-1.7.7/src/lib_json/../../include   -Wall -Wextra -Werror -Wno-noexcept-type -O2 -pedantic -pedantic-errors -O2 -g -DNDEBUG   -pthread -std=c++14 -o CMakeFiles/polybar.dir/modules/temperature.cpp.o -c /home/andrew/.config/polybar/src/modules/temperature.cpp",
+  "file": "/home/andrew/.config/polybar/src/modules/temperature.cpp"
+},
+{
+  "directory": "/home/andrew/.config/polybar/build/bin",
+  "command": "/usr/bin/c++   -I/usr/include/cairo -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/freetype2 -I/usr/include/libpng16 -I/home/andrew/.config/polybar/include -I/home/andrew/.config/polybar/lib/concurrentqueue/include -I/home/andrew/.config/polybar/lib/xpp/include -I/home/andrew/.config/polybar/lib/i3ipcpp/3rd/auss/include -I/home/andrew/.config/polybar/lib/i3ipcpp/include -I/home/andrew/.config/polybar/lib/i3ipcpp/libs/jsoncpp-1.7.7/include -I/home/andrew/.config/polybar/lib/i3ipcpp/libs/jsoncpp-1.7.7/src/lib_json/../../include   -Wall -Wextra -Werror -Wno-noexcept-type -O2 -pedantic -pedantic-errors -O2 -g -DNDEBUG   -pthread -std=c++14 -o CMakeFiles/polybar.dir/modules/text.cpp.o -c /home/andrew/.config/polybar/src/modules/text.cpp",
+  "file": "/home/andrew/.config/polybar/src/modules/text.cpp"
+},
+{
+  "directory": "/home/andrew/.config/polybar/build/bin",
+  "command": "/usr/bin/c++   -I/usr/include/cairo -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/freetype2 -I/usr/include/libpng16 -I/home/andrew/.config/polybar/include -I/home/andrew/.config/polybar/lib/concurrentqueue/include -I/home/andrew/.config/polybar/lib/xpp/include -I/home/andrew/.config/polybar/lib/i3ipcpp/3rd/auss/include -I/home/andrew/.config/polybar/lib/i3ipcpp/include -I/home/andrew/.config/polybar/lib/i3ipcpp/libs/jsoncpp-1.7.7/include -I/home/andrew/.config/polybar/lib/i3ipcpp/libs/jsoncpp-1.7.7/src/lib_json/../../include   -Wall -Wextra -Werror -Wno-noexcept-type -O2 -pedantic -pedantic-errors -O2 -g -DNDEBUG   -pthread -std=c++14 -o CMakeFiles/polybar.dir/modules/xbacklight.cpp.o -c /home/andrew/.config/polybar/src/modules/xbacklight.cpp",
+  "file": "/home/andrew/.config/polybar/src/modules/xbacklight.cpp"
+},
+{
+  "directory": "/home/andrew/.config/polybar/build/bin",
+  "command": "/usr/bin/c++   -I/usr/include/cairo -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/freetype2 -I/usr/include/libpng16 -I/home/andrew/.config/polybar/include -I/home/andrew/.config/polybar/lib/concurrentqueue/include -I/home/andrew/.config/polybar/lib/xpp/include -I/home/andrew/.config/polybar/lib/i3ipcpp/3rd/auss/include -I/home/andrew/.config/polybar/lib/i3ipcpp/include -I/home/andrew/.config/polybar/lib/i3ipcpp/libs/jsoncpp-1.7.7/include -I/home/andrew/.config/polybar/lib/i3ipcpp/libs/jsoncpp-1.7.7/src/lib_json/../../include   -Wall -Wextra -Werror -Wno-noexcept-type -O2 -pedantic -pedantic-errors -O2 -g -DNDEBUG   -pthread -std=c++14 -o CMakeFiles/polybar.dir/modules/xkeyboard.cpp.o -c /home/andrew/.config/polybar/src/modules/xkeyboard.cpp",
+  "file": "/home/andrew/.config/polybar/src/modules/xkeyboard.cpp"
+},
+{
+  "directory": "/home/andrew/.config/polybar/build/bin",
+  "command": "/usr/bin/c++   -I/usr/include/cairo -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/freetype2 -I/usr/include/libpng16 -I/home/andrew/.config/polybar/include -I/home/andrew/.config/polybar/lib/concurrentqueue/include -I/home/andrew/.config/polybar/lib/xpp/include -I/home/andrew/.config/polybar/lib/i3ipcpp/3rd/auss/include -I/home/andrew/.config/polybar/lib/i3ipcpp/include -I/home/andrew/.config/polybar/lib/i3ipcpp/libs/jsoncpp-1.7.7/include -I/home/andrew/.config/polybar/lib/i3ipcpp/libs/jsoncpp-1.7.7/src/lib_json/../../include   -Wall -Wextra -Werror -Wno-noexcept-type -O2 -pedantic -pedantic-errors -O2 -g -DNDEBUG   -pthread -std=c++14 -o CMakeFiles/polybar.dir/modules/xwindow.cpp.o -c /home/andrew/.config/polybar/src/modules/xwindow.cpp",
+  "file": "/home/andrew/.config/polybar/src/modules/xwindow.cpp"
+},
+{
+  "directory": "/home/andrew/.config/polybar/build/bin",
+  "command": "/usr/bin/c++   -I/usr/include/cairo -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/freetype2 -I/usr/include/libpng16 -I/home/andrew/.config/polybar/include -I/home/andrew/.config/polybar/lib/concurrentqueue/include -I/home/andrew/.config/polybar/lib/xpp/include -I/home/andrew/.config/polybar/lib/i3ipcpp/3rd/auss/include -I/home/andrew/.config/polybar/lib/i3ipcpp/include -I/home/andrew/.config/polybar/lib/i3ipcpp/libs/jsoncpp-1.7.7/include -I/home/andrew/.config/polybar/lib/i3ipcpp/libs/jsoncpp-1.7.7/src/lib_json/../../include   -Wall -Wextra -Werror -Wno-noexcept-type -O2 -pedantic -pedantic-errors -O2 -g -DNDEBUG   -pthread -std=c++14 -o CMakeFiles/polybar.dir/modules/xworkspaces.cpp.o -c /home/andrew/.config/polybar/src/modules/xworkspaces.cpp",
+  "file": "/home/andrew/.config/polybar/src/modules/xworkspaces.cpp"
+},
+{
+  "directory": "/home/andrew/.config/polybar/build/bin",
+  "command": "/usr/bin/c++   -I/usr/include/cairo -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/freetype2 -I/usr/include/libpng16 -I/home/andrew/.config/polybar/include -I/home/andrew/.config/polybar/lib/concurrentqueue/include -I/home/andrew/.config/polybar/lib/xpp/include -I/home/andrew/.config/polybar/lib/i3ipcpp/3rd/auss/include -I/home/andrew/.config/polybar/lib/i3ipcpp/include -I/home/andrew/.config/polybar/lib/i3ipcpp/libs/jsoncpp-1.7.7/include -I/home/andrew/.config/polybar/lib/i3ipcpp/libs/jsoncpp-1.7.7/src/lib_json/../../include   -Wall -Wextra -Werror -Wno-noexcept-type -O2 -pedantic -pedantic-errors -O2 -g -DNDEBUG   -pthread -std=c++14 -o CMakeFiles/polybar.dir/utils/bspwm.cpp.o -c /home/andrew/.config/polybar/src/utils/bspwm.cpp",
+  "file": "/home/andrew/.config/polybar/src/utils/bspwm.cpp"
+},
+{
+  "directory": "/home/andrew/.config/polybar/build/bin",
+  "command": "/usr/bin/c++   -I/usr/include/cairo -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/freetype2 -I/usr/include/libpng16 -I/home/andrew/.config/polybar/include -I/home/andrew/.config/polybar/lib/concurrentqueue/include -I/home/andrew/.config/polybar/lib/xpp/include -I/home/andrew/.config/polybar/lib/i3ipcpp/3rd/auss/include -I/home/andrew/.config/polybar/lib/i3ipcpp/include -I/home/andrew/.config/polybar/lib/i3ipcpp/libs/jsoncpp-1.7.7/include -I/home/andrew/.config/polybar/lib/i3ipcpp/libs/jsoncpp-1.7.7/src/lib_json/../../include   -Wall -Wextra -Werror -Wno-noexcept-type -O2 -pedantic -pedantic-errors -O2 -g -DNDEBUG   -pthread -std=c++14 -o CMakeFiles/polybar.dir/utils/command.cpp.o -c /home/andrew/.config/polybar/src/utils/command.cpp",
+  "file": "/home/andrew/.config/polybar/src/utils/command.cpp"
+},
+{
+  "directory": "/home/andrew/.config/polybar/build/bin",
+  "command": "/usr/bin/c++   -I/usr/include/cairo -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/freetype2 -I/usr/include/libpng16 -I/home/andrew/.config/polybar/include -I/home/andrew/.config/polybar/lib/concurrentqueue/include -I/home/andrew/.config/polybar/lib/xpp/include -I/home/andrew/.config/polybar/lib/i3ipcpp/3rd/auss/include -I/home/andrew/.config/polybar/lib/i3ipcpp/include -I/home/andrew/.config/polybar/lib/i3ipcpp/libs/jsoncpp-1.7.7/include -I/home/andrew/.config/polybar/lib/i3ipcpp/libs/jsoncpp-1.7.7/src/lib_json/../../include   -Wall -Wextra -Werror -Wno-noexcept-type -O2 -pedantic -pedantic-errors -O2 -g -DNDEBUG   -pthread -std=c++14 -o CMakeFiles/polybar.dir/utils/concurrency.cpp.o -c /home/andrew/.config/polybar/src/utils/concurrency.cpp",
+  "file": "/home/andrew/.config/polybar/src/utils/concurrency.cpp"
+},
+{
+  "directory": "/home/andrew/.config/polybar/build/bin",
+  "command": "/usr/bin/c++   -I/usr/include/cairo -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/freetype2 -I/usr/include/libpng16 -I/home/andrew/.config/polybar/include -I/home/andrew/.config/polybar/lib/concurrentqueue/include -I/home/andrew/.config/polybar/lib/xpp/include -I/home/andrew/.config/polybar/lib/i3ipcpp/3rd/auss/include -I/home/andrew/.config/polybar/lib/i3ipcpp/include -I/home/andrew/.config/polybar/lib/i3ipcpp/libs/jsoncpp-1.7.7/include -I/home/andrew/.config/polybar/lib/i3ipcpp/libs/jsoncpp-1.7.7/src/lib_json/../../include   -Wall -Wextra -Werror -Wno-noexcept-type -O2 -pedantic -pedantic-errors -O2 -g -DNDEBUG   -pthread -std=c++14 -o CMakeFiles/polybar.dir/utils/env.cpp.o -c /home/andrew/.config/polybar/src/utils/env.cpp",
+  "file": "/home/andrew/.config/polybar/src/utils/env.cpp"
+},
+{
+  "directory": "/home/andrew/.config/polybar/build/bin",
+  "command": "/usr/bin/c++   -I/usr/include/cairo -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/freetype2 -I/usr/include/libpng16 -I/home/andrew/.config/polybar/include -I/home/andrew/.config/polybar/lib/concurrentqueue/include -I/home/andrew/.config/polybar/lib/xpp/include -I/home/andrew/.config/polybar/lib/i3ipcpp/3rd/auss/include -I/home/andrew/.config/polybar/lib/i3ipcpp/include -I/home/andrew/.config/polybar/lib/i3ipcpp/libs/jsoncpp-1.7.7/include -I/home/andrew/.config/polybar/lib/i3ipcpp/libs/jsoncpp-1.7.7/src/lib_json/../../include   -Wall -Wextra -Werror -Wno-noexcept-type -O2 -pedantic -pedantic-errors -O2 -g -DNDEBUG   -pthread -std=c++14 -o CMakeFiles/polybar.dir/utils/factory.cpp.o -c /home/andrew/.config/polybar/src/utils/factory.cpp",
+  "file": "/home/andrew/.config/polybar/src/utils/factory.cpp"
+},
+{
+  "directory": "/home/andrew/.config/polybar/build/bin",
+  "command": "/usr/bin/c++   -I/usr/include/cairo -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/freetype2 -I/usr/include/libpng16 -I/home/andrew/.config/polybar/include -I/home/andrew/.config/polybar/lib/concurrentqueue/include -I/home/andrew/.config/polybar/lib/xpp/include -I/home/andrew/.config/polybar/lib/i3ipcpp/3rd/auss/include -I/home/andrew/.config/polybar/lib/i3ipcpp/include -I/home/andrew/.config/polybar/lib/i3ipcpp/libs/jsoncpp-1.7.7/include -I/home/andrew/.config/polybar/lib/i3ipcpp/libs/jsoncpp-1.7.7/src/lib_json/../../include   -Wall -Wextra -Werror -Wno-noexcept-type -O2 -pedantic -pedantic-errors -O2 -g -DNDEBUG   -pthread -std=c++14 -o CMakeFiles/polybar.dir/utils/file.cpp.o -c /home/andrew/.config/polybar/src/utils/file.cpp",
+  "file": "/home/andrew/.config/polybar/src/utils/file.cpp"
+},
+{
+  "directory": "/home/andrew/.config/polybar/build/bin",
+  "command": "/usr/bin/c++   -I/usr/include/cairo -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/freetype2 -I/usr/include/libpng16 -I/home/andrew/.config/polybar/include -I/home/andrew/.config/polybar/lib/concurrentqueue/include -I/home/andrew/.config/polybar/lib/xpp/include -I/home/andrew/.config/polybar/lib/i3ipcpp/3rd/auss/include -I/home/andrew/.config/polybar/lib/i3ipcpp/include -I/home/andrew/.config/polybar/lib/i3ipcpp/libs/jsoncpp-1.7.7/include -I/home/andrew/.config/polybar/lib/i3ipcpp/libs/jsoncpp-1.7.7/src/lib_json/../../include   -Wall -Wextra -Werror -Wno-noexcept-type -O2 -pedantic -pedantic-errors -O2 -g -DNDEBUG   -pthread -std=c++14 -o CMakeFiles/polybar.dir/utils/i3.cpp.o -c /home/andrew/.config/polybar/src/utils/i3.cpp",
+  "file": "/home/andrew/.config/polybar/src/utils/i3.cpp"
+},
+{
+  "directory": "/home/andrew/.config/polybar/build/bin",
+  "command": "/usr/bin/c++   -I/usr/include/cairo -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/freetype2 -I/usr/include/libpng16 -I/home/andrew/.config/polybar/include -I/home/andrew/.config/polybar/lib/concurrentqueue/include -I/home/andrew/.config/polybar/lib/xpp/include -I/home/andrew/.config/polybar/lib/i3ipcpp/3rd/auss/include -I/home/andrew/.config/polybar/lib/i3ipcpp/include -I/home/andrew/.config/polybar/lib/i3ipcpp/libs/jsoncpp-1.7.7/include -I/home/andrew/.config/polybar/lib/i3ipcpp/libs/jsoncpp-1.7.7/src/lib_json/../../include   -Wall -Wextra -Werror -Wno-noexcept-type -O2 -pedantic -pedantic-errors -O2 -g -DNDEBUG   -pthread -std=c++14 -o CMakeFiles/polybar.dir/utils/inotify.cpp.o -c /home/andrew/.config/polybar/src/utils/inotify.cpp",
+  "file": "/home/andrew/.config/polybar/src/utils/inotify.cpp"
+},
+{
+  "directory": "/home/andrew/.config/polybar/build/bin",
+  "command": "/usr/bin/c++   -I/usr/include/cairo -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/freetype2 -I/usr/include/libpng16 -I/home/andrew/.config/polybar/include -I/home/andrew/.config/polybar/lib/concurrentqueue/include -I/home/andrew/.config/polybar/lib/xpp/include -I/home/andrew/.config/polybar/lib/i3ipcpp/3rd/auss/include -I/home/andrew/.config/polybar/lib/i3ipcpp/include -I/home/andrew/.config/polybar/lib/i3ipcpp/libs/jsoncpp-1.7.7/include -I/home/andrew/.config/polybar/lib/i3ipcpp/libs/jsoncpp-1.7.7/src/lib_json/../../include   -Wall -Wextra -Werror -Wno-noexcept-type -O2 -pedantic -pedantic-errors -O2 -g -DNDEBUG   -pthread -std=c++14 -o CMakeFiles/polybar.dir/utils/io.cpp.o -c /home/andrew/.config/polybar/src/utils/io.cpp",
+  "file": "/home/andrew/.config/polybar/src/utils/io.cpp"
+},
+{
+  "directory": "/home/andrew/.config/polybar/build/bin",
+  "command": "/usr/bin/c++   -I/usr/include/cairo -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/freetype2 -I/usr/include/libpng16 -I/home/andrew/.config/polybar/include -I/home/andrew/.config/polybar/lib/concurrentqueue/include -I/home/andrew/.config/polybar/lib/xpp/include -I/home/andrew/.config/polybar/lib/i3ipcpp/3rd/auss/include -I/home/andrew/.config/polybar/lib/i3ipcpp/include -I/home/andrew/.config/polybar/lib/i3ipcpp/libs/jsoncpp-1.7.7/include -I/home/andrew/.config/polybar/lib/i3ipcpp/libs/jsoncpp-1.7.7/src/lib_json/../../include   -Wall -Wextra -Werror -Wno-noexcept-type -O2 -pedantic -pedantic-errors -O2 -g -DNDEBUG   -pthread -std=c++14 -o CMakeFiles/polybar.dir/utils/process.cpp.o -c /home/andrew/.config/polybar/src/utils/process.cpp",
+  "file": "/home/andrew/.config/polybar/src/utils/process.cpp"
+},
+{
+  "directory": "/home/andrew/.config/polybar/build/bin",
+  "command": "/usr/bin/c++   -I/usr/include/cairo -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/freetype2 -I/usr/include/libpng16 -I/home/andrew/.config/polybar/include -I/home/andrew/.config/polybar/lib/concurrentqueue/include -I/home/andrew/.config/polybar/lib/xpp/include -I/home/andrew/.config/polybar/lib/i3ipcpp/3rd/auss/include -I/home/andrew/.config/polybar/lib/i3ipcpp/include -I/home/andrew/.config/polybar/lib/i3ipcpp/libs/jsoncpp-1.7.7/include -I/home/andrew/.config/polybar/lib/i3ipcpp/libs/jsoncpp-1.7.7/src/lib_json/../../include   -Wall -Wextra -Werror -Wno-noexcept-type -O2 -pedantic -pedantic-errors -O2 -g -DNDEBUG   -pthread -std=c++14 -o CMakeFiles/polybar.dir/utils/socket.cpp.o -c /home/andrew/.config/polybar/src/utils/socket.cpp",
+  "file": "/home/andrew/.config/polybar/src/utils/socket.cpp"
+},
+{
+  "directory": "/home/andrew/.config/polybar/build/bin",
+  "command": "/usr/bin/c++   -I/usr/include/cairo -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/freetype2 -I/usr/include/libpng16 -I/home/andrew/.config/polybar/include -I/home/andrew/.config/polybar/lib/concurrentqueue/include -I/home/andrew/.config/polybar/lib/xpp/include -I/home/andrew/.config/polybar/lib/i3ipcpp/3rd/auss/include -I/home/andrew/.config/polybar/lib/i3ipcpp/include -I/home/andrew/.config/polybar/lib/i3ipcpp/libs/jsoncpp-1.7.7/include -I/home/andrew/.config/polybar/lib/i3ipcpp/libs/jsoncpp-1.7.7/src/lib_json/../../include   -Wall -Wextra -Werror -Wno-noexcept-type -O2 -pedantic -pedantic-errors -O2 -g -DNDEBUG   -pthread -std=c++14 -o CMakeFiles/polybar.dir/utils/string.cpp.o -c /home/andrew/.config/polybar/src/utils/string.cpp",
+  "file": "/home/andrew/.config/polybar/src/utils/string.cpp"
+},
+{
+  "directory": "/home/andrew/.config/polybar/build/bin",
+  "command": "/usr/bin/c++   -I/usr/include/cairo -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/freetype2 -I/usr/include/libpng16 -I/home/andrew/.config/polybar/include -I/home/andrew/.config/polybar/lib/concurrentqueue/include -I/home/andrew/.config/polybar/lib/xpp/include -I/home/andrew/.config/polybar/lib/i3ipcpp/3rd/auss/include -I/home/andrew/.config/polybar/lib/i3ipcpp/include -I/home/andrew/.config/polybar/lib/i3ipcpp/libs/jsoncpp-1.7.7/include -I/home/andrew/.config/polybar/lib/i3ipcpp/libs/jsoncpp-1.7.7/src/lib_json/../../include   -Wall -Wextra -Werror -Wno-noexcept-type -O2 -pedantic -pedantic-errors -O2 -g -DNDEBUG   -pthread -std=c++14 -o CMakeFiles/polybar.dir/utils/throttle.cpp.o -c /home/andrew/.config/polybar/src/utils/throttle.cpp",
+  "file": "/home/andrew/.config/polybar/src/utils/throttle.cpp"
+},
+{
+  "directory": "/home/andrew/.config/polybar/build/bin",
+  "command": "/usr/bin/c++   -I/usr/include/cairo -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/freetype2 -I/usr/include/libpng16 -I/home/andrew/.config/polybar/include -I/home/andrew/.config/polybar/lib/concurrentqueue/include -I/home/andrew/.config/polybar/lib/xpp/include -I/home/andrew/.config/polybar/lib/i3ipcpp/3rd/auss/include -I/home/andrew/.config/polybar/lib/i3ipcpp/include -I/home/andrew/.config/polybar/lib/i3ipcpp/libs/jsoncpp-1.7.7/include -I/home/andrew/.config/polybar/lib/i3ipcpp/libs/jsoncpp-1.7.7/src/lib_json/../../include   -Wall -Wextra -Werror -Wno-noexcept-type -O2 -pedantic -pedantic-errors -O2 -g -DNDEBUG   -pthread -std=c++14 -o CMakeFiles/polybar.dir/x11/atoms.cpp.o -c /home/andrew/.config/polybar/src/x11/atoms.cpp",
+  "file": "/home/andrew/.config/polybar/src/x11/atoms.cpp"
+},
+{
+  "directory": "/home/andrew/.config/polybar/build/bin",
+  "command": "/usr/bin/c++   -I/usr/include/cairo -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/freetype2 -I/usr/include/libpng16 -I/home/andrew/.config/polybar/include -I/home/andrew/.config/polybar/lib/concurrentqueue/include -I/home/andrew/.config/polybar/lib/xpp/include -I/home/andrew/.config/polybar/lib/i3ipcpp/3rd/auss/include -I/home/andrew/.config/polybar/lib/i3ipcpp/include -I/home/andrew/.config/polybar/lib/i3ipcpp/libs/jsoncpp-1.7.7/include -I/home/andrew/.config/polybar/lib/i3ipcpp/libs/jsoncpp-1.7.7/src/lib_json/../../include   -Wall -Wextra -Werror -Wno-noexcept-type -O2 -pedantic -pedantic-errors -O2 -g -DNDEBUG   -pthread -std=c++14 -o CMakeFiles/polybar.dir/x11/connection.cpp.o -c /home/andrew/.config/polybar/src/x11/connection.cpp",
+  "file": "/home/andrew/.config/polybar/src/x11/connection.cpp"
+},
+{
+  "directory": "/home/andrew/.config/polybar/build/bin",
+  "command": "/usr/bin/c++   -I/usr/include/cairo -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/freetype2 -I/usr/include/libpng16 -I/home/andrew/.config/polybar/include -I/home/andrew/.config/polybar/lib/concurrentqueue/include -I/home/andrew/.config/polybar/lib/xpp/include -I/home/andrew/.config/polybar/lib/i3ipcpp/3rd/auss/include -I/home/andrew/.config/polybar/lib/i3ipcpp/include -I/home/andrew/.config/polybar/lib/i3ipcpp/libs/jsoncpp-1.7.7/include -I/home/andrew/.config/polybar/lib/i3ipcpp/libs/jsoncpp-1.7.7/src/lib_json/../../include   -Wall -Wextra -Werror -Wno-noexcept-type -O2 -pedantic -pedantic-errors -O2 -g -DNDEBUG   -pthread -std=c++14 -o CMakeFiles/polybar.dir/x11/cursor.cpp.o -c /home/andrew/.config/polybar/src/x11/cursor.cpp",
+  "file": "/home/andrew/.config/polybar/src/x11/cursor.cpp"
+},
+{
+  "directory": "/home/andrew/.config/polybar/build/bin",
+  "command": "/usr/bin/c++   -I/usr/include/cairo -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/freetype2 -I/usr/include/libpng16 -I/home/andrew/.config/polybar/include -I/home/andrew/.config/polybar/lib/concurrentqueue/include -I/home/andrew/.config/polybar/lib/xpp/include -I/home/andrew/.config/polybar/lib/i3ipcpp/3rd/auss/include -I/home/andrew/.config/polybar/lib/i3ipcpp/include -I/home/andrew/.config/polybar/lib/i3ipcpp/libs/jsoncpp-1.7.7/include -I/home/andrew/.config/polybar/lib/i3ipcpp/libs/jsoncpp-1.7.7/src/lib_json/../../include   -Wall -Wextra -Werror -Wno-noexcept-type -O2 -pedantic -pedantic-errors -O2 -g -DNDEBUG   -pthread -std=c++14 -o CMakeFiles/polybar.dir/x11/ewmh.cpp.o -c /home/andrew/.config/polybar/src/x11/ewmh.cpp",
+  "file": "/home/andrew/.config/polybar/src/x11/ewmh.cpp"
+},
+{
+  "directory": "/home/andrew/.config/polybar/build/bin",
+  "command": "/usr/bin/c++   -I/usr/include/cairo -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/freetype2 -I/usr/include/libpng16 -I/home/andrew/.config/polybar/include -I/home/andrew/.config/polybar/lib/concurrentqueue/include -I/home/andrew/.config/polybar/lib/xpp/include -I/home/andrew/.config/polybar/lib/i3ipcpp/3rd/auss/include -I/home/andrew/.config/polybar/lib/i3ipcpp/include -I/home/andrew/.config/polybar/lib/i3ipcpp/libs/jsoncpp-1.7.7/include -I/home/andrew/.config/polybar/lib/i3ipcpp/libs/jsoncpp-1.7.7/src/lib_json/../../include   -Wall -Wextra -Werror -Wno-noexcept-type -O2 -pedantic -pedantic-errors -O2 -g -DNDEBUG   -pthread -std=c++14 -o CMakeFiles/polybar.dir/x11/extensions/randr.cpp.o -c /home/andrew/.config/polybar/src/x11/extensions/randr.cpp",
+  "file": "/home/andrew/.config/polybar/src/x11/extensions/randr.cpp"
+},
+{
+  "directory": "/home/andrew/.config/polybar/build/bin",
+  "command": "/usr/bin/c++   -I/usr/include/cairo -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/freetype2 -I/usr/include/libpng16 -I/home/andrew/.config/polybar/include -I/home/andrew/.config/polybar/lib/concurrentqueue/include -I/home/andrew/.config/polybar/lib/xpp/include -I/home/andrew/.config/polybar/lib/i3ipcpp/3rd/auss/include -I/home/andrew/.config/polybar/lib/i3ipcpp/include -I/home/andrew/.config/polybar/lib/i3ipcpp/libs/jsoncpp-1.7.7/include -I/home/andrew/.config/polybar/lib/i3ipcpp/libs/jsoncpp-1.7.7/src/lib_json/../../include   -Wall -Wextra -Werror -Wno-noexcept-type -O2 -pedantic -pedantic-errors -O2 -g -DNDEBUG   -pthread -std=c++14 -o CMakeFiles/polybar.dir/x11/extensions/xkb.cpp.o -c /home/andrew/.config/polybar/src/x11/extensions/xkb.cpp",
+  "file": "/home/andrew/.config/polybar/src/x11/extensions/xkb.cpp"
+},
+{
+  "directory": "/home/andrew/.config/polybar/build/bin",
+  "command": "/usr/bin/c++   -I/usr/include/cairo -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/freetype2 -I/usr/include/libpng16 -I/home/andrew/.config/polybar/include -I/home/andrew/.config/polybar/lib/concurrentqueue/include -I/home/andrew/.config/polybar/lib/xpp/include -I/home/andrew/.config/polybar/lib/i3ipcpp/3rd/auss/include -I/home/andrew/.config/polybar/lib/i3ipcpp/include -I/home/andrew/.config/polybar/lib/i3ipcpp/libs/jsoncpp-1.7.7/include -I/home/andrew/.config/polybar/lib/i3ipcpp/libs/jsoncpp-1.7.7/src/lib_json/../../include   -Wall -Wextra -Werror -Wno-noexcept-type -O2 -pedantic -pedantic-errors -O2 -g -DNDEBUG   -pthread -std=c++14 -o CMakeFiles/polybar.dir/x11/icccm.cpp.o -c /home/andrew/.config/polybar/src/x11/icccm.cpp",
+  "file": "/home/andrew/.config/polybar/src/x11/icccm.cpp"
+},
+{
+  "directory": "/home/andrew/.config/polybar/build/bin",
+  "command": "/usr/bin/c++   -I/usr/include/cairo -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/freetype2 -I/usr/include/libpng16 -I/home/andrew/.config/polybar/include -I/home/andrew/.config/polybar/lib/concurrentqueue/include -I/home/andrew/.config/polybar/lib/xpp/include -I/home/andrew/.config/polybar/lib/i3ipcpp/3rd/auss/include -I/home/andrew/.config/polybar/lib/i3ipcpp/include -I/home/andrew/.config/polybar/lib/i3ipcpp/libs/jsoncpp-1.7.7/include -I/home/andrew/.config/polybar/lib/i3ipcpp/libs/jsoncpp-1.7.7/src/lib_json/../../include   -Wall -Wextra -Werror -Wno-noexcept-type -O2 -pedantic -pedantic-errors -O2 -g -DNDEBUG   -pthread -std=c++14 -o CMakeFiles/polybar.dir/x11/registry.cpp.o -c /home/andrew/.config/polybar/src/x11/registry.cpp",
+  "file": "/home/andrew/.config/polybar/src/x11/registry.cpp"
+},
+{
+  "directory": "/home/andrew/.config/polybar/build/bin",
+  "command": "/usr/bin/c++   -I/usr/include/cairo -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/freetype2 -I/usr/include/libpng16 -I/home/andrew/.config/polybar/include -I/home/andrew/.config/polybar/lib/concurrentqueue/include -I/home/andrew/.config/polybar/lib/xpp/include -I/home/andrew/.config/polybar/lib/i3ipcpp/3rd/auss/include -I/home/andrew/.config/polybar/lib/i3ipcpp/include -I/home/andrew/.config/polybar/lib/i3ipcpp/libs/jsoncpp-1.7.7/include -I/home/andrew/.config/polybar/lib/i3ipcpp/libs/jsoncpp-1.7.7/src/lib_json/../../include   -Wall -Wextra -Werror -Wno-noexcept-type -O2 -pedantic -pedantic-errors -O2 -g -DNDEBUG   -pthread -std=c++14 -o CMakeFiles/polybar.dir/x11/tray_client.cpp.o -c /home/andrew/.config/polybar/src/x11/tray_client.cpp",
+  "file": "/home/andrew/.config/polybar/src/x11/tray_client.cpp"
+},
+{
+  "directory": "/home/andrew/.config/polybar/build/bin",
+  "command": "/usr/bin/c++   -I/usr/include/cairo -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/freetype2 -I/usr/include/libpng16 -I/home/andrew/.config/polybar/include -I/home/andrew/.config/polybar/lib/concurrentqueue/include -I/home/andrew/.config/polybar/lib/xpp/include -I/home/andrew/.config/polybar/lib/i3ipcpp/3rd/auss/include -I/home/andrew/.config/polybar/lib/i3ipcpp/include -I/home/andrew/.config/polybar/lib/i3ipcpp/libs/jsoncpp-1.7.7/include -I/home/andrew/.config/polybar/lib/i3ipcpp/libs/jsoncpp-1.7.7/src/lib_json/../../include   -Wall -Wextra -Werror -Wno-noexcept-type -O2 -pedantic -pedantic-errors -O2 -g -DNDEBUG   -pthread -std=c++14 -o CMakeFiles/polybar.dir/x11/tray_manager.cpp.o -c /home/andrew/.config/polybar/src/x11/tray_manager.cpp",
+  "file": "/home/andrew/.config/polybar/src/x11/tray_manager.cpp"
+},
+{
+  "directory": "/home/andrew/.config/polybar/build/bin",
+  "command": "/usr/bin/c++   -I/usr/include/cairo -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/freetype2 -I/usr/include/libpng16 -I/home/andrew/.config/polybar/include -I/home/andrew/.config/polybar/lib/concurrentqueue/include -I/home/andrew/.config/polybar/lib/xpp/include -I/home/andrew/.config/polybar/lib/i3ipcpp/3rd/auss/include -I/home/andrew/.config/polybar/lib/i3ipcpp/include -I/home/andrew/.config/polybar/lib/i3ipcpp/libs/jsoncpp-1.7.7/include -I/home/andrew/.config/polybar/lib/i3ipcpp/libs/jsoncpp-1.7.7/src/lib_json/../../include   -Wall -Wextra -Werror -Wno-noexcept-type -O2 -pedantic -pedantic-errors -O2 -g -DNDEBUG   -pthread -std=c++14 -o CMakeFiles/polybar.dir/x11/window.cpp.o -c /home/andrew/.config/polybar/src/x11/window.cpp",
+  "file": "/home/andrew/.config/polybar/src/x11/window.cpp"
+},
+{
+  "directory": "/home/andrew/.config/polybar/build/bin",
+  "command": "/usr/bin/c++   -I/usr/include/cairo -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/freetype2 -I/usr/include/libpng16 -I/home/andrew/.config/polybar/include -I/home/andrew/.config/polybar/lib/concurrentqueue/include -I/home/andrew/.config/polybar/lib/xpp/include -I/home/andrew/.config/polybar/lib/i3ipcpp/3rd/auss/include -I/home/andrew/.config/polybar/lib/i3ipcpp/include -I/home/andrew/.config/polybar/lib/i3ipcpp/libs/jsoncpp-1.7.7/include -I/home/andrew/.config/polybar/lib/i3ipcpp/libs/jsoncpp-1.7.7/src/lib_json/../../include   -Wall -Wextra -Werror -Wno-noexcept-type -O2 -pedantic -pedantic-errors -O2 -g -DNDEBUG   -pthread -std=c++14 -o CMakeFiles/polybar.dir/x11/winspec.cpp.o -c /home/andrew/.config/polybar/src/x11/winspec.cpp",
+  "file": "/home/andrew/.config/polybar/src/x11/winspec.cpp"
+},
+{
+  "directory": "/home/andrew/.config/polybar/build/bin",
+  "command": "/usr/bin/c++   -I/usr/include/cairo -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/freetype2 -I/usr/include/libpng16 -I/home/andrew/.config/polybar/include -I/home/andrew/.config/polybar/lib/concurrentqueue/include -I/home/andrew/.config/polybar/lib/xpp/include -I/home/andrew/.config/polybar/lib/i3ipcpp/3rd/auss/include -I/home/andrew/.config/polybar/lib/i3ipcpp/include -I/home/andrew/.config/polybar/lib/i3ipcpp/libs/jsoncpp-1.7.7/include -I/home/andrew/.config/polybar/lib/i3ipcpp/libs/jsoncpp-1.7.7/src/lib_json/../../include   -Wall -Wextra -Werror -Wno-noexcept-type -O2 -pedantic -pedantic-errors -O2 -g -DNDEBUG   -pthread -std=c++14 -o CMakeFiles/polybar.dir/x11/xembed.cpp.o -c /home/andrew/.config/polybar/src/x11/xembed.cpp",
+  "file": "/home/andrew/.config/polybar/src/x11/xembed.cpp"
+},
+{
+  "directory": "/home/andrew/.config/polybar/build/bin",
+  "command": "/usr/bin/c++   -I/usr/include/cairo -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/freetype2 -I/usr/include/libpng16 -I/home/andrew/.config/polybar/include -I/home/andrew/.config/polybar/lib/concurrentqueue/include -I/home/andrew/.config/polybar/lib/xpp/include -I/home/andrew/.config/polybar/lib/i3ipcpp/3rd/auss/include -I/home/andrew/.config/polybar/lib/i3ipcpp/include -I/home/andrew/.config/polybar/lib/i3ipcpp/libs/jsoncpp-1.7.7/include -I/home/andrew/.config/polybar/lib/i3ipcpp/libs/jsoncpp-1.7.7/src/lib_json/../../include   -Wall -Wextra -Werror -Wno-noexcept-type -O2 -pedantic -pedantic-errors -O2 -g -DNDEBUG   -pthread -std=c++14 -o CMakeFiles/polybar.dir/x11/xresources.cpp.o -c /home/andrew/.config/polybar/src/x11/xresources.cpp",
+  "file": "/home/andrew/.config/polybar/src/x11/xresources.cpp"
+}
+]

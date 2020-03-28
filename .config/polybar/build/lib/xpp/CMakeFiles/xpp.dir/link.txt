@@ -1,0 +1,2 @@
+/usr/bin/ar qc libxpp.a  
+/usr/bin/ranlib libxpp.a
