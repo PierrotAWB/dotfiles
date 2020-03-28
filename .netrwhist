@@ -1,7 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =5
-let g:netrw_dirhist_1='/Users/andrew/Documents/2A/CS246E/vm/vm'
-let g:netrw_dirhist_2='/Users/andrew/Documents/2A/CS246E/vm/docs/design_docs'
-let g:netrw_dirhist_3='/Users/andrew/.config'
-let g:netrw_dirhist_4='/Users/andrew/.config/skhd'
-let g:netrw_dirhist_5='/Users/andrew/.vim'
