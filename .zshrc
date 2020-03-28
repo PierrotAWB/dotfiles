@@ -93,41 +93,21 @@ export EDITOR='vim'
 alias ranger='ranger --choosedir=$HOME/.rangerdir; LASTDIR=`cat $HOME/.rangerdir`; cd "$LASTDIR"'
 
 
-# Lacework
-alias lacework="cd ~/Lacework && ls -al"
-alias lw="lacework"
-alias la="lacework"
-alias s="source "
-alias sl="source ~/config/lwenv "
-alias sl1="source ~/config/lwenv dev1"
-alias sld="source ~/config/lwenv dev2"
-alias sle="source ~/config/lwenv exit"
-alias pf="cd ~/config && portforward.sh query-service 8080"
-alias k8s="cd ~/Lacework/k8s"
-alias k8=k8s
-alias milkyway="cd ~/Lacework/milkyway"
-alias mi="milkyway"
-alias rainbow="cd ~/Lacework/rainbow"
-alias ra="rainbow"
-alias services="cd ~/Lacework/services"
-alias qs="services"
-alias cspi="cd ~/Lacework/csp-integrations"
-alias csp="cspi"
-alias gulp="ra && gulp --gulpfile gulpfile-dev.js"
-
-
 # General
-alias config="cd ~/config"
-alias conf="config" 
-alias scripts="cd ~/scripts"
-alias mail="cd /var/mail && cat andrewwang"
-alias sonar="cd /Users/andrewwang/SonarQube/sonarqube-7.8/bin/macosx-universal-64"
-alias l="ls"
 alias cl="clear"
 alias c="cl"
+alias e="exit"
+
+alias l="ls"
+alias ll="ls -l"
+alias lla="ls -al"
+alias lal="lla"
+
+alias pbcopy='xclip -selection clipboard'
+alias pbpaste='xclip -selection clipboard -o'
+
 alias v="vim"
 alias r="ranger"
-alias e="exit"
 
 
 # Important directories
