@@ -98,6 +98,8 @@ alias cl="clear"
 alias c="cl"
 alias e="exit"
 
+alias i3conf="vim ~/.config/i3/config"
+
 alias l="ls"
 alias ll="ls -l"
 alias lla="ls -al"
@@ -106,8 +108,9 @@ alias lal="lla"
 alias pbcopy='xclip -selection clipboard'
 alias pbpaste='xclip -selection clipboard -o'
 
-alias v="vim"
 alias r="ranger"
+alias todo="vim ~/Documents/TODO"
+alias v="vim"
 
 
 # Important directories
