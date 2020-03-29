@@ -114,10 +114,10 @@ alias v="vim"
 
 
 # Important directories
-alias dow="cd ~/downloads && r"
+alias dow="cd ~/Downloads && r"
 alias down="dow"
 alias downloads="dow"
-alias doc="cd ~/documents && r"
+alias doc="cd ~/Documents && r"
 alias documents="doc"
 
 
