@@ -11,7 +11,7 @@
 set $mod Mod4
 
 # i3-gaps
-for_window [class="^.*"] border pixel 0
+for_window [class="^.*"] border pixel 2
 gaps inner 15
 gaps outer 15
 
@@ -19,10 +19,10 @@ gaps outer 15
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec st
 
 # start a browser session
-bindsym $mod+shift+return exec brave-browser
+bindsym $mod+Shift+Return exec brave-browser
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -141,7 +141,7 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 # Color definitions
-set $bg-color            	#263238
+set $bg-color            	#A549FC
 set $inactive-bg-color   	#2F343F
 set $text-color          	#F3F4F5
 set $inactive-text-color 	#676E7D
@@ -210,7 +210,7 @@ hide_edge_borders both
 bindsym $mod+n   				exec ranger
 
 # Startup
-exec_always feh --bg-scale /home/andrew/Pictures/annapurna.jpg
+exec_always feh --bg-scale /home/andrew/Pictures/background
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec_always compton --config /home/andrew/.config/i3/compton.conf
 exec_always xrandr --output HDMI-2 --off --output HDMI-1 --off --output DP-1 --mode 1920x1080 --pos 2560x1312 --rotate normal --output eDP-1 --primary --mode 2560x1600 --pos 0x1096 --rotate normal --output DP-2 --off
