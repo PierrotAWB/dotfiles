@@ -1,0 +1,6 @@
+[submodule ".fzf"]
+	path = .fzf
+	url = git@github.com:junegunn/fzf.git
+[submodule "st"]
+	path = st
+	url = git@github.com:PierrotAWB/st.git
