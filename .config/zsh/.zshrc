@@ -13,12 +13,13 @@ source $ZSH/oh-my-zsh.sh
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
-alias ranger='ranger --choosedir=$HOME/.rangerdir; LASTDIR=`cat $HOME/.rangerdir`; cd "$LASTDIR"'
 
 
 # General
 alias cl="clear"
 alias c="cl"
+alias config="cd ~/.config"
+alias conf="config"
 alias e="exit"
 
 alias i3conf="vim ~/.config/i3/config"
@@ -31,9 +32,13 @@ alias lal="lla"
 alias pbcopy='xclip -selection clipboard'
 alias pbpaste='xclip -selection clipboard -o'
 
+alias ranger='ranger --choosedir=$HOME/.rangerdir; LASTDIR=`cat $HOME/.rangerdir`; cd "$LASTDIR"'
 alias r="ranger"
+alias ra="r"
+
 alias todo="vim ~/Documents/TODO"
 alias v="vim"
+alias v.="vim .vimrc"
 
 
 # Important directories
@@ -73,8 +78,8 @@ alias gs="gst"
 
 
 # zsh
-alias z="source ~/.config/zsh/.zshrc"
-alias z.="vim ~/.config/zsh/.zshrc"
+alias z="source $XDG_CONFIG_HOME/zsh/.zshrc"
+alias z.="vim $XDG_CONFIG_HOME/zsh/.zshrc"
 
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
