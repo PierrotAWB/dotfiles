@@ -38,13 +38,15 @@ alias ra="r"
 
 alias todo="vim ~/Documents/TODO"
 alias v="vim"
-alias v.="vim .vimrc"
+alias v.="vim $XDG_CONFIG_HOME/vim/.vimrc"
 
+alias xre="vim $XDG_CONFIG_HOME/Xresources"
 
 # Important directories
 alias dow="cd ~/Downloads && r"
 alias down="dow"
 alias downloads="dow"
+alias dl="dow"
 alias doc="cd ~/Documents && r"
 alias documents="doc"
 
@@ -61,10 +63,13 @@ alias gb="git branch"
 alias gcp="git cherry-pick"
 alias gco="git checkout"
 alias gd="git diff"
+alias gdc="git diff --cached"
+
 alias gd1="git diff HEAD^..HEAD"
 alias gd2="git diff HEAD^^..HEAD"
 alias gd3="git diff HEAD^^^..HEAD"
 alias gd4="git diff HEAD^^^^..HEAD"
+
 alias gf="git fetch"
 alias gl="git log"
 alias gm="git merge"

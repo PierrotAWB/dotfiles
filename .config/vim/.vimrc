@@ -7,7 +7,7 @@
 "   \  $/  | $$| $$ | $$ | $$| $$     |  $$$$$$$
 "    \_/   |__/|__/ |__/ |__/|__/      \_______/
 
-execute pathogen#infect()
+source $XDG_CONFIG_HOME/vim/autoload/pathogen.vim
 
 filetype plugin on
 filetype indent on
@@ -17,6 +17,7 @@ syntax on
 "hi! NonText ctermbg=NONE guibg=NONE
 
 set autoindent
+set backspace=indent,eol,start
 set confirm 
 set cmdheight=2
 set incsearch
@@ -24,9 +25,10 @@ set iskeyword+=:
 set laststatus=2
 set nocompatible
 set mouse=a
+set nocp
 set number
 set relativenumber
-set rtp+=/usr/share/powerline/bindings/vim
+set rtp+=/home/andrew/.config/vim/autoload
 set shellslash
 set shiftwidth=4
 set tabstop=4
@@ -122,3 +124,6 @@ nmap <space> za
 
 " Autocommand 
 au BufReadPost,BufNewFile *.md,*.txt,*.tex setlocal nofoldenable
+
+
+execute pathogen#infect()
