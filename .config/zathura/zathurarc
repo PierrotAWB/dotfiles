@@ -1,0 +1,16 @@
+set highlight-color "#FF9D2D"
+set highlight-active-color "#2DE3FF"
+
+set page-padding 1
+
+map i recolor
+
+map + zoom in 
+map _ zoom out
+
+map K zoom in 
+map J zoom out
+
+map <Right> navigate next
+map <Left> navigate previous
+
