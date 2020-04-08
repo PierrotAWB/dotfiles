@@ -11,7 +11,7 @@
 set $mod Mod4
 
 # i3-gaps
-for_window [class="^.*"] border pixel 2
+for_window [class="^.*"] border pixel 0
 gaps inner 15
 gaps outer 15
 
@@ -19,7 +19,7 @@ gaps outer 15
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec st
+bindsym $mod+Return exec xrdb /home/andrew/.config/Xresources && st
 
 # start a browser session
 bindsym $mod+Shift+Return exec brave-browser
@@ -188,7 +188,8 @@ bindsym XF86AudioNext 			exec playerctl next
 bindsym XF86AudioPrev 			exec playerctl previous
 
 # Keybindings
-bindsym $mod+shift+x 			exec i3lock-fancy -g #~/.bin/scripts/lock.sh /home/andrew/Pictures/Icons/lock.png  #"~/.bin/scripts/lock.sh /home/andrew/Pictures/wallpaper.jpg"
+bindsym $mod+control+q 			exec i3lock-fancy -g #~/.bin/scripts/lock.sh /home/andrew/Pictures/background #i3lock-fancy -g #~/.bin/scripts/lock.sh /home/andrew/Pictures/Icons/lock.png  
+
 bindsym $mod+q 					kill
 bindsym $mod+space 					exec rofi -show run -config /home/andrew/.config/rofi
 
@@ -204,7 +205,7 @@ bindsym $mod+shift+o			gaps outer current minus 5
 bindsym $mod+shift+p			exec scrot '%Y-%m-%d-%H:%M.png' -e 'mv $f ~/Pictures/Screenshots/'
 
 # hide edges for next window opening-direction
-hide_edge_borders both
+hide_edge_borders true
 
 # Ranger
 bindsym $mod+n   				exec ranger

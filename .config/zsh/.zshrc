@@ -23,6 +23,7 @@ alias conf="config"
 alias e="exit"
 
 alias i3conf="vim ~/.config/i3/config"
+alias i3.="i3conf"
 
 alias l="ls"
 alias ll="ls -l"
@@ -43,11 +44,11 @@ alias v.="vim $XDG_CONFIG_HOME/vim/.vimrc"
 alias xre="vim $XDG_CONFIG_HOME/Xresources"
 
 # Important directories
-alias dow="cd ~/Downloads && r"
+alias dow="cd ~/Downloads"
 alias down="dow"
 alias downloads="dow"
 alias dl="dow"
-alias doc="cd ~/Documents && r"
+alias doc="cd ~/Documents"
 alias documents="doc"
 
 
@@ -88,3 +89,9 @@ alias z.="vim $XDG_CONFIG_HOME/zsh/.zshrc"
 
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+
+
+
+# temporary aliases
+alias test="cd $HOME/Documents/Lacework\ Testing\ Framework"
