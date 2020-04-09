@@ -11,3 +11,10 @@ map _ zoom out
 map <Right> navigate next
 map <Left> navigate previous
 
+map 1 set "pages-per-row 1"
+map 2 set "pages-per-row 2"
+map 3 set "pages-per-row 3"
+map 4 set "pages-per-row 4"
+
+map <C-h> toggle_statusbar
+map <C-i> toggle_inputbar
