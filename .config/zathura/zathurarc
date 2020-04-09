@@ -6,6 +6,8 @@ set page-padding 1
 map i recolor
 
 map + zoom in 
+map = zoom in
+
 map _ zoom out
 
 map <Right> navigate next
@@ -15,6 +17,12 @@ map 1 set "pages-per-row 1"
 map 2 set "pages-per-row 2"
 map 3 set "pages-per-row 3"
 map 4 set "pages-per-row 4"
+
+map u scroll half-up
+map d scroll half-down
+
+map b scroll full-up
+map f scroll full-down
 
 map <C-h> toggle_statusbar
 map <C-i> toggle_inputbar
