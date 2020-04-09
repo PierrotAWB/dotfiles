@@ -69,7 +69,7 @@ bindsym $mod+f fullscreen toggle
 # change container layout (stacked, tabbed, toggle split)
 bindsym $mod+shift+s layout stacking
 bindsym $mod+shift+w layout tabbed
-bindsym $mod+e layout toggle split
+bindsym $mod+s layout toggle split
 
 # toggle tiling / floating
 bindsym $mod+t floating toggle
@@ -207,13 +207,22 @@ bindsym $mod+shift+p			exec scrot '%Y-%m-%d-%H:%M.png' -e 'mv $f ~/Pictures/Scre
 # hide edges for next window opening-direction
 hide_edge_borders true
 
-# Ranger
-bindsym $mod+n   				exec ranger
+# Terminal program bindings
+
+bindsym $mod+c 					exec st -e calcurse -D ~/.local/share/calcurse -c ~/.config/calcurse/apt ## hardcoded until I figure out how to use env variables in this config
+bindsym $mod+e					exec st -e neomutt 
+bindsym $mod+n   				exec st -e ranger
+
 
 # Startup
 exec_always feh --bg-scale /home/andrew/Pictures/background
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec_always compton --config /home/andrew/.config/i3/compton.conf
 exec_always xrandr --output HDMI-2 --off --output HDMI-1 --off --output DP-1 --mode 1920x1080 --pos 2560x1312 --rotate normal --output eDP-1 --primary --mode 2560x1600 --pos 0x1096 --rotate normal --output DP-2 --off
-exec_always xinput set-prop 12 285 1
-exec_always xinput set-prop 12 297 0.8
+
+## Touchpad configuration sensitivities
+exec_always xinput set-prop 12 285 1 # Tapping button mapping
+exec_always xinput set-prop 12 297 0.8 # Middle Emulation Enabled
+
+## Battery conservation
+exec_always sudo tlp start
