@@ -40,10 +40,10 @@ alias ra="r"
 alias todo="vim ~/Documents/TODO"
 alias v="vim"
 alias v.="vim $XDG_CONFIG_HOME/vim/.vimrc"
-
 alias xre="vim $XDG_CONFIG_HOME/Xresources"
 
-# Important directories
+# Common directories
+alias books="cd ~/Documents/Books"
 alias dow="cd ~/Downloads"
 alias down="dow"
 alias downloads="dow"
@@ -94,4 +94,4 @@ alias z.="vim $XDG_CONFIG_HOME/zsh/.zshrc"
 
 
 # temporary aliases
-alias test="cd $HOME/Documents/Lacework\ Testing\ Framework"
+alias test="cd '$HOME/Documents/Lacework\ Testing\ Framework'"
