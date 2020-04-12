@@ -209,9 +209,9 @@ hide_edge_borders true
 
 # Terminal program bindings
 
-bindsym $mod+c 					exec st -e calcurse -D ~/.local/share/calcurse ## hardcoded until I figure out how to use env variables in this config
-bindsym $mod+e					exec st -e neomutt 
-bindsym $mod+n   				exec st -e ranger
+bindsym $mod+c 					exec xrdb /home/andrew/.config/Xresources && st -e calcurse -D ~/.local/share/calcurse ## hardcoded until I figure out how to use env variables in this config
+bindsym $mod+e					exec xrdb /home/andrew/.config/Xresources && st -e neomutt 
+bindsym $mod+n   				exec xrdb /home/andrew/.config/Xresources && st -e ranger
 
 
 # Startup
