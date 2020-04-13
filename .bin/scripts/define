@@ -1,0 +1,4 @@
+#!/bin/sh
+
+wordToDefine=$1
+dict -d gcide $1
