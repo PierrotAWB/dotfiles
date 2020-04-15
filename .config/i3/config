@@ -10,8 +10,8 @@
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 set $mod Mod4
 
-# i3-gaps
-for_window [class="^.*"] border pixel 0
+# i3-gap
+for_window [class="^.*"] border pixel 5
 gaps inner 15
 gaps outer 15
 
@@ -46,10 +46,10 @@ bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
 # move focused window
-bindsym $mod+Shift+j move left
-bindsym $mod+Shift+k move down
-bindsym $mod+Shift+l move up
-bindsym $mod+Shift+semicolon move right
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+l move right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Shift+Left move left
@@ -58,10 +58,10 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 # split in horizontal orientation
-bindsym $mod+shift+h split h
+bindsym Mod1+h split h
 
 # split in vertical orientation
-bindsym $mod+shift+v split v
+bindsym Mod1++v split v
 
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
@@ -205,7 +205,7 @@ bindsym $mod+shift+o			gaps outer current minus 5
 bindsym $mod+shift+p			exec scrot '%Y-%m-%d-%H:%M.png' -e 'mv $f ~/Pictures/Screenshots/'
 
 # hide edges for next window opening-direction
-hide_edge_borders true
+hide_edge_borders none
 
 # Terminal program bindings
 
