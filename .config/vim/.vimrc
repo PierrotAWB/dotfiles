@@ -7,7 +7,7 @@
 "   \  $/  | $$| $$ | $$ | $$| $$     |  $$$$$$$
 "    \_/   |__/|__/ |__/ |__/|__/      \_______/
 
-source $XDG_CONFIG_HOME/vim/autoload/pathogen.vim
+source $XDG_CONFIG_HOME/vim/autoload/plug.vim
 
 filetype plugin on
 filetype indent on
@@ -44,29 +44,24 @@ let &t_8f="\<Esc>[38;2;%lu;%lu;%lum"
 let &t_8b="\<Esc>[48;2;%lu;%lu;%lum"
 set termguicolors
 
-"python3 from powerline.vim import setup as powerline_setup
-"python3 powerline_setup()
-"python3 del powerline_setup
-
 let g:ale_fix_on_save = 1
 let g:livepreview_engine = 'pdflatex'
-let g:livepreview_previewer = 'open -a Preview'
+let g:livepreview_previewer = 'zathura'
 let g:Powerline_symbols='fancy'
 let g:Tex_DefaultTargetFormat = 'pdf'
 let g:tex_flavor = 'latex'
 let g:Tex_GotoError=0
-"let g:Tex_ViewRule_pdf = 'zathura'
-let g:Tex_ViewRule_pdf = 'open -a /Applications/Preview.app'
+let g:Tex_ViewRule_pdf = 'zathura'
+
 let g:UltiSnipsEditSplit="context"
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 let g:UltiSnipsJumpForwardTrigger="<c-j>"
-let g:UltiSnipsSnippetsDir="~/.vim/UltiSnips"
+let g:UltiSnipsSnippetDirectories=[$XDG_CONFIG_HOME.'/vim/plugged/ultisnips']
 
 let g:UltiSnipsUsePythonVersion = 3
 
 
-inoremap jk <Esc>
 "
 "  _              _     _           _ _                 
 " | |            | |   (_)         | (_)                
@@ -76,10 +71,6 @@ inoremap jk <Esc>
 " |_|\_\___|\__, |_.__/|_|_| |_|\__,_|_|_| |_|\__, |___/
 "           __/ |                             __/ |     
 "           |___/                             |___/     
-
-" Note: mappings are temporarily to control; it seems very difficult to map to
-" command in the terminal. What's more, using control conflicts with XOFF;
-" using it tends to freeze the current terminal window.
 
 " Navigate to front and end of line in normal mode
 nmap <C-a> ^
@@ -122,8 +113,35 @@ nmap <C-l> :LLP
 nmap <space> za
 
 
-" Autocommand 
-au BufReadPost,BufNewFile *.md,*.txt,*.tex setlocal nofoldenable
+"______ _             _           
+"| ___ \ |           (_)          
+"| |_/ / |_   _  __ _ _ _ __  ___ 
+"|  __/| | | | |/ _` | | '_ \/ __|
+"| |   | | |_| | (_| | | | | \__ \
+"\_|   |_|\__,_|\__, |_|_| |_|___/
+"                __/ |            
+"               |___/             
+"
+
+call plug#begin('~/.config/vim/plugged')
+
+Plug 'lervag/vimtex'
+Plug 'SirVer/ultisnips'
+Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
+
+call plug#end()
 
 
-execute pathogen#infect()
+"______ _ _          _____      _   _   _                 
+"|  ___(_) |        /  ___|    | | | | (_)                
+"| |_   _| | ___    \ `--.  ___| |_| |_ _ _ __   __ _ ___ 
+"|  _| | | |/ _ \    `--. \/ _ \ __| __| | '_ \ / _` / __|
+"| |   | | |  __/   /\__/ /  __/ |_| |_| | | | | (_| \__ \
+"\_|   |_|_|\___|   \____/ \___|\__|\__|_|_| |_|\__, |___/
+"                                                __/ |    
+"                                               |___/     
+
+autocmd BufReadPost,BufNewFile *.md,*.txt,*.tex setlocal nofoldenable
+autocmd FileType tex setlocal syntax=off
+
+
