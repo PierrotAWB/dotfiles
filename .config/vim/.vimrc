@@ -44,7 +44,7 @@ let &t_8f="\<Esc>[38;2;%lu;%lu;%lum"
 let &t_8b="\<Esc>[48;2;%lu;%lu;%lum"
 set termguicolors
 
-let g:ale_fix_on_save = 1
+"let g:ale_fix_on_save = 1
 let g:livepreview_engine = 'pdflatex'
 let g:livepreview_previewer = 'zathura'
 let g:Powerline_symbols='fancy'
@@ -121,7 +121,6 @@ nmap <space> za
 "\_|   |_|\__,_|\__, |_|_| |_|___/
 "                __/ |            
 "               |___/             
-"
 
 call plug#begin('~/.config/vim/plugged')
 
@@ -141,7 +140,6 @@ call plug#end()
 "                                                __/ |    
 "                                               |___/     
 
-autocmd BufReadPost,BufNewFile *.md,*.txt,*.tex setlocal nofoldenable
-autocmd FileType tex setlocal syntax=off
-
+au BufReadPost,BufNewFile *.md,*.txt,*.tex setlocal nofoldenable
+au FileType tex setlocal syntax=off
 
