@@ -14,7 +14,6 @@ source $ZSH/oh-my-zsh.sh
 # export ARCHFLAGS="-arch x86_64"
 
 
-
 # General
 alias cl="clear"
 alias c="cl"
@@ -50,7 +49,7 @@ alias downloads="dow"
 alias dl="dow"
 alias doc="cd ~/Documents"
 alias documents="doc"
-
+alias scripts="cd ~/.bin/scripts"
 
 # Kubernetes
 alias kgp="kubectl get pods"
