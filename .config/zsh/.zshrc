@@ -1,4 +1,4 @@
-export ZSH="/home/andrew/.oh-my-zsh"
+export ZSH=$ZDOTDIR/.oh-my-zsh
 export UPDATE_ZSH_DAYS=13
 export EDITOR='vim'
 
@@ -87,10 +87,5 @@ alias z="source $XDG_CONFIG_HOME/zsh/.zshrc"
 alias z.="vim $XDG_CONFIG_HOME/zsh/.zshrc"
 
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+[ -f $XDG_CONFIG_HOME/fzf/.fzf.zsh ] && source $XDG_CONFIG_HOME/fzf/.fzf.zsh
 
-
-
-
-# temporary aliases
-alias test="cd '$HOME/Documents/Lacework\ Testing\ Framework'"

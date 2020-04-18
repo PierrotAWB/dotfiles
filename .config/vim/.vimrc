@@ -44,7 +44,6 @@ let &t_8f="\<Esc>[38;2;%lu;%lu;%lum"
 let &t_8b="\<Esc>[48;2;%lu;%lu;%lum"
 set termguicolors
 
-"let g:ale_fix_on_save = 1
 let g:livepreview_engine = 'pdflatex'
 let g:livepreview_previewer = 'zathura'
 let g:Powerline_symbols='fancy'
@@ -127,6 +126,7 @@ call plug#begin('~/.config/vim/plugged')
 Plug 'lervag/vimtex'
 Plug 'SirVer/ultisnips'
 Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
+Plug 'neomake/neomake'
 
 call plug#end()
 
