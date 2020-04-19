@@ -7,5 +7,6 @@ export XDG_DATA_HOME="$HOME/.local/share"
 # ~/ Clean-up:
 export VIMINIT=":source $XDG_CONFIG_HOME"/vim/.vimrc
 export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
+export HISTFILE="$XDG_DATA_HOME"/zsh/history
 
 source "$ZDOTDIR/.zshrc"
