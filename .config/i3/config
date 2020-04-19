@@ -10,7 +10,7 @@
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 set $mod Mod4
 
-# i3-gap
+# i3-gaps
 for_window [class="^.*"] border pixel 5
 gaps inner 15
 gaps outer 15
@@ -201,23 +201,22 @@ bindsym $mod+shift+i			gaps inner current minus 5
 bindsym $mod+o 					gaps outer current plus 5
 bindsym $mod+shift+o			gaps outer current minus 5
 
-# screenshot (same keybinding as in OS X)
+# screenshot
 bindsym $mod+shift+p			exec scrot '%Y-%m-%d-%H:%M.png' -e 'mv $f ~/Pictures/Screenshots/'
 
 # hide edges for next window opening-direction
 hide_edge_borders none
 
 # Terminal program bindings
-
 bindsym $mod+c 					exec xrdb /home/andrew/.config/Xresources && st -e calcurse -D ~/.local/share/calcurse ## hardcoded until I figure out how to use env variables in this config
 bindsym $mod+e					exec xrdb /home/andrew/.config/Xresources && st -e neomutt 
 bindsym $mod+n   				exec xrdb /home/andrew/.config/Xresources && st -e ranger
 
 
 # Startup
-exec_always feh --bg-scale /home/andrew/Pictures/background
-exec_always --no-startup-id $HOME/.config/polybar/launch.sh
-exec_always compton --config /home/andrew/.config/i3/compton.conf
+exec_always feh --bg-scale $HOME/Pictures/background
+exec_always --no-startup-id $XDG_CONFIG_HOME/polybar/launch.sh
+exec_always compton --config $XDG_CONFIG_HOME/i3/compton.conf
 exec_always xrandr --output HDMI-2 --off --output HDMI-1 --off --output DP-1 --mode 1920x1080 --pos 2560x1312 --rotate normal --output eDP-1 --primary --mode 2560x1600 --pos 0x1096 --rotate normal --output DP-2 --off
 
 ## Touchpad configuration sensitivities
