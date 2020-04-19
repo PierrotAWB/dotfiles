@@ -215,8 +215,8 @@ bindsym $mod+n   				exec xrdb /home/andrew/.config/Xresources && st -e ranger
 
 # Startup
 exec_always feh --bg-scale $HOME/Pictures/background
-exec_always --no-startup-id $XDG_CONFIG_HOME/polybar/launch.sh
-exec_always compton --config $XDG_CONFIG_HOME/i3/compton.conf
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+exec_always compton --config $HOME/.config/i3/compton.conf
 exec_always xrandr --output HDMI-2 --off --output HDMI-1 --off --output DP-1 --mode 1920x1080 --pos 2560x1312 --rotate normal --output eDP-1 --primary --mode 2560x1600 --pos 0x1096 --rotate normal --output DP-2 --off
 
 ## Touchpad configuration sensitivities
