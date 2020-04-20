@@ -191,7 +191,7 @@ bindsym XF86AudioPrev 			exec playerctl previous
 bindsym $mod+control+q 			exec i3lock-fancy -g #~/.bin/scripts/lock.sh /home/andrew/Pictures/background #i3lock-fancy -g #~/.bin/scripts/lock.sh /home/andrew/Pictures/Icons/lock.png  
 
 bindsym $mod+q 					kill
-bindsym $mod+space 					exec rofi -show run -config /home/andrew/.config/rofi
+bindsym $mod+space 					exec rofi -show run -config $HOME/.config/rofi
 
 # /i/nner gaps
 bindsym $mod+i					gaps inner current plus 5
@@ -208,9 +208,9 @@ bindsym $mod+shift+p			exec scrot '%Y-%m-%d-%H:%M.png' -e 'mv $f ~/Pictures/Scre
 hide_edge_borders none
 
 # Terminal program bindings
-bindsym $mod+c 					exec xrdb /home/andrew/.config/Xresources && st -e calcurse -D ~/.local/share/calcurse ## hardcoded until I figure out how to use env variables in this config
-bindsym $mod+e					exec xrdb /home/andrew/.config/Xresources && st -e neomutt 
-bindsym $mod+n   				exec xrdb /home/andrew/.config/Xresources && st -e ranger
+bindsym $mod+c 					exec xrdb $HOME/.config/Xresources && st -e calcurse -D ~/.local/share/calcurse ## hardcoded until I figure out how to use env variables in this config
+bindsym $mod+e					exec xrdb $HOME/.config/Xresources && st -e neomutt 
+bindsym $mod+n   				exec xrdb $HOME/.config/Xresources && st -e ranger
 
 
 # Startup
@@ -220,8 +220,8 @@ exec_always compton --config $HOME/.config/i3/compton.conf
 exec_always xrandr --output HDMI-2 --off --output HDMI-1 --off --output DP-1 --mode 1920x1080 --pos 2560x1312 --rotate normal --output eDP-1 --primary --mode 2560x1600 --pos 0x1096 --rotate normal --output DP-2 --off
 
 ## Touchpad configuration sensitivities
-exec_always xinput set-prop 12 285 1 # Tapping button mapping
-exec_always xinput set-prop 12 297 0.8 # Middle Emulation Enabled
+exec_always xinput set-prop 12 310 1 # Tapping button mapping
+exec_always xinput set-prop 12 322 0.8 # Middle Emulation Enabled
 
 ## Battery conservation
-exec_always sudo tlp start
+exec_always tlp start # Requires 'sudo visudo' to run without sudo
