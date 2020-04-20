@@ -89,5 +89,9 @@ alias z="source $XDG_CONFIG_HOME/zsh/.zshrc"
 alias z.="vim $XDG_CONFIG_HOME/zsh/.zshrc"
 
 
-[ -f $XDG_CONFIG_HOME/fzf/.fzf.zsh ] && source $XDG_CONFIG_HOME/fzf/.fzf.zsh
+# misc
+alias mimetype="xdg-mime query filetype"
+alias mime=mimetype
 
+
+[ -f $XDG_CONFIG_HOME/fzf/.fzf.zsh ] && source $XDG_CONFIG_HOME/fzf/.fzf.zsh
