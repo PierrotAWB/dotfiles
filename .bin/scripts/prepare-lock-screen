@@ -1,0 +1,11 @@
+#!/bin/sh
+
+BACKGROUND=~/Pictures/background
+TEMP=/tmp/lock-screen.png
+
+scrot $TEMP
+
+convert $TEMP -scale 10% -scale 1000% $TEMP
+convert $TEMP -filter Gaussian -blur 0x4 $TEMP
+
+cp $TEMP ~/Pictures/lock-screen
