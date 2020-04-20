@@ -35,7 +35,8 @@ set tabstop=4
 set termguicolors
 set t_Co=256
 set updatetime=500
-"set visualbell
+"#set visualbell
+set viminfo+='1000,n$XDG_DATA_HOME/vim/viminfo
 
 set timeoutlen=1000
 set ttimeoutlen=0
