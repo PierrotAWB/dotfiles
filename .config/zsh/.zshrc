@@ -29,6 +29,8 @@ alias ll="ls -l"
 alias lla="ls -al"
 alias lal="lla"
 
+alias mbsync="mbsync -c "$XDG_CONFIG_HOME"/mbsync/mbsyncrc
+
 alias pbcopy='xclip -selection clipboard'
 alias pbpaste='xclip -selection clipboard -o'
 
