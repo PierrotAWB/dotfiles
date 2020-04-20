@@ -2,10 +2,10 @@
 type = internal/date
 interval = 1
 
-date =
+date = "%m-%d"
 date-alt = "%Y-%m-%d "
 
 time = %I:%M
 time-alt = %I:%M:%S
 
-label = %date%%time%
+label = %date% %time%
