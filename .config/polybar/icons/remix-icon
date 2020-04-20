@@ -1,0 +1,58 @@
+[module/battery]
+
+[module/cpu]
+format-prefix = " "
+
+[module/dots-updates]
+format-prefix = " "
+
+[module/eth]
+ramp-signal-0 = 
+
+[module/memory]
+format-prefix = " "
+
+[module/mpd]
+icon-prev = 
+icon-stop = 
+icon-play = 
+icon-pause = 
+icon-next = 
+label-song =  %title%
+label-offline =  mpd is offline
+
+
+[module/powermenu-old]
+label-open = 
+label-close = 
+menu-0-0 = 
+menu-0-1 = 
+
+[module/powermenu]
+content = 
+
+[module/filesystem]
+usb-icon = 
+
+[module/temperature]
+ramp-0 = 
+ramp-1 = 
+
+[module/updates-arch-combined]
+format-prefix = " "
+
+[module/volume-commons]
+;format-volume-prefix = " "
+format-muted-prefix = " "
+
+ramp-volume-0 = 
+ramp-volume-1 = 
+
+[module/wlan]
+ramp-signal-0 = 
+
+[module/xbacklight]
+format-prefix = " "
+
+[module/xkeyboard]
+format-prefix = " "

@@ -1,0 +1,21 @@
+[module/powermenu-old]
+type = custom/menu
+
+expand-right = true
+
+format-spacing = 0
+
+label-open-foreground = ${colors.secondary}
+label-close-foreground = ${colors.foreground-alt}
+label-separator = "  "
+label-separator-foreground = ${colors.foreground-alt}
+
+menu-0-0-exec = reboot
+menu-0-1-exec = systemctl poweroff
+
+[module/powermenu]
+type = custom/text
+
+content-foreground = ${colors.primary}
+
+click-left = $XDG_CONFIG_HOME/rofi/powermenu.sh

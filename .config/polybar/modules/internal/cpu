@@ -1,0 +1,5 @@
+[module/cpu]
+type = internal/cpu
+interval = 2
+format-prefix-foreground = ${colors.foreground-alt}
+label = %percentage%
