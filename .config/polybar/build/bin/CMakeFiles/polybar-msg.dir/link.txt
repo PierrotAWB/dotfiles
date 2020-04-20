@@ -1,1 +1,0 @@
-/usr/bin/c++   -Wall -Wextra -Werror -Wno-noexcept-type -O2 -pedantic -pedantic-errors -O2 -g -DNDEBUG  -rdynamic CMakeFiles/polybar-msg.dir/ipc.cpp.o CMakeFiles/polybar-msg.dir/utils/env.cpp.o CMakeFiles/polybar-msg.dir/utils/file.cpp.o CMakeFiles/polybar-msg.dir/utils/string.cpp.o  -o polybar-msg 

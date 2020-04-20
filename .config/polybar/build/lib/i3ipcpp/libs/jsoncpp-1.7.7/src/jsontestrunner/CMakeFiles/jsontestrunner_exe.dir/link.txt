@@ -1,1 +1,0 @@
-/usr/bin/c++   -Wall -Wextra -Werror -Wno-noexcept-type -O2 -pedantic -pedantic-errors -std=c++11 -Wall -Wconversion -Wshadow -Wextra -Werror=conversion -pedantic -O2 -g -DNDEBUG  -rdynamic CMakeFiles/jsontestrunner_exe.dir/main.cpp.o  -o jsontestrunner_exe ../lib_json/libjsoncpp.a 

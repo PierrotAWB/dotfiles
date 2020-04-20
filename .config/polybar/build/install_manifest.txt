@@ -1,7 +1,0 @@
-/usr/local/share/doc/polybar/config
-/usr/local/share/bash-completion/completions/polybar
-/usr/local/share/zsh/site-functions/_polybar
-/usr/local/share/zsh/site-functions/_polybar_msg
-/usr/local/share/man/man1/polybar.1
-/usr/local/bin/polybar
-/usr/local/bin/polybar-msg

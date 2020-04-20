@@ -1,7 +1,0 @@
-build
-.clang_complete
-*.o
-*.swp
-*.gch
-*.d
-*.pyc
