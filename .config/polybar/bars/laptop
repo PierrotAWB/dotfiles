@@ -1,4 +1,5 @@
 [bar/bar-laptop]
 inherit = bar/default
 
-modules-right = arrow<- space dots-updates updates-arch-combined battery alsa wlan date powermenu space
+modules-right = arrow<- space battery wlan date space
+; alsa powermenu 

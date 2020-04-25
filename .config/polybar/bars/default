@@ -1,5 +1,5 @@
 [bar/default]
-monitor = ${env:MONITOR:HDMI-0}
+monitor = ${env:MONITOR:eDP-1}
 width = 100%
 height = 28
 ;offset-x = 1%
@@ -32,8 +32,9 @@ font-4 = Font Awesome 5 Free:style=Solid:size=11;2
 font-5 = FuraCode Nerd Font:style=Regular:size=18;4
 font-6 = mplus Nerd Font Mono;2
 
-modules-left = i3 space arrow->
-modules-right = arrow<- space pulseaudio wlan battery date space
+modules-left = space i3 arrow->
+;i3
+modules-right = arrow<- space wlan pulseaudio battery date space
 ;space pulseaudio eth date powermenu space
 
 tray-position = right

@@ -12,7 +12,7 @@ format-discharging-underline = ${colors.secondary}
 
 label-charging = BAT: %percentage%% (%time%)
 label-discharging = BAT: %percentage%% (%time%)
-label-full = Fully Charged — 100%
+label-full = 100%
 
 format-full-prefix = " "
 format-full-prefix-foreground = ${colors.foreground-alt}

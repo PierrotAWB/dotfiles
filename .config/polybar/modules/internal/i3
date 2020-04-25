@@ -2,7 +2,7 @@
 type = internal/i3
 
 label-focused = %name%
-label-focused-underline= ${colors.primary}
+label-focused-underline= ${colors.tertiary}
 label-focused-padding = 1
 
 label-occupied = %name%
@@ -22,3 +22,4 @@ label-separator = " "
 pin-workspaces = true
 index-sort = true
 enable-click = true
+
