@@ -1,7 +1,7 @@
 [bar/bar-secondary]
 inherit = bar/default
 
-modules-right = arrow<- space pulseaudio date 
+modules-right = arrow<- space battery date 
 ;powermenu space
 
 tray-position = none

@@ -92,6 +92,7 @@ alias z.="vim $XDG_CONFIG_HOME/zsh/.zshrc"
 # misc
 alias mimetype="xdg-mime query filetype"
 alias mime=mimetype
+alias mp="mbsync personal"
 
 
 [ -f $XDG_CONFIG_HOME/fzf/.fzf.zsh ] && source $XDG_CONFIG_HOME/fzf/.fzf.zsh
