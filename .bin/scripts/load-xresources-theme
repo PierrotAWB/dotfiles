@@ -1,0 +1,17 @@
+#!/bin/sh
+
+OUTPUT_FILE=$XDG_CONFIG_HOME/Xresources
+
+# Sanitize inputs
+if [ "$#" -ne 2 ]; then
+	echo "Usage: $0 <default config> <xresources-theme>" >&2
+	exit 1
+elif ! [ -f "$1" ]; then
+	echo "Could not open \"$1\" for reading." >&2
+	exit 1
+elif ! [ -f "$2" ]; then
+	echo "Could not open \"$2\" for reading." >&2
+	exit 1
+fi
+
+cat $1 $2 > $OUTPUT_FILE
