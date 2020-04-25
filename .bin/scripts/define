@@ -2,7 +2,7 @@
 
 main() {
 	wordToDefine=$1
-	$(which dict) || install 
+	which dict > /dev/null || install 
 	
 	dict -d gcide $1
 }
