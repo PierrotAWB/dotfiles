@@ -15,3 +15,5 @@ elif ! [ -f "$2" ]; then
 fi
 
 cat $1 $2 > $OUTPUT_FILE
+
+i3 restart
