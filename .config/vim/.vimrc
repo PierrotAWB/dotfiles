@@ -16,6 +16,7 @@ syntax on
 "hi! Normal ctermbg=NONE guibg=NONE
 "hi! NonText ctermbg=NONE guibg=NONE
 
+" Vim behaviour and appearance
 set autoindent
 set backspace=indent,eol,start
 set confirm 
@@ -45,6 +46,9 @@ let &t_8f="\<Esc>[38;2;%lu;%lu;%lum"
 let &t_8b="\<Esc>[48;2;%lu;%lu;%lum"
 set termguicolors
 
+highlight LineNr ctermfg=red
+
+" Plugin Settings
 let g:livepreview_engine = 'pdflatex'
 let g:livepreview_previewer = 'zathura'
 let g:Powerline_symbols='fancy'
