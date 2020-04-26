@@ -90,6 +90,7 @@ alias z.="vim $XDG_CONFIG_HOME/zsh/.zshrc"
 
 
 # misc
+alias dfh="df -h | egrep 'Filesystem|/dev/nvme0n1p5'"
 alias mimetype="xdg-mime query filetype"
 alias mime=mimetype
 alias mp="mbsync personal"
