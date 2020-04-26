@@ -18,6 +18,9 @@ gaps outer 15
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
+# Use auto_back_and_forth
+workspace_auto_back_and_forth yes
+
 # start a terminal
 bindsym $mod+Return exec xrdb $HOME/.config/Xresources && st
 
@@ -141,18 +144,18 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 # Color definitions
-set $bg-color            	#A549FC
+set $bg-color            	#FFA807
 set $inactive-bg-color   	#2F343F
 set $text-color          	#F3F4F5
 set $inactive-text-color 	#676E7D
 set $urgent-bg-color     	#E53935
 
 # window colors 
-#                       border                  background              text                    indicator
-client.focused          $bg-color               $bg-color               $text-color             #00ff00
-client.unfocused        $inactive-bg-color      $inactive-bg-color      $inactive-text-color    #00ff00
-client.focused_inactive $inactive-bg-color      $inactive-bg-color      $inactive-text-color    #00ff00
-client.urgent           $urgent-bg-color        $urgent-bg-color        $inactive-text-color    #00ff00
+#                       border                  background              text                    indicator	child_border
+client.focused          $bg-color           	$bg-color               $text-color             $bg-color
+client.unfocused        $inactive-bg-color      $inactive-bg-color      $inactive-text-color    $inactive-bg-color
+client.focused_inactive $inactive-bg-color      $inactive-bg-color      $inactive-text-color    $inactive-bg-color
+client.urgent           $urgent-bg-color        $urgent-bg-color        $inactive-text-color    $urgent-bg-color
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
