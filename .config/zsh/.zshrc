@@ -2,7 +2,7 @@ export ZSH=$ZDOTDIR/.oh-my-zsh
 export UPDATE_ZSH_DAYS=13
 export EDITOR='vim'
 
-ZSH_CUSTOM=$ZDOTDIR/customizations
+ZSH_CUSTOM=$ZDOTDIR/custom
 ZSH_THEME="agnoster"
 HIST_STAMPS="yyyy-mm-dd"
 

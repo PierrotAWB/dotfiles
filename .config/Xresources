@@ -2,7 +2,8 @@
 *.alpha: 0.9
 
 !! Set a default font and font size as below: 
-*.font: Liberation Mono:pixelsize=22:antialias=true:autohint=true;
+*.font: Liberation Mono for Powerline:pixelsize=22:antialias=true:autohint=true;
+
 ! Base16 Eighties
 ! Scheme: Chris Kempson (http://chriskempson.com)
 
