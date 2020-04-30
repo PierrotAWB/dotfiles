@@ -38,6 +38,8 @@ alias ranger='ranger --choosedir=$XDG_DATA_HOME/ranger/.rangerdir; LASTDIR=`cat 
 alias r="ranger"
 alias ra="r"
 
+alias sp='spotifyd -u andrewwang298 -p $(pass spotify) && spt'
+
 alias todo="vim ~/Documents/TODO"
 alias v="vim"
 alias v.="vim $XDG_CONFIG_HOME/vim/.vimrc"
