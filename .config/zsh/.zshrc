@@ -13,6 +13,8 @@ source $ZSH/oh-my-zsh.sh
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
+# Disable `XOFF`, so <C-s> works in Vim
+stty -ixon
 
 # General
 alias cl="clear"
