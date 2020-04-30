@@ -92,17 +92,17 @@ imap <C-k> <Esc>2ld$a
 nmap <C-u> d^x
 imap <C-u> <Esc>d^xi
 
-" To undo, option-z
+" To save, control-s
+nnoremap <C-s> :w<CR>
+inoremap <C-s> <Esc>:w<CR>
+
+" To undo, control-z
 nnoremap <C-z> :undo<CR>
 inoremap <C-z> <Esc>:undo<CR>
 
-" To redo, option-y
+" To redo, control-y
 nnoremap <C-y> :redo<CR>
 inoremap <C-y> <Esc>:redo<CR>
-
-" To write-quit, option-w
-nnoremap <C-w> :wq<CR>
-inoremap <C-w> <Esc>:wq<Cr>
 
 " Strictly map escape key
 inoremap jk <Esc>
