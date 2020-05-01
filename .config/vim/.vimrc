@@ -52,10 +52,15 @@ highlight LineNr ctermfg=red
 let g:livepreview_engine = 'pdflatex'
 let g:livepreview_previewer = 'zathura'
 let g:Powerline_symbols='fancy'
+let g:Tex_CompileRule_pdf = 'latexmk -pdf -f $*'
 let g:Tex_DefaultTargetFormat = 'pdf'
 let g:tex_flavor = 'latex'
 let g:Tex_GotoError=0
 let g:Tex_ViewRule_pdf = 'zathura'
+let g:vimtex_view_method='zathura'
+let g:vimtex_quickfix_mode=0
+let g:conceallevel=1
+let g:tex_conceal='abdmg'
 
 let g:UltiSnipsEditSplit="context"
 let g:UltiSnipsExpandTrigger="<tab>"
