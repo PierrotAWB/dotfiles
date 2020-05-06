@@ -3,26 +3,25 @@
 
 !! Set a default font and font size as below: 
 *.font: Liberation Mono for Powerline:pixelsize=22:antialias=true:autohint=true;
+! Base16 OceanicNext
+! Scheme: https://github.com/voronianski/oceanic-next-color-scheme
 
-! Base16 Eighties
-! Scheme: Chris Kempson (http://chriskempson.com)
-
-#define base00 #2d2d2d
-#define base01 #393939
-#define base02 #515151
-#define base03 #747369
-#define base04 #a09f93
-#define base05 #d3d0c8
-#define base06 #e8e6df
-#define base07 #f2f0ec
-#define base08 #f2777a
-#define base09 #f99157
-#define base0A #ffcc66
-#define base0B #99cc99
-#define base0C #66cccc
-#define base0D #6699cc
-#define base0E #cc99cc
-#define base0F #d27b53
+#define base00 #1B2B34
+#define base01 #343D46
+#define base02 #4F5B66
+#define base03 #65737E
+#define base04 #A7ADBA
+#define base05 #C0C5CE
+#define base06 #CDD3DE
+#define base07 #D8DEE9
+#define base08 #EC5f67
+#define base09 #F99157
+#define base0A #FAC863
+#define base0B #99C794
+#define base0C #5FB3B3
+#define base0D #6699CC
+#define base0E #C594C5
+#define base0F #AB7967
 
 *.foreground:   base05
 #ifdef background_opacity
