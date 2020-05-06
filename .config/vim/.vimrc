@@ -28,8 +28,9 @@ set nocompatible
 set mouse=a
 set nocp
 set number
+set path+=**
 set relativenumber
-set rtp+=/home/andrew/.config/vim/autoload
+set rtp+=$XDG_CONFIG_HOME/vim/autoload
 set shellslash
 set shiftwidth=4
 set tabstop=4
@@ -57,6 +58,10 @@ let g:Tex_DefaultTargetFormat = 'pdf'
 let g:tex_flavor = 'latex'
 let g:Tex_GotoError=0
 let g:Tex_ViewRule_pdf = 'zathura'
+
+let g:netrw_banner=0
+let g:netrw_dirhistmax=0
+
 let g:vimtex_view_method='zathura'
 let g:vimtex_quickfix_mode=0
 let g:conceallevel=1
