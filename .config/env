@@ -9,14 +9,17 @@ export XDG_DATA_HOME="$HOME/.local/share"
 
 # ~/ Clean-up:
 
-# Less
+# less
 export LESSKEY="$XDG_CACHE_HOME/less/lesskey"
 export LESSHISTFILE="$XDG_CACHE_HOME/less/history"
-# Tex
+# notmuch
+export NOTMUCH_CONFIG="$XDG_CONFIG_HOME/notmuch/notmuchrc"
+# TeX
 export TEXMFHOME="$XDG_DATA_HOME/texmf"
 # Vim
+export VIM="$XDG_CONFIG_HOME/vim"
 export VIMINIT=":source $XDG_CONFIG_HOME/vim/.vimrc"
-# Zsh
+# zsh
 export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
 export HISTFILE="$XDG_DATA_HOME/zsh/history"
 
