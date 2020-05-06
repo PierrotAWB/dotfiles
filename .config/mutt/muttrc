@@ -8,3 +8,5 @@ macro index,pager i1 '<sync-mailbox><enter-command>source /home/andrew/.config/m
 
 bind index p noop
 bind index pd delete-pattern
+
+bind index ] next-unread
