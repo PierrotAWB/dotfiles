@@ -218,7 +218,7 @@ bindsym $mod+n   				exec xrdb $HOME/.config/Xresources && st -e ranger
 
 # Startup
 exec_always $HOME/.bin/scripts/default-layout
-exec_always feh --bg-scale $HOME/Pictures/background
+exec_always feh --no-fehbg --bg-scale $HOME/Pictures/background 
 exec_always prepare-lock-screen # Prepare for locking
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec_always compton --config $HOME/.config/i3/compton.conf
