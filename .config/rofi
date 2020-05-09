@@ -1,7 +1,7 @@
 rofi.lines: 3
 rofi.eh: 2
 rofi.bw: 0
-rofi.padding: 1100
+rofi.padding: 680
 rofi.separator-style: none
 rofi.hide-scrollbar: true
 rofi.width: 100
