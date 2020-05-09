@@ -64,7 +64,7 @@ bindsym $mod+Shift+Right move right
 bindsym Mod1+h split h
 
 # split in vertical orientation
-bindsym Mod1++v split v
+bindsym Mod1+v split v
 
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
@@ -211,10 +211,9 @@ bindsym $mod+shift+p			exec scrot '%Y-%m-%d-%H:%M.png' -e 'mv $f ~/Pictures/Scre
 hide_edge_borders both
 
 # Terminal program bindings
-bindsym $mod+c 					exec xrdb $HOME/.config/Xresources && st -e calcurse -D ~/.local/share/calcurse 
+bindsym $mod+c 					exec xrdb $HOME/.config/Xresources && st -e calcurse -D ~/.local/share/calcurse
 bindsym $mod+e					exec xrdb $HOME/.config/Xresources && st -e neomutt 
 bindsym $mod+n   				exec xrdb $HOME/.config/Xresources && st -e ranger
-
 
 # Startup
 exec_always $HOME/.bin/scripts/default-layout
