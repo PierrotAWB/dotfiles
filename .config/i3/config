@@ -213,7 +213,7 @@ hide_edge_borders both
 # Terminal program bindings
 bindsym $mod+c 					exec xrdb $HOME/.config/Xresources && st -e calcurse -D ~/.local/share/calcurse
 bindsym $mod+e					exec xrdb $HOME/.config/Xresources && st -e neomutt 
-bindsym $mod+n   				exec xrdb $HOME/.config/Xresources && st -e ranger
+bindsym $mod+n   				exec xrdb $HOME/.config/Xresources && st -e newsboat
 
 # Startup
 exec_always $HOME/.bin/scripts/default-layout
