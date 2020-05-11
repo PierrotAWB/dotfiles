@@ -1,0 +1,4 @@
+.include /etc/pulse/default.pa
+
+load-module module-alsa-sink device=hw:0,7
+set-default-sink 1
