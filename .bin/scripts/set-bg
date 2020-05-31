@@ -1,5 +1,3 @@
 #!/bin/sh
-
-echo $1
-cp -T $1 ~/Pictures/background
+cp -T "$1" ~/Pictures/background
 i3 restart
