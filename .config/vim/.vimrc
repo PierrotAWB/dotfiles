@@ -69,8 +69,8 @@ let g:tex_conceal='abdmg'
 
 let g:UltiSnipsEditSplit="context"
 let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpBackwardTrigger="<c-k>"
-let g:UltiSnipsJumpForwardTrigger="<c-j>"
+let g:UltiSnipsJumpBackwardTrigger="<C-k>"
+let g:UltiSnipsJumpForwardTrigger="<C-j>"
 let g:UltiSnipsSnippetDirectories=[$XDG_CONFIG_HOME.'/vim/plugged/ultisnips']
 
 let g:UltiSnipsUsePythonVersion = 3

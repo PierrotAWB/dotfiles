@@ -28,7 +28,8 @@ alias l="ls"
 alias ll="ls -l"
 alias lla="ls -al"
 alias lal="lla"
-alias mbsync="mbsync -c "$XDG_CONFIG_HOME"/mbsync/.mbsyncrc"
+alias linux="ssh -Y a99wang@linux.student.cs.uwaterloo.ca"
+mbsync="mbsync -c "$XDG_CONFIG_HOME"/mbsync/.mbsyncrc"
 alias newsboat="newsboat -C $XDG_CONFIG_HOME/newsboat/config"
 alias pbcopy='xclip -selection clipboard'
 alias pbpaste='xclip -selection clipboard -o'
@@ -51,9 +52,14 @@ alias doc="cd ~/Documents"
 alias documents="doc"
 alias scripts="cd ~/.bin/scripts"
 
+
 # Kubernetes
 alias kgp="kubectl get pods"
 alias kt="kubetail"
+
+
+# R bindings
+alias RR="R --no-save < "
 
 
 # Git
@@ -88,10 +94,12 @@ alias z.="vim $XDG_CONFIG_HOME/zsh/.zshrc"
 
 
 # misc
+alias aud="pactl set-card-profile 0 output:hdmi-stereo"
 alias dfh="df -h | egrep 'Filesystem|/dev/nvme0n1p5'"
+alias fan="sensors | egrep 'Left|Right'"
+alias fans="fan"
 alias mimetype="xdg-mime query filetype"
 alias mime=mimetype
 alias mp="mbsync personal"
-
 
 [ -f $XDG_CONFIG_HOME/fzf/.fzf.zsh ] && source $XDG_CONFIG_HOME/fzf/.fzf.zsh

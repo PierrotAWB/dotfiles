@@ -225,6 +225,7 @@ exec_always compton --config $HOME/.config/i3/compton.conf
 ## Touchpad configuration sensitivities
 exec_always xinput set-prop 12 310 1 # Tapping button mapping
 exec_always xinput set-prop 12 322 0.8 # Middle Emulation Enabled
+exec_always xinput set-prop 13 325 1 # Touchpad Acceleration
 
 ## Battery conservation
 exec_always tlp start # Requires 'sudo visudo' to run without sudo
