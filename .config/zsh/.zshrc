@@ -101,5 +101,7 @@ alias fans="fan"
 alias mimetype="xdg-mime query filetype"
 alias mime=mimetype
 alias mp="mbsync personal"
+alias sinks="pactl list short sinks"
+alias sink="sinks"
 
 [ -f $XDG_CONFIG_HOME/fzf/.fzf.zsh ] && source $XDG_CONFIG_HOME/fzf/.fzf.zsh

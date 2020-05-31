@@ -1,4 +1,6 @@
 .include /etc/pulse/default.pa
 
 load-module module-alsa-sink device=hw:0,7
-set-default-sink alsa_output.hw_0_7
+set-default-sink 1
+set-card-profile alsa_card.pci-0000_00_1f.3 off
+
