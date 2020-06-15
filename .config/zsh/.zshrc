@@ -94,7 +94,6 @@ alias z.="vim $XDG_CONFIG_HOME/zsh/.zshrc"
 
 
 # misc
-alias aud="pactl set-card-profile 0 output:hdmi-stereo"
 alias dfh="df -h | egrep 'Filesystem|/dev/nvme0n1p5'"
 alias fan="sensors | egrep 'Left|Right'"
 alias fans="fan"
@@ -103,5 +102,10 @@ alias mime=mimetype
 alias mp="mbsync personal"
 alias sinks="pactl list short sinks"
 alias sink="sinks"
+alias temp="sudo tlp stat -t"
 
 [ -f $XDG_CONFIG_HOME/fzf/.fzf.zsh ] && source $XDG_CONFIG_HOME/fzf/.fzf.zsh
+
+
+
+

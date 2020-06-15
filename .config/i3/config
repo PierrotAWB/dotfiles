@@ -214,6 +214,10 @@ hide_edge_borders both
 bindsym $mod+c 					exec xrdb $HOME/.config/Xresources && st -e calcurse -D ~/.local/share/calcurse
 bindsym $mod+e					exec xrdb $HOME/.config/Xresources && st -e neomutt 
 bindsym $mod+n   				exec xrdb $HOME/.config/Xresources && st -e newsboat
+bindsym $mod+shift+f			exec xrdb $HOME/.config/Xresources && st -e rangert
+
+# Bluetooth
+bindsym $mod+b					exec btConnect
 
 # Startup
 exec_always $HOME/.bin/scripts/default-layout
