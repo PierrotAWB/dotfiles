@@ -1,0 +1,5 @@
+#!/bin/bash
+
+MAC_ADDRESS='DC:2C:26:DA:84:57'
+echo "connect $MAC_ADDRESS" | bluetoothctl 
+
