@@ -21,6 +21,7 @@ alias cl="clear"
 alias c="cl"
 alias config="cd ~/.config"
 alias conf="config"
+alias clion="$XDG_CONFIG_HOME/JetBrains/CLion2020.1/bin/clion.sh"
 alias e="exit"
 alias i3conf="vim ~/.config/i3/config"
 alias i3.="i3conf"
@@ -31,6 +32,7 @@ alias lal="lla"
 alias linux="ssh -Y a99wang@linux.student.cs.uwaterloo.ca"
 mbsync="mbsync -c "$XDG_CONFIG_HOME"/mbsync/.mbsyncrc"
 alias newsboat="newsboat -C $XDG_CONFIG_HOME/newsboat/config"
+alias note="vim ~/Documents/NOTE"
 alias pbcopy='xclip -selection clipboard'
 alias pbpaste='xclip -selection clipboard -o'
 alias ranger='ranger --choosedir=$XDG_DATA_HOME/ranger/.rangerdir; LASTDIR=`cat $XDG_DATA_HOME/ranger/.rangerdir`; cd "$LASTDIR"'

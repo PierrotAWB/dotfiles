@@ -222,9 +222,9 @@ bindsym $mod+b					exec btConnect
 # Startup
 exec_always $HOME/.bin/scripts/default-layout
 exec_always feh --no-fehbg --bg-scale $HOME/Pictures/background 
-exec_always prepare-lock-screen # Prepare for locking
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec_always compton --config $HOME/.config/i3/compton.conf
+exec_always $HOME/.bin/scripts/prepare-lock-screen
 
 ## Touchpad configuration sensitivities
 exec_always xinput set-prop 12 310 1 # Tapping button mapping
