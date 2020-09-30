@@ -1,4 +1,4 @@
-http://lukesmith.xyz/rss.xml
+https://lukesmith.xyz/rss.xml
 https://notrelated.libsyn.com/rss
 https://www.youtube.com/feeds/videos.xml?channel_id=UC2eYFnH61tmytImy1mTYvhA "~Luke Smith (YouTube)"
 
@@ -13,3 +13,5 @@ https://reddit.com/r/worldnews/.rss "~r/worldnews"
 http://feeds.bbci.co.uk/news/world/rss.xml
 https://www.nytimes.com/svc/collections/v1/publish/https://www.nytimes.com/section/world/rss.xml "World News - New York Times"
 
+file:///home/andrew/.bin/scripts/python/rss/data/peterson.xml
+file:///home/andrew/.bin/scripts/scrape/UR.xml

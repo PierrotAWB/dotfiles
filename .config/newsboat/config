@@ -1,5 +1,6 @@
 #show-read-feeds no
 auto-reload yes
+goto-next-feed no
 
 external-url-viewer "urlscan -dc -r 'linkhandler {}'"
 
@@ -29,10 +30,10 @@ color listfocus_unread yellow default bold
 color info red black bold
 color article white default bold
 
-browser linkhandler
+browser brave-browser
 macro , open-in-browser
 macro t set browser "qndl"; open-in-browser ; set browser linkhandler
-macro a set browser "tsp youtube-dl --add-metadata -xic -f bestaudio/best"; open-in-browser ; set browser linkhandler
+macro a set browser "tsp youtube-dl" ; open-in-browser ; set browser linkhandler
 macro v set browser "setsid nohup mpv"; open-in-browser ; set browser linkhandler
 macro w set browser "lynx"; open-in-browser ; set browser linkhandler
 macro p set browser "dmenuhandler"; open-in-browser ; set browser linkhandler

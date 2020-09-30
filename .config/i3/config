@@ -141,7 +141,7 @@ mode "resize" {
         bindsym Escape mode "default"
 }
 
-bindsym $mod+r mode "resize"
+bindsym $mod+m mode "resize"
 
 # Color definitions
 set $bg-color            	#FFA807
@@ -214,10 +214,10 @@ hide_edge_borders both
 bindsym $mod+c 					exec xrdb $HOME/.config/Xresources && st -e calcurse -D ~/.local/share/calcurse
 bindsym $mod+e					exec xrdb $HOME/.config/Xresources && st -e neomutt 
 bindsym $mod+n   				exec xrdb $HOME/.config/Xresources && st -e newsboat
+bindsym $mod+r					exec xrdb $HOME/.config/Xresources && st -e ranger
+bindsym $mod+p					exec xrdb $HOME/.config/Xresources && st -e python
 bindsym $mod+shift+f			exec xrdb $HOME/.config/Xresources && st -e rangert
-
-# Bluetooth
-bindsym $mod+b					exec btConnect
+bindsym $mod+b					exec xrdb $HOME/.config/Xresources && st -e rangerBooks;
 
 # Startup
 exec_always $HOME/.bin/scripts/default-layout
@@ -229,4 +229,4 @@ exec_always $HOME/.bin/scripts/prepare-lock-screen
 ## Touchpad configuration sensitivities
 exec_always xinput set-prop 12 310 1 # Tapping button mapping
 exec_always xinput set-prop 12 322 0.8 # Middle Emulation Enabled
-exec_always xinput set-prop 13 325 1 # Touchpad Acceleration
+exec_alwats xset mouse 3 0
