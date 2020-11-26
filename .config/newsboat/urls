@@ -1,6 +1,11 @@
 https://lukesmith.xyz/rss.xml
 https://notrelated.libsyn.com/rss
 https://www.youtube.com/feeds/videos.xml?channel_id=UC2eYFnH61tmytImy1mTYvhA "~Luke Smith (YouTube)"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCYO_jab_esuFRV4b17AJtAw "~3Blue1Brown (YouTube)"
+
+https://www.youtube.com/feeds/videos.xml?channel_id=UCoxcjq-8xIDTYp3uz647V5A "~Numberphile (YouTube)"
+
+https://www.youtube.com/feeds/videos.xml?channel_id=UCBa659QWEk1AI4Tg--mrJ2A "~Tom Scott (YouTube)"
 
 https://terrytao.wordpress.com/feed/ "~Terrence Tao's Blog"
 https://usamo.wordpress.com/feed/ "~Evan Chen's Blog"
@@ -9,9 +14,6 @@ https://georgerrmartin.com/notablog/feed/ "~George R. R. Martin's Blog"
 
 https://balkin.blogspot.com/feeds/posts/default
 
-https://reddit.com/r/worldnews/.rss "~r/worldnews"
-http://feeds.bbci.co.uk/news/world/rss.xml
-https://www.nytimes.com/svc/collections/v1/publish/https://www.nytimes.com/section/world/rss.xml "World News - New York Times"
 
 file:///home/andrew/.bin/scripts/python/rss/data/peterson.xml
 file:///home/andrew/.bin/scripts/scrape/UR.xml

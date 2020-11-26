@@ -17,6 +17,7 @@ source $ZSH/oh-my-zsh.sh
 stty -ixon
 
 # General
+alias abook="abook --datafile $XDG_CONFIG_HOME/abook/addressbook"
 alias cl="clear"
 alias c="cl"
 alias config="cd ~/.config"
@@ -43,6 +44,7 @@ alias todo="vim ~/Documents/TODO"
 alias v="vim"
 alias v.="vim $XDG_CONFIG_HOME/vim/.vimrc"
 alias xre="vim $XDG_CONFIG_HOME/Xresources"
+alias youtube-dl="youtube-dl --config-location $XDG_CONFIG_HOME/youtube-dl/config"
 
 # Common directories
 alias books="cd ~/Documents/Books"
