@@ -33,6 +33,7 @@ set relativenumber
 set rtp+=$XDG_CONFIG_HOME/vim/autoload
 set shellslash
 set shiftwidth=4
+set spell! spelllang=en_ca
 set tabstop=4
 set termguicolors
 set t_Co=256

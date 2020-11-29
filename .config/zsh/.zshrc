@@ -45,6 +45,7 @@ alias v="vim"
 alias v.="vim $XDG_CONFIG_HOME/vim/.vimrc"
 alias xre="vim $XDG_CONFIG_HOME/Xresources"
 alias youtube-dl="youtube-dl --config-location $XDG_CONFIG_HOME/youtube-dl/config"
+alias yd="youtube-dl"
 
 # Common directories
 alias books="cd ~/Documents/Books"
