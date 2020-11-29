@@ -33,7 +33,6 @@ set relativenumber
 set rtp+=$XDG_CONFIG_HOME/vim/autoload
 set shellslash
 set shiftwidth=4
-set spell! spelllang=en_ca
 set tabstop=4
 set termguicolors
 set t_Co=256
@@ -126,6 +125,9 @@ nmap <C-l> :LLP
 
 " To alternate folds, use space (normal mode)
 nmap <space> za
+
+" Toggle Canadian English spell check
+nmap <F6> :set spell! spelllang=en_ca<CR>
 
 
 "______ _             _           
