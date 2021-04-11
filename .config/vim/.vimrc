@@ -162,3 +162,6 @@ call plug#end()
 au BufReadPost,BufNewFile *.md,*.txt,*.tex setlocal nofoldenable
 au FileType tex setlocal syntax=off
 
+autocmd filetype py nnoremap <F4> :w <bar> exec ':term python %'<CR>
+autocmd filetype cpp nnoremap <F4> :w <bar> exec ':term g++ % -o %:r'<CR>
+
