@@ -5,4 +5,4 @@
 DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/$(id -u)/bus
 export DISPLAY=:0.0
 
-notify-send "Shutdown" "Shutting down in 10 minutes!"
+notify-send -u critical "Shutdown" "Shutting down in 10 minutes!"

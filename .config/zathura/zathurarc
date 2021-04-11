@@ -3,6 +3,9 @@ set highlight-active-color "#2DE3FF"
 
 set page-padding 1
 
+set recolor-lightcolor "#0f0f24"
+set recolor-darkcolor "#FFF2CC"
+
 map i recolor
 
 map + zoom in 

@@ -219,6 +219,10 @@ bindsym $mod+p					exec xrdb $HOME/.config/Xresources && st -e python
 bindsym $mod+shift+f			exec xrdb $HOME/.config/Xresources && st -e rangert
 bindsym $mod+b					exec xrdb $HOME/.config/Xresources && st -e rangerBooks;
 
+# Language support
+#exec_always "setxkbmap -layout us,us -option grp:alt_space_toggle"
+#bindsym $mod+z exec "~/bin/cycle.sh /dev/shm/kbd2.txt 'setxkbmap -layout us,zh -variant ,mac -option grp:alt_space_toggle' 'setxkbmap -layout us,zh -option grp:alt_space_toggle'"
+
 # Startup
 exec_always $HOME/.bin/scripts/default-layout
 exec_always feh --no-fehbg --bg-scale $HOME/Pictures/background 
