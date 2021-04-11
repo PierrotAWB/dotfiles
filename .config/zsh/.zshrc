@@ -110,6 +110,9 @@ alias sinks="pactl list short sinks"
 alias sink="sinks"
 alias temp="sudo tlp stat -t"
 
+# Autorepeat rate: xset r rate <delay> <rate>
+xset r rate 200 50
+
 [ -f $XDG_CONFIG_HOME/fzf/.fzf.zsh ] && source $XDG_CONFIG_HOME/fzf/.fzf.zsh
 
 
