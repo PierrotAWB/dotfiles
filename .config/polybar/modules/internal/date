@@ -2,7 +2,7 @@
 type = internal/date
 interval = 1
 
-date = "%m-%d"
+date = "%a %m-%d"
 date-alt = "%Y-%m-%d "
 
 time = %I:%M
