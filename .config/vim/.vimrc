@@ -1,13 +1,9 @@
-"           /$$
-"          |__/
-" /$$    /$$/$$ /$$$$$$/$$$$   /$$$$$$  /$$$$$$$
-"|  $$  /$$/ $$| $$_  $$_  $$ /$$__  $$/$$_____/
-" \  $$/$$/| $$| $$ \ $$ \ $$| $$  \__/ $$
-"  \  $$$/ | $$| $$ | $$ | $$| $$     | $$
-"   \  $/  | $$| $$ | $$ | $$| $$     |  $$$$$$$
-"    \_/   |__/|__/ |__/ |__/|__/      \_______/
-
 source $XDG_CONFIG_HOME/vim/autoload/plug.vim
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                                 Default settings                             "
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 filetype plugin on
 filetype indent on
@@ -16,7 +12,6 @@ syntax on
 "hi! Normal ctermbg=NONE guibg=NONE
 "hi! NonText ctermbg=NONE guibg=NONE
 
-" Vim behaviour and appearance
 set autoindent
 set backspace=indent,eol,start
 set confirm 
@@ -50,7 +45,11 @@ set termguicolors
 
 highlight LineNr ctermfg=red
 
-" Plugin Settings
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                             Global variables                                 "
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 let g:livepreview_engine = 'pdflatex'
 let g:livepreview_previewer = 'zathura'
 let g:Powerline_symbols='fancy'
@@ -77,15 +76,9 @@ let g:UltiSnipsSnippetDirectories=[$XDG_CONFIG_HOME.'/vim/plugged/ultisnips']
 let g:UltiSnipsUsePythonVersion = 3
 
 
-"
-"  _              _     _           _ _                 
-" | |            | |   (_)         | (_)                
-" | | _____ _   _| |__  _ _ __   __| |_ _ __   __ _ ___ 
-" | |/ / _ \ | | | '_ \| | '_ \ / _` | | '_ \ / _` / __|
-" |   <  __/ |_| | |_) | | | | | (_| | | | | | (_| \__ \
-" |_|\_\___|\__, |_.__/|_|_| |_|\__,_|_|_| |_|\__, |___/
-"           __/ |                             __/ |     
-"           |___/                             |___/     
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                               Keybindings                                    "
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Navigate to front and end of line in normal mode
 nmap <C-a> ^
@@ -131,14 +124,9 @@ nmap <space> za
 nmap <F6> :set spell! spelllang=en_ca<CR>
 
 
-"______ _             _           
-"| ___ \ |           (_)          
-"| |_/ / |_   _  __ _ _ _ __  ___ 
-"|  __/| | | | |/ _` | | '_ \/ __|
-"| |   | | |_| | (_| | | | | \__ \
-"\_|   |_|\__,_|\__, |_|_| |_|___/
-"                __/ |            
-"               |___/             
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                                  Plugins                                     "
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 call plug#begin('~/.config/vim/plugged')
 
@@ -150,18 +138,43 @@ Plug 'neomake/neomake'
 call plug#end()
 
 
-"______ _ _          _____      _   _   _                 
-"|  ___(_) |        /  ___|    | | | | (_)                
-"| |_   _| | ___    \ `--.  ___| |_| |_ _ _ __   __ _ ___ 
-"|  _| | | |/ _ \    `--. \/ _ \ __| __| | '_ \ / _` / __|
-"| |   | | |  __/   /\__/ /  __/ |_| |_| | | | | (_| \__ \
-"\_|   |_|_|\___|   \____/ \___|\__|\__|_|_| |_|\__, |___/
-"                                                __/ |    
-"                                               |___/     
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                               File Settings                                  "
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 au BufReadPost,BufNewFile *.md,*.txt,*.tex setlocal nofoldenable
 au FileType tex setlocal syntax=off
 
+"  Run a program in terminal.
 autocmd filetype py nnoremap <F4> :w <bar> exec ':term python %'<CR>
+autocmd filetype c nnoremap <F4> :w <bar> exec ':term gcc % -o %:r'<CR>
 autocmd filetype cpp nnoremap <F4> :w <bar> exec ':term g++ % -o %:r'<CR>
 
+" (un)comment blocks of code.
+augroup commenting_blocks_of_code
+  autocmd!
+  autocmd FileType c,cpp,java,scala let b:comment_leader = '// '
+  autocmd FileType sh,ruby,python   let b:comment_leader = '# '
+  autocmd FileType conf,fstab       let b:comment_leader = '# '
+  autocmd FileType tex              let b:comment_leader = '% '
+  autocmd FileType mail             let b:comment_leader = '> '
+  autocmd FileType vim              let b:comment_leader = '" '
+augroup END
+
+" TODO: Fix commenting in a block that already contains some comments.
+function! ToggleComment()
+  if exists("b:comment_leader") == 0
+    throw "No comment leader found for filetype."
+  else
+    if getline('.') =~ '^\s*' . b:comment_leader
+      " Uncomment the line
+      execute 'silent s/\v^(\s*)' . b:comment_leader . '(\s*)/\1\2/'
+    else
+      " Comment the line
+      execute 'silent! s/\v^(\s*)/' . b:comment_leader . '\1/'
+    endif
+  endif
+endfunction
+   
+nnoremap <C-_> :call ToggleComment()<CR>
+vnoremap <C-_> :call ToggleComment()<CR>
