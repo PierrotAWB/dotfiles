@@ -148,7 +148,7 @@ call plug#end()
 au BufReadPost,BufNewFile *.md,*.txt,*.tex setlocal nofoldenable
 au FileType tex setlocal syntax=off
 
-"  Run a program in terminal.
+" Run a program in terminal.
 augroup run_program
 	autocmd Filetype py nnoremap <F1> :w <bar> exec ':term python %'<CR>
 	autocmd Filetype c nnoremap <F1> :w <bar> exec ':term gcc % -o %:r'<CR>
@@ -166,21 +166,10 @@ augroup commenting_blocks_of_code
 	autocmd FileType vim              let b:comment_leader = '" '
 augroup END
 
-" TODO: Fix commenting in a block that already contains some comments.
-function! ToggleComment()
-	if exists("b:comment_leader") == 0
-		throw "No comment leader found for filetype."
-	else
-		if getline('.') =~ '^\s*' . b:comment_leader
-			" Uncomment the line
-			execute 'silent s/\v^(\s*)' . b:comment_leader . '(\s*)/\1\2/'
-		else
-			" Comment the line
-			execute 'silent! s/\v^(\s*)/' . b:comment_leader . '\1/'
-		endif
-	endif
+function! CommentToggle()
+    execute ':silent! s/\([^ ]\)/' . escape(b:comment_leader,'\/') . ' \1/'
+    execute ':silent! s/^\( *\)' . escape(b:comment_leader,'\/') . ' \?' . escape(b:comment_leader,'\/') . ' \?/\1/'
 endfunction
 
-nnoremap <C-_> :call ToggleComment()<CR>
-vnoremap <C-_> :call ToggleComment()<CR>
+map <C-_> :call CommentToggle()<CR>
 
