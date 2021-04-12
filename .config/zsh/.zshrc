@@ -5,6 +5,29 @@ autoload -U colors && colors
 PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_color%}$%b "
 setopt autocd
 
+# vi mode
+bindkey -v
+export KEYTIMEOUT=1
+
+bindkey "^A" vi-beginning-of-line
+bindkey "^E" vi-end-of-line
+bindkey "^K" kill-line
+bindkey "^D" delete-char
+
+bindkey "^F" vi-forward-blank-word
+bindkey "^L" vi-forward-char
+bindkey "^B" vi-backward-blank-word
+bindkey "^H" vi-backward-char
+
+bindkey "^Z" undo
+
+bindkey "^P" clear-screen
+
+
+# Use vim keys in tab complete menu:
+# bindkey -M menuselect 'k' vi-up-line-or-history
+# bindkey -M menuselect 'j' vi-down-line-or-history
+ 
 # Disable `XOFF`, so <C-s> works in Vim
 stty -ixon
 
@@ -107,7 +130,3 @@ alias temp="sudo tlp stat -t"
 xset r rate 200 50
 
 [ -f $XDG_CONFIG_HOME/fzf/.fzf.zsh ] && source $XDG_CONFIG_HOME/fzf/.fzf.zsh
-
-
-
-
