@@ -35,6 +35,7 @@ set t_Co=256
 set updatetime=500
 "#set visualbell
 set viminfo+='1000,n$XDG_DATA_HOME/vim/viminfo
+set wildcharm=<Tab>
 
 set timeoutlen=1000
 set ttimeoutlen=0
@@ -77,7 +78,7 @@ let g:UltiSnipsUsePythonVersion = 3
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"                               Keybindings                                    "
+"                            General Keybindings                               "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Navigate to front and end of line in normal mode
@@ -113,15 +114,17 @@ inoremap jk <Esc>
 cnoremap jk <Esc>
 vnoremap jk <Esc>
 
-" Map ctrl-l to :LLP (Live Preview)
-imap <C-l> <Esc>:LLP
-nmap <C-l> :LLP
-
 " To alternate folds, use space (normal mode)
 nmap <space> za
 
 " Toggle Canadian English spell check
 nmap <F6> :set spell! spelllang=en_ca<CR>
+
+" Indentation.
+nnoremap <F12> :w <Bar> exec ':normal gg=G``zz'<CR>
+
+" Search and replace
+nnoremap <C-S-r> :w <Bar> exec :%s/
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -146,35 +149,38 @@ au BufReadPost,BufNewFile *.md,*.txt,*.tex setlocal nofoldenable
 au FileType tex setlocal syntax=off
 
 "  Run a program in terminal.
-autocmd filetype py nnoremap <F4> :w <bar> exec ':term python %'<CR>
-autocmd filetype c nnoremap <F4> :w <bar> exec ':term gcc % -o %:r'<CR>
-autocmd filetype cpp nnoremap <F4> :w <bar> exec ':term g++ % -o %:r'<CR>
+augroup run_program
+	autocmd Filetype py nnoremap <F1> :w <bar> exec ':term python %'<CR>
+	autocmd Filetype c nnoremap <F1> :w <bar> exec ':term gcc % -o %:r'<CR>
+	autocmd Filetype cpp nnoremap <F1> :w <bar> exec ':term g++ % -o %:r'<CR>
+augroup END
 
 " (un)comment blocks of code.
 augroup commenting_blocks_of_code
-  autocmd!
-  autocmd FileType c,cpp,java,scala let b:comment_leader = '// '
-  autocmd FileType sh,ruby,python   let b:comment_leader = '# '
-  autocmd FileType conf,fstab       let b:comment_leader = '# '
-  autocmd FileType tex              let b:comment_leader = '% '
-  autocmd FileType mail             let b:comment_leader = '> '
-  autocmd FileType vim              let b:comment_leader = '" '
+	autocmd!
+	autocmd FileType c,cpp,java,scala let b:comment_leader = '// '
+	autocmd FileType sh,ruby,python   let b:comment_leader = '# '
+	autocmd FileType conf,fstab       let b:comment_leader = '# '
+	autocmd FileType tex              let b:comment_leader = '% '
+	autocmd FileType mail             let b:comment_leader = '> '
+	autocmd FileType vim              let b:comment_leader = '" '
 augroup END
 
 " TODO: Fix commenting in a block that already contains some comments.
 function! ToggleComment()
-  if exists("b:comment_leader") == 0
-    throw "No comment leader found for filetype."
-  else
-    if getline('.') =~ '^\s*' . b:comment_leader
-      " Uncomment the line
-      execute 'silent s/\v^(\s*)' . b:comment_leader . '(\s*)/\1\2/'
-    else
-      " Comment the line
-      execute 'silent! s/\v^(\s*)/' . b:comment_leader . '\1/'
-    endif
-  endif
+	if exists("b:comment_leader") == 0
+		throw "No comment leader found for filetype."
+	else
+		if getline('.') =~ '^\s*' . b:comment_leader
+			" Uncomment the line
+			execute 'silent s/\v^(\s*)' . b:comment_leader . '(\s*)/\1\2/'
+		else
+			" Comment the line
+			execute 'silent! s/\v^(\s*)/' . b:comment_leader . '\1/'
+		endif
+	endif
 endfunction
-   
+
 nnoremap <C-_> :call ToggleComment()<CR>
 vnoremap <C-_> :call ToggleComment()<CR>
+
