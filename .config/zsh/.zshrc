@@ -1,17 +1,9 @@
-export ZSH=$ZDOTDIR/.oh-my-zsh
-export UPDATE_ZSH_DAYS=13
+#export UPDATE_ZSH_DAYS=13
 export EDITOR='vim'
 
-ZSH_CUSTOM=$ZDOTDIR/custom
-ZSH_THEME="agnoster"
-HIST_STAMPS="yyyy-mm-dd"
-
-plugins=(git)
-
-source $ZSH/oh-my-zsh.sh
-
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
+autoload -U colors && colors
+PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_color%}$%b "
+setopt autocd
 
 # Disable `XOFF`, so <C-s> works in Vim
 stty -ixon
@@ -72,6 +64,7 @@ alias RR="R --no-save < "
 alias ga="git add"
 alias gaa="git add -A"
 alias gb="git branch"
+alias gc="git commit"
 alias gcp="git cherry-pick"
 alias gco="git checkout"
 alias gd="git diff"
@@ -91,7 +84,7 @@ alias gpu="git push"
 alias grb="git rebase"
 alias grl="git reflog"
 alias grev="git revert"
-alias gs="gst"
+alias gs="git status"
 
 
 # zsh
