@@ -125,6 +125,7 @@ alias mp="mbsync personal"
 alias sinks="pactl list short sinks"
 alias sink="sinks"
 alias temp="sudo tlp stat -t"
+alias xbindkeys="xbindkeys -f $XDG_CONFIG_HOME/xbindkeysrc"
 
 # Autorepeat rate: xset r rate <delay> <rate>
 xset r rate 200 50

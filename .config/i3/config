@@ -205,7 +205,6 @@ bindsym $mod+shift+o			gaps outer current minus 5
 
 # screenshot
 bindsym ctrl+shift+5			exec scrot '%Y-%m-%d-%H:%M:%S.png' -e 'mv $f ~/Pictures/Screenshots/'
-bindsym --release ctrl+shift+s exec --no-startup-id maim -s | xclip -selection clipboard -t image/png
 
 # hide edges for next window opening-direction
 hide_edge_borders both
