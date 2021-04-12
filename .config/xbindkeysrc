@@ -1,0 +1,42 @@
+# Version: 1.8.6
+#
+# If you edit this file, do not forget to uncomment any lines
+# that you change.
+# The pound(#) symbol may be used anywhere for comments.
+#
+# To specify a key, you can use 'xbindkeys --key' or
+# 'xbindkeys --multikey' and put one of the two lines in this file.
+#
+# The format of a command line is:
+#    "command to start"
+#       associated key
+#
+#
+# A list of keys is in /usr/include/X11/keysym.h and in
+# /usr/include/X11/keysymdef.h
+# The XK_ is not needed.
+#
+# List of modifiers:
+#   Release, Control, Shift, Mod1 (Alt), Mod2 (NumLock),
+#   Mod3 (CapsLock), Mod4, Mod5 (Scroll).
+#
+
+# Increase volume
+"pactl set-sink-volume @DEFAULT_SINK@ +1000"
+	XF86AudioRaiseVolume
+
+# Decrease volume
+"pactl set-sink-volume @DEFAULT_SINK@ -1000"
+	XF86AudioLowerVolume
+
+# Mute volume
+"pactl set-sink-mute @DEFAULT_SINK@ toggle"
+	XF86AudioMute
+
+# Screenshot
+"maim -s | xclip -selection clipboard -t image/png"
+	Mod4 + Tab
+
+# Copy
+"xclip -o | xclip -selection clipboard"
+	Mod4 + c
