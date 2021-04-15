@@ -1,8 +1,0 @@
-#!/bin/sh
-
-# Warning: ensure that this is referenced in the USER level crontab
-# if referenced at the root level, this won't work.
-DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/$(id -u)/bus
-export DISPLAY=:0.0
-
-notify-send -u critical "Shutdown" "Shutting down in 10 minutes!"
