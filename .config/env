@@ -1,0 +1,28 @@
+#!/bin/sh
+
+
+# XDG Base Directory Setup
+export XDG_CACHE_HOME="$HOME/.cache"
+export XDG_CONFIG_HOME="$HOME/.config"
+export XDG_DATA_HOME="$HOME/.local/share"
+
+
+# ~/ Clean-up:
+
+# less
+export LESSKEY="$XDG_CACHE_HOME/less/lesskey"
+export LESSHISTFILE="$XDG_CACHE_HOME/less/history"
+# notmuch
+export NOTMUCH_CONFIG="$XDG_CONFIG_HOME/notmuch/notmuchrc"
+# TeX
+export TEXMFHOME="$XDG_DATA_HOME/texmf"
+# Vim
+export VIM="$XDG_CONFIG_HOME/vim"
+export VIMINIT=":source $XDG_CONFIG_HOME/vim/vimrc"
+# zsh
+export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
+export HISTFILE="$XDG_DATA_HOME/zsh/history"
+
+
+# Source .zshrc for main configuration.
+source "$ZDOTDIR/.zshrc"
