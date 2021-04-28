@@ -32,7 +32,6 @@ bindkey "^P" clear-screen
 stty -ixon
 
 # General
-alias abook="abook --datafile $XDG_CONFIG_HOME/abook/addressbook"
 alias cl="clear"
 alias c="cl"
 alias config="cd $XDG_CONFIG_HOME"
@@ -61,6 +60,8 @@ alias ranger='ranger --choosedir=$XDG_DATA_HOME/ranger/.rangerdir; LASTDIR=`cat 
 alias r="lf"
 alias sp='spotifyd -u andrewwang298 -p $(pass spotify) && spt'
 alias todo="vim ~/documents/todo"
+alias unlock-key="pass mutt-wizard-personal > /dev/null"
+alias uk="unlock-key"
 alias v="vim"
 alias v.="vim $XDG_CONFIG_HOME/vim/vimrc"
 alias xre="vim $XDG_CONFIG_HOME/Xresources"

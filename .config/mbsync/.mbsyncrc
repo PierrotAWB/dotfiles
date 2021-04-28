@@ -1,4 +1,3 @@
-
 IMAPStore personal-remote
 Host imap.gmail.com
 Port 993
@@ -16,8 +15,8 @@ Flatten .
 
 Channel personal
 Expunge Both
-Master :personal-remote:
-Slave :personal-local:
+Far :personal-remote:
+Near :personal-local:
 Patterns * !"[Gmail]/All Mail"
 Create Both
 SyncState *

@@ -7,11 +7,11 @@ export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_DATA_HOME="$HOME/.local/share"
 
 
-# ~/ Clean-up:
-
 # less
 export LESSKEY="$XDG_CACHE_HOME/less/lesskey"
 export LESSHISTFILE="$XDG_CACHE_HOME/less/history"
+# mbsync
+export MBSYNCRC="$XDG_CONFIG_HOME/mbsync/.mbsyncrc"
 # notmuch
 export NOTMUCH_CONFIG="$XDG_CONFIG_HOME/notmuch/notmuchrc"
 # TeX
@@ -23,6 +23,8 @@ export VIMINIT=":source $XDG_CONFIG_HOME/vim/vimrc"
 export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
 export HISTFILE="$XDG_DATA_HOME/zsh/history"
 
+# MTP Probe
+export MTP_NO_PROBE="1"
 
 # Source .zshrc for main configuration.
 source "$ZDOTDIR/.zshrc"
