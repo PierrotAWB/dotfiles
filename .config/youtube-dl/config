@@ -1,1 +1,1 @@
--o /home/andrew/Videos/%(title)s.%(ext)s
+-o /home/andrew/videos/%(title)s.%(ext)s

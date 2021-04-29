@@ -52,14 +52,15 @@ alias linux="ssh -Y a99wang@linux.student.cs.uwaterloo.ca"
 alias mbsync="mbsync -c "$XDG_CONFIG_HOME"/mbsync/.mbsyncrc"
 alias m="ncmpcpp"
 alias newsboat="newsboat -C $XDG_CONFIG_HOME/newsboat/config"
-alias note="vim ~/Documents/NOTE"
+alias note="vim ~/documents/notes/scratchpad"
 alias pdb="pdb3.6"
 alias pbcopy='xclip -selection clipboard'
 alias pbpaste='xclip -selection clipboard -o'
 alias ranger='ranger --choosedir=$XDG_DATA_HOME/ranger/.rangerdir; LASTDIR=`cat $XDG_DATA_HOME/ranger/.rangerdir`; cd "$LASTDIR"'
 alias r="lf"
 alias sp='spotifyd -u andrewwang298 -p $(pass spotify) && spt'
-alias todo="vim ~/documents/todo"
+alias tlm="tllocalmgr" #TeX Live Manager
+alias todo="vim ~/documents/notes/todo"
 alias unlock-key="pass mutt-wizard-personal > /dev/null"
 alias uk="unlock-key"
 alias v="vim"
@@ -119,3 +120,6 @@ alias sinks="pactl list short sinks"
 alias sink="sinks"
 alias temp="sudo tlp stat -t"
 alias xbindkeys="xbindkeys -f $XDG_CONFIG_HOME/xbindkeysrc"
+
+[ -f $XDG_CONFIG_HOME/fzf/shell/key-bindings.zsh ] && source $XDG_CONFIG_HOME/fzf/shell/key-bindings.zsh
+[ -f $XDG_CONFIG_HOME/fzf/shell/completion.zsh ] && source $XDG_CONFIG_HOME/fzf/shell/completion.zsh

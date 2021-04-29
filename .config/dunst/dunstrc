@@ -4,10 +4,10 @@
     geometry = "500x5-24-24"
     indicate_hidden = yes
     shrink = no
-    transparency = 10
+    transparency = 7
     notification_height = 80
     separator_height = 2
-    padding = 3
+    padding = 15
     horizontal_padding = 8
     frame_width = 3
     frame_color = "#282828"

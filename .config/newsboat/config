@@ -30,7 +30,7 @@ color listfocus_unread yellow default bold
 color info red black bold
 color article white default bold
 
-browser brave-browser
+browser brave
 macro , open-in-browser
 macro t set browser "qndl"; open-in-browser ; set browser linkhandler
 macro a set browser "youtube-dl --config-location /home/andrew/.config/youtube-dl/config" ; open-in-browser ; set browser linkhandler
