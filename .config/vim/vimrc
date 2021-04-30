@@ -80,14 +80,6 @@ let g:UltiSnipsUsePythonVersion = 3
 "                            General Keybindings                               "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-" Navigate to front and end of line in normal mode
-nmap <C-a> ^
-nmap <C-e> $ 
-
-" Navigate to front and end of line in insert mode
-imap <C-a> <Esc>I
-imap <C-e> <Esc>A
-
 " Delete everything from the cursor to the end of the line
 nmap <C-k> lD
 imap <C-k> <Esc>2ld$a
@@ -151,8 +143,8 @@ au FileType tex setlocal syntax=off
 augroup run_program
 	autocmd Filetype py nnoremap <F1> :w <bar> exec ':term python %'<CR>
 	autocmd Filetype c nnoremap <F1> :w <bar> exec ':term gcc % -o %:r'<CR>
-	autocmd Filetype cpp nnoremap \c :w <bar> exec ':term g++ -g -std=c++11 % -o %:r'<CR>
-	autocmd Filetype cpp nnoremap \r :w <bar> exec ':! echo "./%:r" && ./%:r'<CR>
+    autocmd Filetype cpp nnoremap <C-c> :execute ':term ++hidden st-hook cpp-compile %:r %' <CR>
+    autocmd Filetype cpp nnoremap <C-e> :execute ':term ++hidden st-hook cpp-exec %:r'<CR>
 augroup END
 
 " (un)comment blocks of code.
