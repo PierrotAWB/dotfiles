@@ -51,6 +51,7 @@ cmd open ${{
     case $(file --mime-type $f -b) in
         text/*) $EDITOR $fx ;;
 		application/pdf) setsid -f zathura $fx ;;
+		application/zip) unzip $f ;;
 		# image/*) sxiv -a $fx 2>/dev/null ;;
 		video/*) setsid -f mpv $f -quiet >/dev/null 2>&1 ;;
         *) for f in $fx; do setsid $OPENER $f > /dev/null 2>&1 & done;;
