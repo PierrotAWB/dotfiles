@@ -80,42 +80,45 @@ let g:UltiSnipsUsePythonVersion = 3
 "                            General Keybindings                               "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-" Delete everything from the cursor to the end of the line
+" Delete everything from the cursor to the end of the line.
 nmap <C-k> lD
 imap <C-k> <Esc>2ld$a
 
-" Delete everything from beginning of the line to the cursor
+" Delete everything from beginning of the line to the cursor.
 nmap <C-u> d^x
 imap <C-u> <Esc>d^xi
 
-" To save, control-s
+" To save, control-s.
 nnoremap <C-s> :w<CR>
 inoremap <C-s> <Esc>:w<CR>
 
-" To undo, control-z
+" To undo, control-z.
 nnoremap <C-z> :undo<CR>
 inoremap <C-z> <Esc>:undo<CR>
 
-" To redo, control-y
+" To redo, control-y.
 nnoremap <C-y> :redo<CR>
 inoremap <C-y> <Esc>:redo<CR>
 
-" Strictly map escape key
+" Strictly map escape key.
 inoremap jk <Esc>
 cnoremap jk <Esc>
 vnoremap jk <Esc>
 
-" To alternate folds, use space (normal mode)
+" To alternate folds, use space (normal mode).
 nmap <space> za
 
-" Toggle Canadian English spell check
+" Toggle Canadian English spell check.
 nmap <F6> :set spell! spelllang=en_ca<CR>
 
 " Indentation.
 nnoremap <F12> :w <Bar> exec ':normal gg=G``zz'<CR>
 
-" Search and replace
+" Search and replace.
 nnoremap <C-S-r> :%s/
+
+" Tabbing.
+nnoremap <C-o> :tabnew 
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
