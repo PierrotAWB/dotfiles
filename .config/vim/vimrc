@@ -88,10 +88,6 @@ imap <C-k> <Esc>2ld$a
 nmap <C-u> d^x
 imap <C-u> <Esc>d^xi
 
-" To save, control-s.
-nnoremap <C-s> :w<CR>
-inoremap <C-s> <Esc>:w<CR>
-
 " To undo, control-z.
 nnoremap <C-z> :undo<CR>
 inoremap <C-z> <Esc>:undo<CR>
@@ -115,10 +111,16 @@ nmap <F6> :set spell! spelllang=en_ca<CR>
 nnoremap <F12> :w <Bar> exec ':normal gg=G``zz'<CR>
 
 " Search and replace.
-nnoremap <C-S-r> :%s/
+nnoremap <C-s> :%s/
 
 " Tabbing.
 nnoremap <C-o> :tabnew 
+
+" Renaming.
+" Local.
+nnoremap gr gd[{V%::s/<C-R>///gc<left><left><left> 
+" Global.
+nnoremap gR gD:%s/<C-R>///gc<left><left><left>
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
