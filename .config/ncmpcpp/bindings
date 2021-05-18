@@ -45,3 +45,9 @@ def_key "x"
 
 def_key "="
 	volume_up
+
+def_key "ctrl-f"
+	seek_forward
+
+def_key "ctrl-b"
+	seek_backward

@@ -31,6 +31,7 @@ set splitbelow
 set tabstop=4
 set termguicolors
 set t_Co=256
+set tw=80
 set updatetime=500
 "#set visualbell
 set viminfo+='1000,n$XDG_DATA_HOME/vim/viminfo
@@ -121,7 +122,6 @@ nnoremap <C-o> :tabnew
 nnoremap gr gd[{V%::s/<C-R>///gc<left><left><left> 
 " Global.
 nnoremap gR gD:%s/<C-R>///gc<left><left><left>
-
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                                  Plugins                                     "

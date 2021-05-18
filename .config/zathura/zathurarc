@@ -3,8 +3,10 @@ set highlight-active-color "#2DE3FF"
 
 set page-padding 1
 
-set recolor-lightcolor "#0f0f24"
 set recolor-darkcolor "#FFF2CC"
+
+set default-bg rgba(0,0,0,0.7)
+set recolor-lightcolor rgba(0,0,0,0)
 
 map i recolor
 

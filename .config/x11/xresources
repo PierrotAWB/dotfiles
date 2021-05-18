@@ -1,12 +1,12 @@
 !! Transparency (0-1):
-*.alpha: 0.9
+*.alpha: 0.6
 
 !! Set a default font and font size as below: 
 !! *.font: Liberation Mono for Powerline:pixelsize=22:antialias=true:autohint=true;
 ! Base16 OceanicNext
 ! Scheme: https://github.com/voronianski/oceanic-next-color-scheme
 
-#define base00 #1B2B34
+#define base00 #000000
 #define base01 #343D46
 #define base02 #4F5B66
 #define base03 #65737E

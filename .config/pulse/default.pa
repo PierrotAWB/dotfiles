@@ -1,6 +1,5 @@
 .include /etc/pulse/default.pa
 
 load-module module-alsa-sink device=hw:0,3
-set-default-sink 1
-set-card-profile alsa_card.pci-0000_00_1f.3 off
-
+load-module module-bluetooth-policy
+load-module module-bluez5-device

@@ -32,6 +32,8 @@ bindkey "^P" clear-screen
 stty -ixon
 
 # General
+alias ...="cd ../.."
+alias ....="cd ../../.."
 alias cl="clear"
 alias c="cl"
 alias config="cd $XDG_CONFIG_HOME"
@@ -52,12 +54,13 @@ alias linux="ssh -Y a99wang@linux.student.cs.uwaterloo.ca"
 alias mbsync="mbsync -c "$XDG_CONFIG_HOME"/mbsync/.mbsyncrc"
 alias m="ncmpcpp"
 alias newsboat="newsboat -C $XDG_CONFIG_HOME/newsboat/config"
+alias networks="nmcli device wifi list"
 alias note="vim ~/documents/notes/scratchpad"
 alias pdb="pdb3.6"
 alias pbcopy='xclip -selection clipboard'
 alias pbpaste='xclip -selection clipboard -o'
 alias ranger='ranger --choosedir=$XDG_DATA_HOME/ranger/.rangerdir; LASTDIR=`cat $XDG_DATA_HOME/ranger/.rangerdir`; cd "$LASTDIR"'
-alias r="lf"
+alias r="ranger"
 alias sp='spotifyd -u andrewwang298 -p $(pass spotify) && spt'
 alias tlm="tllocalmgr" #TeX Live Manager
 alias todo="vim ~/documents/notes/todo"
