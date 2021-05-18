@@ -29,12 +29,12 @@
 "pactl set-sink-volume @DEFAULT_SINK@ -1000"
 	XF86AudioLowerVolume
 
-# Increase volume
-"light -s sysfs/backlight/ddcci5 -A 5 & light -s sysfs/backlight/auto -A 5"
+# Increase brightness
+"light -s sysfs/backlight/ddcci5 -A 10 & light -s sysfs/backlight/auto -A 5"
 	XF86MonBrightnessUp
 
 # Decrease brightness
-"light -s sysfs/backlight/ddcci5 -U 5 & light -s sysfs/backlight/auto -U 5"
+"light -s sysfs/backlight/ddcci5 -U 10 & light -s sysfs/backlight/auto -U 5"
 	XF86MonBrightnessDown
 
 # Mute volume
@@ -42,7 +42,7 @@
 	XF86AudioMute
 
 # Screenshot
-"maim -s | xclip -selection clipboard -t image/png"
+"maim -suo | xclip -selection clipboard -t image/png"
 	Mod4 + Tab
 
 # Copy
