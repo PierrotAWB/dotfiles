@@ -44,6 +44,7 @@ alias d.="cd $XDG_CONFIG_HOME/dwm && sudo vim config.h"
 alias e="exit"
 alias i3conf="vim ~/.config/i3/config"
 alias i3.="i3conf"
+alias j="jump-edit"
 alias l="ls"
 alias l.="cd $XDG_CONFIG_HOME/lf && vim lfrc"
 alias lf='lf -last-dir-path=$XDG_DATA_HOME/lf/.lfdir; LASTDIR=`cat $XDG_DATA_HOME/lf/.lfdir`; cd "$LASTDIR"'
@@ -62,6 +63,8 @@ alias pbpaste='xclip -selection clipboard -o'
 alias ranger='ranger --choosedir=$XDG_DATA_HOME/ranger/.rangerdir; LASTDIR=`cat $XDG_DATA_HOME/ranger/.rangerdir`; cd "$LASTDIR"'
 alias r="ranger"
 alias sp='spotifyd -u andrewwang298 -p $(pass spotify) && spt'
+alias script-search='j'
+alias ss='script-search'
 alias tlm="tllocalmgr" #TeX Live Manager
 alias todo="vim ~/documents/notes/todo"
 alias unlock-key="pass mutt-wizard-personal > /dev/null"
