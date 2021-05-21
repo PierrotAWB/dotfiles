@@ -51,3 +51,6 @@ def_key "ctrl-f"
 
 def_key "ctrl-b"
 	seek_backward
+
+def_key "t"
+	show_clock

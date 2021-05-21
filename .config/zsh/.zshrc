@@ -62,6 +62,7 @@ alias pbcopy='xclip -selection clipboard'
 alias pbpaste='xclip -selection clipboard -o'
 alias ranger='ranger --choosedir=$XDG_DATA_HOME/ranger/.rangerdir; LASTDIR=`cat $XDG_DATA_HOME/ranger/.rangerdir`; cd "$LASTDIR"'
 alias r="ranger"
+alias R="R --quiet"
 alias sp='spotifyd -u andrewwang298 -p $(pass spotify) && spt'
 alias script-search='j'
 alias ss='script-search'
