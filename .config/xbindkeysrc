@@ -22,12 +22,12 @@
 #
 
 # Increase volume
-"pactl set-sink-volume @DEFAULT_SINK@ +1000"
-	XF86AudioRaiseVolume
+"pactl set-sink-volume @DEFAULT_SINK@ +1000 && kill -36 $(pidof dwmblocks)"
+	XF86AudioRaiseVolume 
 
 # Decrease volume
-"pactl set-sink-volume @DEFAULT_SINK@ -1000"
-	XF86AudioLowerVolume
+"pactl set-sink-volume @DEFAULT_SINK@ -1000 && kill -36 $(pidof dwmblocks)"
+	XF86AudioLowerVolume 
 
 # Increase brightness
 "light -s sysfs/backlight/ddcci5 -A 10 & light -s sysfs/backlight/auto -A 5"
@@ -38,7 +38,7 @@
 	XF86MonBrightnessDown
 
 # Mute volume
-"pactl set-sink-mute @DEFAULT_SINK@ toggle"
+"pactl set-sink-mute @DEFAULT_SINK@ toggle && kill -36 $(pidof dwmblocks)"
 	XF86AudioMute
 
 # Screenshot
