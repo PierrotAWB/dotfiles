@@ -64,8 +64,6 @@ alias ranger='ranger --choosedir=$XDG_DATA_HOME/ranger/.rangerdir; LASTDIR=`cat 
 alias r="ranger"
 alias R="R --quiet"
 alias sp='spotifyd -u andrewwang298 -p $(pass spotify) && spt'
-alias script-search='j'
-alias ss='script-search'
 alias tlm="tllocalmgr" #TeX Live Manager
 alias todo="vim ~/documents/notes/todo"
 alias unlock-key="pass mutt-wizard-personal > /dev/null"

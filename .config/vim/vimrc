@@ -27,11 +27,12 @@ set relativenumber
 set rtp+=$XDG_CONFIG_HOME/vim/autoload
 set shellslash
 set shiftwidth=4
-set splitbelow
 set tabstop=4
 set termguicolors
 set t_Co=256
 set tw=80
+set undodir=$XDG_DATA_HOME/vim/undodir
+set undofile
 set updatetime=500
 "#set visualbell
 set viminfo+='1000,n$XDG_DATA_HOME/vim/viminfo
@@ -112,7 +113,7 @@ nmap <F6> :set spell! spelllang=en_ca<CR>
 nnoremap <F12> :w <Bar> exec ':normal gg=G``zz'<CR>
 
 " Search and replace.
-nnoremap <C-s> :%s/
+nnoremap <C-r> :%s/
 
 " Tabbing.
 nnoremap <C-o> :tabnew 
@@ -122,6 +123,19 @@ nnoremap <C-o> :tabnew
 nnoremap gr gd[{V%::s/<C-R>///gc<left><left><left> 
 " Global.
 nnoremap gR gD:%s/<C-R>///gc<left><left><left>
+
+" Redo
+nnoremap <C-y> :redo<CR> 
+
+" Save
+nnoremap <C-s> :w<CR>
+inoremap <C-s> <Esc>:w<CR>
+
+" Select all
+nnoremap <C-a> ggVG
+
+" Ctags bindings
+nnoremap <C-\> :vsp<CR>:exec("tag ".expand("<cword>"))<CR>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                                  Plugins                                     "
@@ -156,7 +170,7 @@ augroup END
 augroup commenting_blocks_of_code
 	autocmd!
 	autocmd FileType c,cpp,java,scala let b:comment_leader = '// '
-	autocmd FileType sh,ruby,python   let b:comment_leader = '# '
+	autocmd FileType sh,ruby,python,R let b:comment_leader = '# '
 	autocmd FileType conf,fstab,zsh   let b:comment_leader = '# '
 	autocmd FileType tex              let b:comment_leader = '% '
 	autocmd FileType mail             let b:comment_leader = '> '

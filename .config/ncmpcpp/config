@@ -3,4 +3,3 @@ mpd_port = 6600
 mpd_music_dir = ~/music
 lyrics_directory = ~/.config/ncmpcpp/lyrics
 user_interface = alternative
-

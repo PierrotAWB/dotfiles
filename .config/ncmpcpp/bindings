@@ -34,10 +34,10 @@ def_key "N"
 def_key "f"
 	show_browser
 
-def_key "p"
+def_key "P"
 	show_playlist
 
-def_key "P"
+def_key "p"
 	pause
 
 def_key "x"

@@ -8,6 +8,8 @@ set recolor-darkcolor "#FFF2CC"
 set default-bg rgba(0,0,0,0.7)
 set recolor-lightcolor rgba(0,0,0,0)
 
+set selection-clipboard clipboard
+
 map i recolor
 
 map + zoom in 
@@ -29,5 +31,10 @@ map d scroll half-down
 map b scroll full-up
 map f scroll full-down
 
+map L follow
+
 map <C-h> toggle_statusbar
 map <C-i> toggle_inputbar
+
+map <Tab> focus_inputbar :open	
+
