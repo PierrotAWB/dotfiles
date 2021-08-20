@@ -3,9 +3,9 @@ set highlight-active-color "#2DE3FF"
 
 set page-padding 1
 
-set recolor-darkcolor "#FFF2CC"
+set recolor-darkcolor "#E1E3E8"
 
-set default-bg rgba(0,0,0,0.7)
+set default-bg rgba(27,43,52,0.9)
 set recolor-lightcolor rgba(0,0,0,0)
 
 set selection-clipboard clipboard
