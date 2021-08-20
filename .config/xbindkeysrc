@@ -43,7 +43,14 @@
 
 # Screenshot
 "maim -suo | xclip -selection clipboard -t image/png"
+	Mod4 + Super_L
+
+#"maim -g 1400x1400+400+150 | xclip -sel c -t image/png"
+
+"maim -suo | xclip -selection clipboard -t image/png"
 	Mod4 + Tab
+
+#"maim -g 1400x1400+400+150 | xclip -sel c -t image/png"
 
 # Copy
 "xclip -o | xclip -selection clipboard"

@@ -116,6 +116,7 @@ alias z.="vim $XDG_CONFIG_HOME/zsh/.zshrc"
 
 # misc
 alias dfh="df -h | egrep 'Filesystem|/dev/nvme0n1p4'"
+alias duu="du -h | sort -rh"
 alias fan="sensors | egrep 'Left|Right'"
 alias fans="fan"
 alias mimetype="xdg-mime query filetype"

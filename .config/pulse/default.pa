@@ -1,4 +1,4 @@
 .include /etc/pulse/default.pa
 
 load-module module-alsa-sink device=hw:0,3
-load-module module-bluez5-device
+# load-module module-bluez5-device
