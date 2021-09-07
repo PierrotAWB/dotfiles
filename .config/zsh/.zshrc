@@ -57,7 +57,7 @@ alias m="ncmpcpp"
 alias newsboat="newsboat -C $XDG_CONFIG_HOME/newsboat/config"
 alias networks="nmcli device wifi list"
 alias note="vim ~/documents/notes/scratchpad"
-alias pdb="pdb3.6"
+#alias pdb="pdb3.6"
 alias pbcopy='xclip -selection clipboard'
 alias pbpaste='xclip -selection clipboard -o'
 alias ranger='ranger --choosedir=$XDG_DATA_HOME/ranger/.rangerdir; LASTDIR=`cat $XDG_DATA_HOME/ranger/.rangerdir`; cd "$LASTDIR"'
