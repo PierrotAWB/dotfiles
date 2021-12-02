@@ -55,30 +55,39 @@ highlight LineNr ctermfg=red
 "                             Global variables                                 "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-let g:livepreview_engine = 'pdflatex'
-let g:livepreview_previewer = 'zathura'
-let g:Powerline_symbols='fancy'
-let g:Tex_CompileRule_pdf = 'latexmk -pdf -f $*'
-let g:Tex_DefaultTargetFormat = 'pdf'
-let g:tex_flavor = 'latex'
-let g:Tex_GotoError=0
-let g:Tex_ViewRule_pdf = 'zathura'
+let g:livepreview_engine 				= 'pdflatex'
+let g:livepreview_previewer 			= 'zathura'
+let g:Powerline_symbols					='fancy'
+let g:Tex_CompileRule_pdf 				= 'latexmk -pdf -f $*'
+let g:Tex_DefaultTargetFormat 			= 'pdf'
+let g:tex_flavor 						= 'latex'
+let g:Tex_GotoError						= 0
+let g:Tex_ViewRule_pdf 					= 'zathura'
 
-let g:netrw_banner=0
-let g:netrw_dirhistmax=0
+let g:netrw_banner						= 0
+let g:netrw_dirhistmax					= 0
 
-let g:vimtex_view_method='zathura'
-let g:vimtex_quickfix_mode=0
-let g:conceallevel=1
-let g:tex_conceal='abdmg'
+let g:vimtex_view_method				= 'zathura'
+let g:vimtex_quickfix_mode				= 0
+let g:conceallevel						= 1
+let g:tex_conceal						= 'abdmg'
 
-let g:UltiSnipsEditSplit="context"
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpBackwardTrigger="<C-k>"
-let g:UltiSnipsJumpForwardTrigger="<C-j>"
-let g:UltiSnipsSnippetDirectories=[$XDG_CONFIG_HOME.'/vim/plugged/ultisnips']
+" make YCM compatible with UltiSnips (using supertab)
+let g:ycm_use_ultisnips_completer 		= 0
+let g:ycm_key_list_select_completion 	= ['<C-n>', '<Down>']
+let g:ycm_key_list_previous_completion 	= ['<C-p>', '<Up>']
+let g:SuperTabDefaultCompletionType 	= '<C-n>'
+let g:ycm_filetype_blacklist 			= { 'tex': 1 }
 
-let g:UltiSnipsUsePythonVersion = 3
+let g:UltiSnipsEditSplit				= "context"
+let g:UltiSnipsExpandTrigger			= "<tab>"
+let g:UltiSnipsJumpForwardTrigger		= "<c-j>"
+let g:UltiSnipsJumpBackwardTrigger		= "<c-k>"
+let g:UltiSnipsSnippetDirectories		= [$XDG_CONFIG_HOME.'/vim/plugged/ultisnips']
+
+let g:UltiSnipsUsePythonVersion			= 3
+
+let g:ycm_auto_hover					= ""
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -117,8 +126,9 @@ nnoremap <C-a> ggVG
 nnoremap <C-\> :vsp<CR>:exec("tag ".expand("<cword>"))<CR>
 
 " Fly between buffers.
-nnoremap gb :ls<CR>:b<Space>
+nnoremap gb :Buffers<CR>
 
+nmap <leader>D <plug>(YCMHover)
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                                  Plugins                                     "
@@ -126,10 +136,23 @@ nnoremap gb :ls<CR>:b<Space>
 
 call plug#begin('~/.config/vim/plugged')
 
+" LaTeX
 Plug 'lervag/vimtex'
-Plug 'SirVer/ultisnips'
 Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
+
+" Snippets
+Plug 'SirVer/ultisnips'
+
+" Linting
 Plug 'neomake/neomake'
+
+" Completion
+Plug 'ycm-core/YouCompleteMe', { 'do': './install.py --clangd-completer --ts-completer' }
+Plug 'ervandew/supertab'
+
+" Search
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 
 call plug#end()
 
@@ -152,12 +175,12 @@ augroup END
 " (un)comment blocks of code.
 augroup commenting_blocks_of_code
 	autocmd!
-	autocmd FileType c,cpp,java,scala let b:comment_leader = '// '
-	autocmd FileType sh,ruby,python,R let b:comment_leader = '# '
-	autocmd FileType conf,fstab,zsh   let b:comment_leader = '# '
-	autocmd FileType tex              let b:comment_leader = '% '
-	autocmd FileType mail             let b:comment_leader = '> '
-	autocmd FileType vim              let b:comment_leader = '" '
+	autocmd FileType c,cpp,java,javascript let b:comment_leader = '// '
+	autocmd FileType sh,ruby,python,R 	   let b:comment_leader = '# '
+	autocmd FileType conf,fstab,zsh   	   let b:comment_leader = '# '
+	autocmd FileType tex              	   let b:comment_leader = '% '
+	autocmd FileType mail             	   let b:comment_leader = '> '
+	autocmd FileType vim              	   let b:comment_leader = '" '
 augroup END
 
 function! CommentToggle()

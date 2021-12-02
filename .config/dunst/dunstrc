@@ -1,15 +1,15 @@
 [global]
     monitor = 0
     follow = none
-    geometry = "500x5-24-24"
     indicate_hidden = yes
     shrink = no
-    transparency = 7
-    notification_height = 80
+    transparency = 20
     separator_height = 2
     padding = 15
     horizontal_padding = 8
-    frame_width = 3
+
+	width = 400
+	origin = bottom-right
     frame_color = "#282828"
 
     # Define a color for the separator.
@@ -24,7 +24,7 @@
     sort = yes
 
     idle_threshold = 120
-    font = sans-serif 12
+    font = monospace 12
     line_height = 0
     markup = full
 
@@ -61,7 +61,6 @@
 
     title = Dunst
     class = Dunst
-    startup_notification = false
     force_xinerama = false
 [experimental]
     per_monitor_dpi = false
