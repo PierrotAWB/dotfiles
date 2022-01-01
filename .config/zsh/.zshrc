@@ -1,5 +1,5 @@
 #export UPDATE_ZSH_DAYS=13
-export EDITOR='vim'
+export EDITOR='nvim'
 
 autoload -U colors && colors
 PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_color%}$%b "
@@ -40,13 +40,13 @@ alias config="cd $XDG_CONFIG_HOME"
 alias conf="config"
 alias clion="$XDG_CONFIG_HOME/JetBrains/CLion2020.1/bin/clion.sh"
 alias d="cd $XDG_CONFIG_HOME/dwm"
-alias d.="cd $XDG_CONFIG_HOME/dwm && sudo vim config.h" 
+alias d.="cd $XDG_CONFIG_HOME/dwm && sudo $EDITOR config.h" 
 alias e="exit"
-alias i3conf="vim ~/.config/i3/config"
+alias i3conf="$EDITOR ~/.config/i3/config"
 alias i3.="i3conf"
 alias j="jump-edit"
 alias l="ls"
-alias l.="cd $XDG_CONFIG_HOME/lf && vim lfrc"
+alias l.="cd $XDG_CONFIG_HOME/lf && $EDITOR lfrc"
 alias lf='lf -last-dir-path=$XDG_DATA_HOME/lf/.lfdir; LASTDIR=`cat $XDG_DATA_HOME/lf/.lfdir`; cd "$LASTDIR"'
 alias ll="ls -l"
 alias lla="ls -al"
@@ -57,7 +57,7 @@ alias mbsync="mbsync -c "$XDG_CONFIG_HOME"/mbsync/.mbsyncrc"
 alias m="ncmpcpp"
 alias newsboat="newsboat -C $XDG_CONFIG_HOME/newsboat/config"
 alias networks="nmcli device wifi list"
-alias note="vim ~/documents/notes/scratchpad"
+alias note="$EDITOR ~/documents/notes/scratchpad"
 #alias pdb="pdb3.6"
 alias pbcopy='xclip -selection clipboard'
 alias pbpaste='xclip -selection clipboard -o'
@@ -66,12 +66,12 @@ alias R="R --quiet"
 alias sy="sudo systemctl"
 alias s="cd ~/.local/bin"
 alias tlm="tllocalmgr" #TeX Live Manager
-alias todo="vim ~/documents/notes/todo"
+alias todo="$EDITOR ~/documents/notes/todo"
 alias unlock-key="pass mutt-wizard-personal > /dev/null"
 alias uk="unlock-key"
-alias v="vim"
-alias v.="vim $XDG_CONFIG_HOME/vim/vimrc"
-alias xre="vim $XDG_CONFIG_HOME/Xresources"
+alias v="$EDITOR"
+alias v.="$EDITOR $XDG_CONFIG_HOME/nvim/init.vim"
+alias xre="$EDITOR $XDG_CONFIG_HOME/Xresources"
 alias youtube-dl="youtube-dl --config-location $XDG_CONFIG_HOME/youtube-dl/config"
 alias yd="youtube-dl"
 
@@ -113,7 +113,7 @@ alias gs="git status"
 
 # zsh
 alias z="source $XDG_CONFIG_HOME/zsh/.zshrc"
-alias z.="vim $XDG_CONFIG_HOME/zsh/.zshrc"
+alias z.="$EDITOR $XDG_CONFIG_HOME/zsh/.zshrc"
 
 # misc
 alias dfh="df -h | egrep 'Filesystem|/dev/nvme0n1p4'"

@@ -1,7 +1,7 @@
 # vim: filetype=neomuttrc
 source /usr/local/share/mutt-wizard/mutt-wizard.muttrc
 
-set editor = "vim"
+set editor = "nvim"
 set sidebar_format = "%B%*	[%N/%S]"
 set edit_headers=yes
 set wait_key = yes

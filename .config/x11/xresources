@@ -6,24 +6,27 @@
 ! Base16 OceanicNext
 ! Scheme: https://github.com/voronianski/oceanic-next-color-scheme
 
-#define base00 #1B2B34
-#define base01 #343D46
-#define base02 #4F5B66
-#define base03 #65737E
-#define base04 #A7ADBA
-#define base05 #C0C5CE
-#define base06 #CDD3DE
-#define base07 #D8DEE9
-#define base08 #EC5f67
-#define base09 #F99157
-#define base0A #FAC863
-#define base0B #99C794
-#define base0C #5FB3B3
-#define base0D #6699CC
-#define base0E #C594C5
-#define base0F #AB7967
+/* 8 normal colors */
+#define base00 #161821 /* black   */
+#define base01 #e27878 /* red     */
+#define base02 #b4be82 /* green   */
+#define base03 #e2a478 /* yellow  */
+#define base04 #84a0c6 /* blue    */
+#define base05 #a093c7 /* magenta */
+#define base06 #89b8c2 /* cyan    */
+#define base07 #c6c8d1 /* white   */
 
-*.foreground:   base05
+/* 8 bright colors */
+#define base08 #6b7089 /* black   */
+#define base09 #e98989 /* red     */
+#define base0A #c0ca8e /* green   */
+#define base0B #e9b189 /* yellow  */
+#define base0C #91acd1 /* blue    */
+#define base0D #ada0d3 /* magenta */
+#define base0E #95c4ce /* cyan    */
+#define base0F #d2d4de /* white   */
+
+*.foreground:   base07
 #ifdef background_opacity
 *.background:   [background_opacity]base00
 #else

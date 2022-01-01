@@ -16,8 +16,9 @@ export NOTMUCH_CONFIG="$XDG_CONFIG_HOME/notmuch/notmuchrc"
 # TeX
 export TEXMFHOME="$XDG_DATA_HOME/texmf"
 # Vim
-export VIM="$XDG_CONFIG_HOME/vim"
-export VIMINIT=":source $XDG_CONFIG_HOME/vim/vimrc"
+#  export VIM="$XDG_CONFIG_HOME/vim"
+#  export VIMRUNTIME="$XDG_CONFIG_HOME/nvim"
+#  export VIMINIT=":source $XDG_CONFIG_HOME/vim/vimrc"
 # zsh
 export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
 export HISTFILE="$XDG_DATA_HOME/zsh/history"
