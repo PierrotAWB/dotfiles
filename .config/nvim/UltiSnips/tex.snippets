@@ -1,0 +1,594 @@
+### Table of Contents
+
+# Press '*' on item to jump to it (might have to use `n' too).
+
+# 1. Contexts
+# 2. Templates
+# 3. General Environments
+# 4. Math Environments
+# 5. Fonts
+# 6. Math Symbols
+# 7. Brackets and Parentheses
+# 8. Greeks
+# 9. Misc.
+
+####################################################################### Contexts
+
+# Allows snippets to only in context.
+# See https://github.com/gillescastel/latex-snippets/blob/master/tex.snippets.
+# N.B. these do not work with :syntax off.
+
+global !p
+
+def math():
+	return vim.eval('vimtex#syntax#in_mathzone()') == '1'
+
+def comment(): 
+	return vim.eval('vimtex#syntax#in_comment()') == '1'
+
+# Modified from Gilles's script to allow multiple environments separated by a '|'.
+# For an example, search for 'env("enumerate|itemize")'
+def env(name):
+	name = name.split('|')
+	for n in name:
+		[x,y] = vim.eval("vimtex#env#is_inside('" + n + "')") 
+		if x != '0' and y != '0':
+			return True
+	return False
+
+endglobal
+
+
+###################################################################### Templates
+
+snippet TTN "Note template" bA
+\documentclass[14pt]{extarticle}
+\usepackage[margin=1in]{geometry}
+\usepackage[linesnumbered, ruled, vlined]{algorithm2e}
+\usepackage[linkcarmine]{Andrew}
+\usepackage{xcolor, mathtools, enumitem, parskip}
+
+\renewcommand\qedsymbol{\scalebox{0.8}[0.729]{$\clubsuit$}}
+\newcommand{\highlight}[1]{\color{blue}\textbf{#1}\color{black}\@\xspace}
+\setlength{\parskip}{12pt}
+\allowdisplaybreaks
+
+\title{$1}
+\author{Andrew Wang}
+
+\begin{document}
+	\maketitle
+	$2
+\end{document}
+endsnippet
+
+
+########################################################### General Environments
+
+snippet beg "Begin" bA
+\begin{$1}
+	$2
+\end{$1}
+endsnippet
+
+snippet EEN "Environment enumerate" iA
+\begin{enumerate}
+	\item $1
+\end{enumerate}
+endsnippet
+
+snippet EIT "Environment itemize" iA
+\begin{itemize}
+	\item $1
+\end{itemize}
+endsnippet
+
+snippet img "Include image" i
+\begin{center}
+	\includegraphics[width=12cm, keepaspectratio]{$1}
+\end{center}
+endsnippet
+
+context "env("enumerate|itemize")"
+snippet \i "Item" iA
+\item $1
+endsnippet
+
+snippet SSE "Section" A
+\section{$1} $0
+endsnippet
+
+snippet SSS "Subsection" A
+\subsection{$1} $0
+endsnippet
+
+snippet SS2 "Subsubsection" A
+\subsubsection{$1} $0
+endsnippet
+
+snippet solve "Solve" i
+\vspace{\baselineskip}
+\textit{Solution.}
+	$1
+
+\qed
+\vspace{\baselineskip}
+endsnippet
+
+
+############################################################## Math Environments
+
+snippet align* "Align env" iA
+\begin{align*}
+	$1
+\end{align*}
+endsnippet
+
+context "math()"
+snippet cases "Cases" iA
+\begin{cases}
+	$1
+\end{cases}
+endsnippet
+
+snippet defn "Definition" iA
+\begin{definition}
+	$1
+\end{definition}
+endsnippet
+
+snippet ex "Example" b
+\begin{example}
+	$1
+\end{example}
+endsnippet
+
+snippet exe "Exercise" b
+\begin{exercise}
+	$1
+\end{exercise}
+endsnippet
+
+snippet lemma "Lemma" b
+\begin{lemma}
+	$1
+\end{lemma}
+endsnippet
+
+snippet prop "Proposition" bA
+\begin{proposition}
+	$1
+\end{proposition}
+endsnippet
+
+snippet ques "Question" bA
+\begin{question}
+	$1
+\end{question}
+endsnippet
+
+snippet remk "Exercise" bA
+\begin{remark}
+	$1
+\end{remark}
+endsnippet
+
+context "math()"
+snippet substack "Substack" iA
+\begin{substack}
+	$1
+\end{substack}
+endsnippet
+
+snippet thm "Theorem" bA
+\begin{theorem}
+	$1
+\end{theorem}
+endsnippet
+
+snippet d "Display math mode" i
+\[$1\]
+endsnippet
+
+snippet m "Math mode" i
+\$$1\$
+endsnippet
+
+
+########################################################################## Fonts
+
+snippet bbc "Complex numbers" iA
+\mathbb C
+endsnippet
+
+snippet bbe "Expectation" iA
+\mathbb E
+endsnippet
+
+snippet bbf "Field" iA
+\mathbb F
+endsnippet
+
+snippet bbn "Naturals" iA
+\mathbb N
+endsnippet
+
+snippet bbr "Reals" iA
+\mathbb R
+endsnippet
+
+snippet bbt "Torus" iA
+\mathbb T
+endsnippet
+
+snippet bbz "Integers" iA
+\mathbb Z
+endsnippet
+
+snippet FBF "Font BoldFace" iA
+\textbf{$1}
+endsnippet
+
+snippet FCA "Font MathCAl" iA
+\mathcal{$1}
+endsnippet
+
+snippet FIT "Font ITalics" iA
+\textsc{$1}
+endsnippet
+
+snippet FRM "Font noRMal" iA
+\textrm{$1}
+endsnippet
+
+snippet FSC "Font Small Caps" iA
+\textsc{$1}
+endsnippet
+
+snippet FTT "Font TypewriTer" iA
+\texttt{$1}
+endsnippet
+
+snippet hlt "Highlight" iA
+\highlight{$1}
+endsnippet
+
+
+################################################################### Math Symbols
+
+context "math()"
+snippet . "cdot" i
+\cdot
+endsnippet
+
+snippet ... "ldots" iA
+\ldots
+endsnippet
+
+snippet == "Equals + return" iA
+&= $1 \\\\
+endsnippet
+
+context "math()"
+snippet to "To (right arrow)" iA
+\to
+endsnippet
+
+context "math()"
+snippet maps "Maps to (right arrow)" iA
+\mapsto
+endsnippet
+
+context "math()"
+snippet => "implies" iA
+\implies
+endsnippet
+
+snippet =< "implied by" iA
+\impliedby
+endsnippet
+
+snippet <= "Less than equal to" A
+\leq
+endsnippet
+
+snippet >= "Greater than equal to" A
+\geq
+endsnippet
+
+snippet circ "Composition" i
+\circ
+endsnippet
+
+# See https://castel.dev/post/lecture-notes-1/#fractions for details.
+snippet // "Fraction" iA
+\\frac{$1}{$2}$0
+endsnippet
+
+# Idem.
+snippet '((\d+)|(\d*)(\\)?([A-Za-z]+)((\^|_)(\{\d+\}|\d))*)/' "Fraction" wrA
+\\frac{`!p snip.rv = match.group(1)`}{$1}$0
+endsnippet
+
+# Idem.
+priority 1000
+snippet '^.*\)/' "() Fraction" wrA
+`!p
+stripped = match.string[:-1]
+depth = 0
+i = len(stripped) - 1
+while True:
+	if stripped[i] == ')': depth += 1
+	if stripped[i] == '(': depth -= 1
+	if depth == 0: break;
+	i -= 1
+snip.rv = stripped[0:i] + "\\frac{" + stripped[i+1:-1] + "}"
+`{$1}$0
+endsnippet
+
+snippet pmat "pmat" iA
+\begin{pmatrix} $1 \end{pmatrix} $0
+endsnippet
+
+snippet bmat "bmat" iA
+\begin{bmatrix} $1 \end{bmatrix} $0
+endsnippet
+
+snippet sum "Sum" w
+\sum_{n=${1:1}}^{${2:\infty}} ${3:a_n z^n}
+endsnippet
+
+snippet lim "Limit" w
+\lim_{${1:n} \to ${2:\infty}} 
+endsnippet
+
+snippet prod "Product" w
+\prod_{n=${1:1}}^{${2:\infty}} ${3:a_n z^n}
+endsnippet
+
+context "math()"
+snippet in "Element of" iA
+\in
+endsnippet
+
+snippet s- "Setminus" iA
+\setminus
+endsnippet
+
+snippet ssub "Subset" iA
+\subseteq $0
+endsnippet
+
+snippet ssup "Superset" iA
+\supseteq $0
+endsnippet
+
+snippet NN "Intersection (cap)" iA
+\cap
+endsnippet
+
+snippet UU "Union (cup)" iA
+\cup
+endsnippet
+
+snippet uuu "bigcup" iA
+\bigcup_{${1:i \in ${2: I}}} $0
+endsnippet
+
+snippet nnn "bigcap" iA
+\bigcap_{${1:i \in ${2: I}}} $0
+endsnippet
+
+snippet -- "Subscript" iA
+_{$1}
+endsnippet
+
+# See https://castel.dev/post/lecture-notes-1/#sub--and-superscripts for more details.
+snippet '([A-Za-z])(\d)' "auto subscript" wrA
+`!p snip.rv = match.group(1)`_`!p snip.rv = match.group(2)`
+endsnippet
+
+# Idem.
+snippet '([A-Za-z])_(\d\d)' "auto subscript2" wrA
+`!p snip.rv = match.group(1)`_{`!p snip.rv = match.group(2)`}
+endsnippet
+
+context "math()"
+snippet tt "Superscript (to the)" iA
+^{$1} $0
+endsnippet
+
+snippet sqx "Square" iA
+^2
+endsnippet
+
+context "math()"
+snippet inv "Inverse" iA
+^{-1}
+endsnippet
+
+context "math()"
+snippet conj "Conjugate" iA
+\overline{$1}$0
+endsnippet
+
+snippet defeq "Defined equal" iA
+\vcentcolon=
+endsnippet
+
+snippet eqdef "Equal defined" iA
+=\vcentcolon
+endsnippet
+
+snippet ip "Inner product" iA
+\\left\\langle $1, $2 \\right\\rangle $0
+endsnippet
+
+context "math()"
+snippet cos "Cos" w
+\\cos\\left(${1:x}\\right) $0
+endsnippet
+
+context "math()"
+snippet sin "Sin" w
+\\sin\\left(${1:x}\\right) $0
+endsnippet
+
+context "math()"
+snippet tan "Tan" w
+\\tan\\left(${1:x}\\right) $0
+endsnippet
+
+context "math()"
+snippet mp "Minus or plus" iA
+\mp
+endsnippet
+
+context "math()"
+snippet pm "Plus or minus" iA
+\pm
+endsnippet
+
+context "math()"
+snippet sqrt "Square root" iA
+\sqrt{$1} $0
+endsnippet
+
+snippet ln "Natural log" wA
+\ln{$1} $0
+endsnippet
+
+context "math()"
+snippet log "Log" wA
+\log{$1} $0
+endsnippet
+
+context "math()"
+snippet exp "Exponential" w
+e^{$1} $0
+endsnippet
+
+
+####################################################### Brackets and Parentheses
+
+snippet lr( "Parentheses" iA
+\\left($1\\right) $0
+endsnippet
+
+snippet lr{ "Braces" iA
+\\left{$1\\right} $0
+endsnippet
+
+context "math()"
+snippet set "Set" iA
+\\left\\{$1\\right\\} $0
+endsnippet
+
+context "math()"
+snippet [ "Square brackets" iA
+\\left[$1\\right] $0
+endsnippet
+
+context "math()"
+snippet ceil "ceil" iA
+\\left\\lceil $1 \\right\\rceil $0
+endsnippet
+
+context "math()"
+snippet floor "floor" iA
+\left\lfloor $1 \right\rfloor $0
+endsnippet
+
+
+######################################################################### Greeks
+
+snippet `a "alpha" iA
+\alpha
+endsnippet
+
+snippet `b "beta" iA
+\beta
+endsnippet
+
+snippet `d "delta" iA
+\delta
+endsnippet
+
+snippet `e "epsilon" iA
+\epsilon
+endsnippet
+
+snippet `et "eta" iA
+\eta
+endsnippet
+
+snippet `g "gamma" iA
+\gamma
+endsnippet
+
+snippet `i "iota" iA
+\iota
+endsnippet
+
+snippet `k "kappa" iA
+\kappa
+endsnippet
+
+snippet `l "lambda" iA
+\lambda
+endsnippet
+
+snippet `m "mu" iA
+\mu
+endsnippet
+
+snippet `n "nu" iA
+\nu
+endsnippet
+
+snippet `ph "(var)phi" iA
+\varphi
+endsnippet
+
+snippet `p "pi" iA
+\pi
+endsnippet
+
+snippet `r "rho" iA
+\rho
+endsnippet
+
+snippet `s "sigma" iA
+\sigma
+endsnippet
+
+snippet `S "Sigma" iA
+\Sigma
+endsnippet
+
+snippet `t "tau" iA
+\tau
+endsnippet
+
+snippet `x "Chi" iA
+\chi
+endsnippet
+
+snippet `z "Zeta" iA
+\zeta
+endsnippet
+
+
+########################################################################## Misc.
+
+snippet href "Create hyperref" w
+\href{${1:http://www.archlinux.org}}{${2:Arch Linux website}}
+endsnippet
+
+snippet lab "Create a label" w
+\label{$1} $0
+endsnippet
+
+snippet ref "Reference a label" w
+\ref{$1} $0
+endsnippet
