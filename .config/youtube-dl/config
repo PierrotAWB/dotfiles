@@ -1,1 +1,2 @@
 -o /home/andrew/videos/%(title)s.%(ext)s
+--external-downloader=aria2c
