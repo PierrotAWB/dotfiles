@@ -11,6 +11,9 @@ def_key "h"
 	jump_to_parent_directory
 
 def_key "l"
+	next_column
+
+def_key "l"
 	enter_directory
 
 def_key "l"
@@ -18,9 +21,6 @@ def_key "l"
 
 def_key "l"
 	play_item
-
-def_key "l"
-	next_column
 
 def_key "h"
 	previous_column
@@ -46,11 +46,23 @@ def_key "x"
 def_key "="
 	volume_up
 
-def_key "ctrl-f"
+def_key "f"
 	seek_forward
 
-def_key "ctrl-b"
+def_key "b"
 	seek_backward
+
+def_key "ctrl-f"
+	page_down
+
+def_key "G"
+	move_end
+
+def_key "g"
+	move_home
+
+def_key "ctrl-b"
+	page_up
 
 def_key "t"
 	show_clock
