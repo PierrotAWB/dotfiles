@@ -1,4 +1,4 @@
-#export UPDATE_ZSH_DAYS=13
+autoload -U compinit; compinit
 export EDITOR='nvim'
 
 autoload -U colors && colors
@@ -128,6 +128,7 @@ alias mime=mimetype
 alias mp="mbsync personal"
 alias sinks="pactl list short sinks"
 alias sink="sinks"
+alias sty="sudo nvim /usr/local/share/texmf/tex/latex/Andrew/Andrew.sty"
 alias temp="sudo tlp stat -t"
 alias xbindkeys="xbindkeys -f $XDG_CONFIG_HOME/xbindkeysrc"
 
