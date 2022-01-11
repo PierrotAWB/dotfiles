@@ -1,4 +1,4 @@
-### Table of Contents
+## Table of Contents
 
 # Press '*' on item to jump to it (might have to use `n' too).
 
@@ -46,7 +46,7 @@ snippet TTN "Note template" bA
 \usepackage[margin=1in]{geometry}
 \usepackage[linesnumbered, ruled, vlined]{algorithm2e}
 \usepackage[linkcarmine]{Andrew}
-\usepackage{xcolor, mathtools, enumitem, parskip}
+\usepackage{xcolor, mathtools, enumitem, parskip, mathrsfs}
 
 \renewcommand\qedsymbol{\scalebox{0.8}[0.729]{$\clubsuit$}}
 \newcommand{\highlight}[1]{\color{blue}\textbf{#1}\color{black}\@\xspace}
@@ -90,7 +90,7 @@ snippet img "Include image" i
 endsnippet
 
 context "env("enumerate|itemize")"
-snippet \i "Item" iA
+snippet it "Item" w
 \item $1
 endsnippet
 
@@ -99,11 +99,11 @@ snippet SSE "Section" A
 endsnippet
 
 snippet SSS "Subsection" A
-\subsection{$1} $0
+\subsection{$1}$0
 endsnippet
 
 snippet SS2 "Subsubsection" A
-\subsubsection{$1} $0
+\subsubsection{$1}$0
 endsnippet
 
 snippet solve "Solve" i
@@ -129,6 +129,12 @@ snippet cases "Cases" iA
 \begin{cases}
 	$1
 \end{cases}
+endsnippet
+
+snippet corr "Corollary" bA
+\begin{corollary}
+	$1
+\end{corollary}
 endsnippet
 
 snippet defn "Definition" iA
@@ -159,6 +165,12 @@ snippet prop "Proposition" bA
 \begin{proposition}
 	$1
 \end{proposition}
+endsnippet
+
+snippet pf "Proof" bA
+\begin{proof}
+	$1
+\end{proof}
 endsnippet
 
 snippet ques "Question" bA
@@ -197,6 +209,10 @@ endsnippet
 
 ########################################################################## Fonts
 
+snippet bba "Geometric avatar" iA
+\mathbb A
+endsnippet
+
 snippet bbc "Complex numbers" iA
 \mathbb C
 endsnippet
@@ -211,6 +227,10 @@ endsnippet
 
 snippet bbn "Naturals" iA
 \mathbb N
+endsnippet
+
+snippet bbq "Rationals" iA
+\mathbb Q
 endsnippet
 
 snippet bbr "Reals" iA
@@ -234,7 +254,7 @@ snippet FCA "Font MathCAl" iA
 endsnippet
 
 snippet FIT "Font ITalics" iA
-\textsc{$1}
+\textit{$1}
 endsnippet
 
 snippet FRM "Font noRMal" iA
@@ -251,6 +271,10 @@ endsnippet
 
 snippet hlt "Highlight" iA
 \highlight{$1}
+endsnippet
+
+snippet MSC "Math SCript" iA
+\mathscr{$1}
 endsnippet
 
 
@@ -288,11 +312,11 @@ snippet =< "implied by" iA
 \impliedby
 endsnippet
 
-snippet <= "Less than equal to" A
+snippet <= "Less than equal to" iA
 \leq
 endsnippet
 
-snippet >= "Greater than equal to" A
+snippet >= "Greater than equal to" iA
 \geq
 endsnippet
 
@@ -347,7 +371,7 @@ snippet prod "Product" w
 endsnippet
 
 context "math()"
-snippet in "Element of" iA
+snippet in "Element of" w
 \in
 endsnippet
 
@@ -356,11 +380,11 @@ snippet s- "Setminus" iA
 endsnippet
 
 snippet ssub "Subset" iA
-\subseteq $0
+\subseteq
 endsnippet
 
 snippet ssup "Superset" iA
-\supseteq $0
+\supseteq
 endsnippet
 
 snippet NN "Intersection (cap)" iA
@@ -395,11 +419,15 @@ endsnippet
 
 context "math()"
 snippet tt "Superscript (to the)" iA
-^{$1} $0
+^{$1}$0
 endsnippet
 
 snippet sqx "Square" iA
 ^2
+endsnippet
+
+snippet cb "Cube" iA
+^3
 endsnippet
 
 context "math()"
@@ -420,28 +448,23 @@ snippet eqdef "Equal defined" iA
 =\vcentcolon
 endsnippet
 
-snippet ip "Inner product" iA
-\\left\\langle $1, $2 \\right\\rangle $0
+snippet ip "Inner product" i
+\\left\\langle $1, $2 \\right\\rangle$0
 endsnippet
 
 context "math()"
 snippet cos "Cos" w
-\\cos\\left(${1:x}\\right) $0
+\\cos\\left(${1:x}\\right)$0
 endsnippet
 
 context "math()"
 snippet sin "Sin" w
-\\sin\\left(${1:x}\\right) $0
+\\sin\\left(${1:x}\\right)$0
 endsnippet
 
 context "math()"
 snippet tan "Tan" w
-\\tan\\left(${1:x}\\right) $0
-endsnippet
-
-context "math()"
-snippet mp "Minus or plus" iA
-\mp
+\\tan\\left(${1:x}\\right)$0
 endsnippet
 
 context "math()"
@@ -468,6 +491,14 @@ snippet exp "Exponential" w
 e^{$1} $0
 endsnippet
 
+snippet A "forall" w
+\forall
+endsnippet
+
+snippet E "Exists" w
+\exists
+endsnippet
+
 
 ####################################################### Brackets and Parentheses
 
@@ -480,12 +511,16 @@ snippet lr{ "Braces" iA
 endsnippet
 
 context "math()"
-snippet set "Set" iA
-\\left\\{$1\\right\\} $0
+snippet set "Set" w
+\\left\\{$1\\right\\}$0
+endsnippet
+
+snippet [ "Square brackets" i
+[$1]
 endsnippet
 
 context "math()"
-snippet [ "Square brackets" iA
+snippet lr[ "Square brackets" iA
 \\left[$1\\right] $0
 endsnippet
 
@@ -502,7 +537,7 @@ endsnippet
 
 ######################################################################### Greeks
 
-snippet `a "alpha" iA
+snippet a "alpha" w
 \alpha
 endsnippet
 
@@ -558,7 +593,7 @@ snippet `r "rho" iA
 \rho
 endsnippet
 
-snippet `s "sigma" iA
+snippet s "sigma" w
 \sigma
 endsnippet
 
@@ -570,16 +605,16 @@ snippet `t "tau" iA
 \tau
 endsnippet
 
-snippet `x "Chi" iA
-\chi
-endsnippet
-
 snippet `z "Zeta" iA
 \zeta
 endsnippet
 
 
 ########################################################################## Misc.
+
+snippet `` "Quotes" w
+`$1'
+endsnippet
 
 snippet href "Create hyperref" w
 \href{${1:http://www.archlinux.org}}{${2:Arch Linux website}}
@@ -591,4 +626,12 @@ endsnippet
 
 snippet ref "Reference a label" w
 \ref{$1} $0
+endsnippet
+
+snippet date "Date below chapter" w
+\vspace{-2em}\hfill `date '+%A, %B %e, %Y'`\vspace{-1em}
+endsnippet
+
+snippet emd "emdash" wA
+--
 endsnippet
