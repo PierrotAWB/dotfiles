@@ -108,7 +108,9 @@ endsnippet
 
 snippet solve "Solve" i
 \vspace{\baselineskip}
+
 \textit{Solution.}
+
 	$1
 
 \qed
@@ -141,6 +143,12 @@ snippet defn "Definition" iA
 \begin{definition}
 	$1
 \end{definition}
+endsnippet
+
+snippet eqn "Equation" iA
+\begin{equation}
+	$1
+\end{equation}
 endsnippet
 
 snippet ex "Example" b
@@ -187,9 +195,9 @@ endsnippet
 
 context "math()"
 snippet substack "Substack" iA
-\begin{substack}
+\substack{
 	$1
-\end{substack}
+}
 endsnippet
 
 snippet thm "Theorem" bA
@@ -304,11 +312,12 @@ snippet maps "Maps to (right arrow)" iA
 endsnippet
 
 context "math()"
-snippet => "implies" iA
+snippet -> "implies" iA
 \implies
 endsnippet
 
-snippet =< "implied by" iA
+context "math()"
+snippet <- "implied by" iA
 \impliedby
 endsnippet
 
@@ -318,6 +327,10 @@ endsnippet
 
 snippet >= "Greater than equal to" iA
 \geq
+endsnippet
+
+snippet != "Not equal to" iA
+\neq
 endsnippet
 
 snippet circ "Composition" i
@@ -359,7 +372,7 @@ snippet bmat "bmat" iA
 endsnippet
 
 snippet sum "Sum" w
-\sum_{n=${1:1}}^{${2:\infty}} ${3:a_n z^n}
+\sum_{${1:n = 1}}^{${2:\infty}} ${3:a_n z^n}
 endsnippet
 
 snippet lim "Limit" w
@@ -371,7 +384,7 @@ snippet prod "Product" w
 endsnippet
 
 context "math()"
-snippet in "Element of" w
+snippet eof "Element of" iA
 \in
 endsnippet
 
@@ -396,11 +409,15 @@ snippet UU "Union (cup)" iA
 endsnippet
 
 snippet uuu "bigcup" iA
-\bigcup_{${1:i \in ${2: I}}} $0
+\bigcup_{${1:i \in ${2: I}}}
+endsnippet
+
+snippet bsc "big square cup" iA
+\bigsqcup_{${1:i \in ${2: I}}}
 endsnippet
 
 snippet nnn "bigcap" iA
-\bigcap_{${1:i \in ${2: I}}} $0
+\bigcap_{${1:i \in ${2: I}}}
 endsnippet
 
 snippet -- "Subscript" iA
@@ -499,6 +516,21 @@ snippet E "Exists" w
 \exists
 endsnippet
 
+context "math()"
+snippet infty "Infinity" wA
+\infty
+endsnippet
+
+context "math()"
+snippet empty "Empty set" wA
+\emptyset
+endsnippet
+
+context "math()"
+snippet part "Partial derivative" wA
+\frac{\partial ${1:f}}{\partial ${2:x}}
+endsnippet
+
 
 ####################################################### Brackets and Parentheses
 
@@ -526,22 +558,29 @@ endsnippet
 
 context "math()"
 snippet ceil "ceil" iA
-\\left\\lceil $1 \\right\\rceil $0
+\\left\\lceil $1 \\right\\rceil
 endsnippet
 
 context "math()"
 snippet floor "floor" iA
-\left\lfloor $1 \right\rfloor $0
+\left\lfloor $1 \right\rfloor
+endsnippet
+
+context "math()"
+snippet grad "gradient" wA
+\nabla $0
 endsnippet
 
 
 ######################################################################### Greeks
 
-snippet a "alpha" w
+context "math()"
+snippet a "alpha" i
 \alpha
 endsnippet
 
-snippet `b "beta" iA
+context "math()"
+snippet b "beta" i
 \beta
 endsnippet
 
@@ -549,7 +588,7 @@ snippet `d "delta" iA
 \delta
 endsnippet
 
-snippet `e "epsilon" iA
+snippet e "epsilon" w
 \epsilon
 endsnippet
 
@@ -557,7 +596,7 @@ snippet `et "eta" iA
 \eta
 endsnippet
 
-snippet `g "gamma" iA
+snippet g "gamma" w
 \gamma
 endsnippet
 
@@ -597,7 +636,7 @@ snippet s "sigma" w
 \sigma
 endsnippet
 
-snippet `S "Sigma" iA
+snippet S "Sigma" w
 \Sigma
 endsnippet
 
@@ -635,3 +674,8 @@ endsnippet
 snippet emd "emdash" wA
 --
 endsnippet
+
+snippet hrule "Horizontal rule" w
+\par\noindent\rule{0.85\textwidth}{0.4pt} 
+endsnippet
+
