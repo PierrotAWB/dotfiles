@@ -139,7 +139,7 @@ snippet corr "Corollary" bA
 \end{corollary}
 endsnippet
 
-snippet defn "Definition" iA
+snippet defn "Definition" bA
 \begin{definition}
 	$1
 \end{definition}
@@ -167,6 +167,12 @@ snippet lemma "Lemma" b
 \begin{lemma}
 	$1
 \end{lemma}
+endsnippet
+
+snippet note "Lemma" b
+\begin{note}
+	$1
+\end{note}
 endsnippet
 
 snippet prop "Proposition" bA
@@ -207,7 +213,9 @@ snippet thm "Theorem" bA
 endsnippet
 
 snippet d "Display math mode" i
-\[$1\]
+\[
+	$1
+\]
 endsnippet
 
 snippet m "Math mode" i
@@ -231,6 +239,10 @@ endsnippet
 
 snippet bbf "Field" iA
 \mathbb F
+endsnippet
+
+snippet bbh "Upper half plane" iA
+\mathbb H
 endsnippet
 
 snippet bbn "Naturals" iA
@@ -312,8 +324,13 @@ snippet maps "Maps to (right arrow)" iA
 endsnippet
 
 context "math()"
-snippet -> "implies" iA
+snippet -> "implies" wA
 \implies
+endsnippet
+
+context "math()"
+snippet x-> "implies" wA
+\xrightarrow[]{${1:u}}
 endsnippet
 
 context "math()"
@@ -322,15 +339,15 @@ snippet <- "implied by" iA
 endsnippet
 
 snippet <= "Less than equal to" iA
-\leq
+\leq $0
 endsnippet
 
 snippet >= "Greater than equal to" iA
-\geq
+\geq $0
 endsnippet
 
 snippet != "Not equal to" iA
-\neq
+\neq $0
 endsnippet
 
 snippet circ "Composition" i
@@ -383,8 +400,12 @@ snippet prod "Product" w
 \prod_{n=${1:1}}^{${2:\infty}} ${3:a_n z^n}
 endsnippet
 
+snippet int "Integral" w
+\int_{${1:X}}^{$2} ${3:f(x)} \ d${4:\mu}
+endsnippet
+
 context "math()"
-snippet eof "Element of" iA
+snippet in "Element of" w
 \in
 endsnippet
 
@@ -471,22 +492,27 @@ endsnippet
 
 context "math()"
 snippet cos "Cos" w
-\\cos\\left(${1:x}\\right)$0
+\cos ${1:\theta}$0
+endsnippet
+
+context "math()"
+snippet cos( "Cos" w
+\cos\left(${1:\theta}\right)$0
 endsnippet
 
 context "math()"
 snippet sin "Sin" w
-\\sin\\left(${1:x}\\right)$0
+\sin ${1:\theta}$0
+endsnippet
+
+context "math()"
+snippet sin( "Sin" w
+\sin\left(${1:\theta}\right)$0
 endsnippet
 
 context "math()"
 snippet tan "Tan" w
 \\tan\\left(${1:x}\\right)$0
-endsnippet
-
-context "math()"
-snippet pm "Plus or minus" iA
-\pm
 endsnippet
 
 context "math()"
@@ -531,6 +557,11 @@ snippet part "Partial derivative" wA
 \frac{\partial ${1:f}}{\partial ${2:x}}
 endsnippet
 
+context "math()"
+snippet st "Such that" iA
+\;:\; $0
+endsnippet
+
 
 ####################################################### Brackets and Parentheses
 
@@ -543,7 +574,7 @@ snippet lr{ "Braces" iA
 endsnippet
 
 context "math()"
-snippet set "Set" w
+snippet set "Set" i
 \\left\\{$1\\right\\}$0
 endsnippet
 
@@ -569,6 +600,26 @@ endsnippet
 context "math()"
 snippet grad "gradient" wA
 \nabla $0
+endsnippet
+
+context "math()"
+snippet bound "boundary" wA
+\partial 
+endsnippet
+
+context "math()"
+snippet v "vector" w
+\vec{${1:x}}
+endsnippet
+
+context "math()"
+snippet n "norm" w
+\|${1:\vec{x}}\|
+endsnippet
+
+context "math()"
+snippet times "Multiply" wA
+\times $0
 endsnippet
 
 
@@ -676,6 +727,19 @@ snippet emd "emdash" wA
 endsnippet
 
 snippet hrule "Horizontal rule" w
-\par\noindent\rule{0.85\textwidth}{0.4pt} 
+\par\noindent\rule{$1\textwidth}{0.4pt}$0
+endsnippet
+
+context "math()"
+snippet ~ "Tilde" iA
+\tilde{$1}
+endsnippet
+
+snippet qand "Spaced and" A
+\quad\text{and}\quad
+endsnippet
+
+snippet C++ "C++" A
+C{}\verb!++!
 endsnippet
 
