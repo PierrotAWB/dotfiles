@@ -23,8 +23,11 @@ export TEXMFHOME="$XDG_DATA_HOME/texmf"
 export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
 export HISTFILE="$XDG_DATA_HOME/zsh/history"
 
+
 # MTP Probe
 export MTP_NO_PROBE="1"
 
+
 # Source .zshrc for main configuration.
 source "$ZDOTDIR/.zshrc"
+

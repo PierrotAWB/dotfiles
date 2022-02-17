@@ -129,8 +129,12 @@ alias mp="mbsync personal"
 alias sinks="pactl list short sinks"
 alias sink="sinks"
 alias sty="sudo nvim /usr/local/share/texmf/tex/latex/Andrew/Andrew.sty"
+alias swapalt="setxkbmap -option altwin:swap_alt_win"
 alias temp="sudo tlp stat -t"
 alias xbindkeys="xbindkeys -f $XDG_CONFIG_HOME/xbindkeysrc"
+
+# Can almost certainly be compressed with AWK.
+alias down="nmcli con down '$(nmcli con show --active | tail -1 | grep -oP '^.*?  ' | sed 's/[ ]*$//')'"
 
 [ -f $XDG_CONFIG_HOME/fzf/shell/key-bindings.zsh ] && source $XDG_CONFIG_HOME/fzf/shell/key-bindings.zsh
 [ -f $XDG_CONFIG_HOME/fzf/shell/completion.zsh ] && source $XDG_CONFIG_HOME/fzf/shell/completion.zsh
