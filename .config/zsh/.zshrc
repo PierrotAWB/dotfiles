@@ -1,6 +1,11 @@
 autoload -U compinit; compinit
 export EDITOR='nvim'
 
+# History in cache directory:
+HISTSIZE=10000000
+SAVEHIST=10000000
+HISTFILE=~/.cache/zsh/history
+
 autoload -U colors && colors
 PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_color%}$%b "
 setopt autocd
@@ -46,8 +51,8 @@ alias i3conf="$EDITOR ~/.config/i3/config"
 alias i3.="i3conf"
 alias j="jump-edit"
 alias l="ls"
+alias lf="lfub"
 alias l.="cd $XDG_CONFIG_HOME/lf && $EDITOR lfrc"
-alias lf='lf -last-dir-path=$XDG_DATA_HOME/lf/.lfdir; LASTDIR=`cat $XDG_DATA_HOME/lf/.lfdir`; cd "$LASTDIR"'
 alias ll="ls -l"
 alias lla="ls -al"
 alias lal="lla"
@@ -61,7 +66,7 @@ alias note="$EDITOR ~/documents/notes/scratchpad"
 #alias pdb="pdb3.6"
 alias pbcopy='xclip -selection clipboard'
 alias pbpaste='xclip -selection clipboard -o'
-alias r='ranger --choosedir=$XDG_DATA_HOME/ranger/.rangerdir; LASTDIR=`cat $XDG_DATA_HOME/ranger/.rangerdir`; cd "$LASTDIR"'
+alias r="lfcd"
 alias R="R --quiet"
 alias sy="sudo systemctl"
 alias s="cd ~/.local/bin"
@@ -131,10 +136,26 @@ alias sink="sinks"
 alias sty="sudo nvim /usr/local/share/texmf/tex/latex/Andrew/Andrew.sty"
 alias swapalt="setxkbmap -option altwin:swap_alt_win"
 alias temp="sudo tlp stat -t"
+alias tlmgr="$TEXMFDIST/scripts/texlive/tlmgr.pl --usermode"
 alias xbindkeys="xbindkeys -f $XDG_CONFIG_HOME/xbindkeysrc"
+
 
 # Can almost certainly be compressed with AWK.
 alias down="nmcli con down '$(nmcli con show --active | tail -1 | grep -oP '^.*?  ' | sed 's/[ ]*$//')'"
+
+
+# Use lf to switch directories and bind it to ctrl-o
+lfcd () {
+    tmp="$(mktemp)"
+    lf -last-dir-path="$tmp" "$@"
+    if [ -f "$tmp" ]; then
+        dir="$(cat "$tmp")"
+        rm -f "$tmp" >/dev/null
+        [ -d "$dir" ] && [ "$dir" != "$(pwd)" ] && cd "$dir"
+    fi
+}
+
+bindkey -s '^o' 'lfcd\n'
 
 [ -f $XDG_CONFIG_HOME/fzf/shell/key-bindings.zsh ] && source $XDG_CONFIG_HOME/fzf/shell/key-bindings.zsh
 [ -f $XDG_CONFIG_HOME/fzf/shell/completion.zsh ] && source $XDG_CONFIG_HOME/fzf/shell/completion.zsh
