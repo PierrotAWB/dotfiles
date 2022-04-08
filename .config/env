@@ -15,6 +15,7 @@ export MBSYNCRC="$XDG_CONFIG_HOME/mbsync/.mbsyncrc"
 export NOTMUCH_CONFIG="$XDG_CONFIG_HOME/notmuch/notmuchrc"
 # TeX
 export TEXMFHOME="$XDG_DATA_HOME/texmf"
+export TEXMFDIST="/usr/share/texmf-dist"
 # Vim
 #  export VIM="$XDG_CONFIG_HOME/vim"
 #  export VIMRUNTIME="$XDG_CONFIG_HOME/nvim"

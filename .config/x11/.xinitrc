@@ -2,6 +2,7 @@
 
 layout
 setbg
+settheme
 
 x-setup &
 dunst &
