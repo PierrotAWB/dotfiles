@@ -45,8 +45,8 @@ snippet TTN "Note template" bA
 \documentclass[14pt]{extarticle}
 \usepackage[margin=1in]{geometry}
 \usepackage[linesnumbered, ruled, vlined]{algorithm2e}
+\usepackage{amsthm, amssymb, xcolor, mathtools, enumitem, parskip, mathrsfs}
 \usepackage[linkcarmine]{Andrew}
-\usepackage{xcolor, mathtools, enumitem, parskip, mathrsfs}
 
 \renewcommand\qedsymbol{\scalebox{0.8}[0.729]{$\clubsuit$}}
 \newcommand{\highlight}[1]{\color{blue}\textbf{#1}\color{black}\@\xspace}
@@ -313,29 +313,25 @@ snippet == "Equals + return" iA
 &= $1 \\\\
 endsnippet
 
-context "math()"
-snippet to "To (right arrow)" iA
+snippet to "To (right arrow)" w
 \to
 endsnippet
 
-context "math()"
-snippet maps "Maps to (right arrow)" iA
+snippet maps "Maps to (right arrow)" w
 \mapsto
 endsnippet
 
-context "math()"
 snippet -> "implies" wA
 \implies
+endsnippet
+
+snippet <- "implied by" iA
+\impliedby
 endsnippet
 
 context "math()"
 snippet x-> "implies" wA
 \xrightarrow[]{${1:u}}
-endsnippet
-
-context "math()"
-snippet <- "implied by" iA
-\impliedby
 endsnippet
 
 snippet <= "Less than equal to" iA
@@ -388,6 +384,10 @@ snippet bmat "bmat" iA
 \begin{bmatrix} $1 \end{bmatrix} $0
 endsnippet
 
+snippet vmat "vmat" iA
+\begin{vmatrix} $1 \end{vmatrix} $0
+endsnippet
+
 snippet sum "Sum" w
 \sum_{${1:n = 1}}^{${2:\infty}} ${3:a_n z^n}
 endsnippet
@@ -404,7 +404,6 @@ snippet int "Integral" w
 \int_{${1:X}}^{$2} ${3:f(x)} \ d${4:\mu}
 endsnippet
 
-context "math()"
 snippet in "Element of" w
 \in
 endsnippet
@@ -446,11 +445,13 @@ _{$1}
 endsnippet
 
 # See https://castel.dev/post/lecture-notes-1/#sub--and-superscripts for more details.
+context "math()"
 snippet '([A-Za-z])(\d)' "auto subscript" wrA
 `!p snip.rv = match.group(1)`_`!p snip.rv = match.group(2)`
 endsnippet
 
 # Idem.
+context "math()"
 snippet '([A-Za-z])_(\d\d)' "auto subscript2" wrA
 `!p snip.rv = match.group(1)`_{`!p snip.rv = match.group(2)`}
 endsnippet
@@ -468,8 +469,7 @@ snippet cb "Cube" iA
 ^3
 endsnippet
 
-context "math()"
-snippet inv "Inverse" iA
+snippet inv "Inverse" i
 ^{-1}
 endsnippet
 
@@ -515,9 +515,8 @@ snippet tan "Tan" w
 \\tan\\left(${1:x}\\right)$0
 endsnippet
 
-context "math()"
 snippet sqrt "Square root" iA
-\sqrt{$1} $0
+\sqrt{$1}
 endsnippet
 
 snippet ln "Natural log" wA
@@ -542,7 +541,6 @@ snippet E "Exists" w
 \exists
 endsnippet
 
-context "math()"
 snippet infty "Infinity" wA
 \infty
 endsnippet
@@ -557,8 +555,7 @@ snippet part "Partial derivative" wA
 \frac{\partial ${1:f}}{\partial ${2:x}}
 endsnippet
 
-context "math()"
-snippet st "Such that" iA
+snippet st "Such that" i
 \;:\; $0
 endsnippet
 
@@ -569,13 +566,16 @@ snippet lr( "Parentheses" iA
 \\left($1\\right) $0
 endsnippet
 
+snippet lr| "Parentheses" iA
+\left|$1\right|
+endsnippet
+
 snippet lr{ "Braces" iA
 \\left{$1\\right} $0
 endsnippet
 
-context "math()"
 snippet set "Set" i
-\\left\\{$1\\right\\}$0
+\left\\{$1\right\\}
 endsnippet
 
 snippet [ "Square brackets" i
@@ -607,41 +607,38 @@ snippet bound "boundary" wA
 \partial 
 endsnippet
 
-context "math()"
 snippet v "vector" w
 \vec{${1:x}}
 endsnippet
 
-context "math()"
 snippet n "norm" w
 \|${1:\vec{x}}\|
 endsnippet
 
-context "math()"
-snippet times "Multiply" wA
-\times $0
+snippet times "Multiply" w
+\times
+endsnippet
+
+snippet iff "If and only if" wA
+\iff
 endsnippet
 
 
 ######################################################################### Greeks
 
-context "math()"
-snippet a "alpha" i
+snippet ;a "alpha" iA
 \alpha
 endsnippet
 
-context "math()"
-snippet b "beta" i
+snippet ;b "beta" iA
 \beta
 endsnippet
 
-context "math()"
-snippet `d "delta" iA
+snippet ;d "delta" iA
 \delta
 endsnippet
 
-context "math()"
-snippet e "epsilon" w
+snippet ;e "epsilon" iA
 \epsilon
 endsnippet
 
@@ -650,8 +647,7 @@ snippet `et "eta" iA
 \eta
 endsnippet
 
-context "math()"
-snippet g "gamma" w
+snippet ;g "gamma" iA
 \gamma
 endsnippet
 
@@ -660,18 +656,19 @@ snippet `i "iota" iA
 \iota
 endsnippet
 
-context "math()"
-snippet `k "kappa" iA
+snippet ;k "kappa" iA
 \kappa
 endsnippet
 
-context "math()"
-snippet `l "lambda" iA
+snippet ;l "lambda" iA
 \lambda
 endsnippet
 
-context "math()"
-snippet `m "mu" iA
+snippet ;L "Lambda" iA
+\Lambda
+endsnippet
+
+snippet ;m "mu" iA
 \mu
 endsnippet
 
@@ -680,13 +677,15 @@ snippet `n "nu" iA
 \nu
 endsnippet
 
-context "math()"
-snippet `ph "(var)phi" iA
+snippet ;o "omega" iA
+\omega
+endsnippet
+
+snippet ;P "(var)phi" iA
 \varphi
 endsnippet
 
-context "math()"
-snippet `p "pi" iA
+snippet ;p "pi" iA
 \pi
 endsnippet
 
@@ -695,8 +694,7 @@ snippet `r "rho" iA
 \rho
 endsnippet
 
-context "math()"
-snippet s "sigma" w
+snippet ;s "sigma" iA
 \sigma
 endsnippet
 
@@ -705,9 +703,8 @@ snippet S "Sigma" w
 \Sigma
 endsnippet
 
-context "math()"
-snippet `t "tau" iA
-\tau
+snippet ;t "Theta" iA
+\theta
 endsnippet
 
 context "math()"
@@ -746,7 +743,6 @@ snippet hrule "Horizontal rule" w
 \par\noindent\rule{$1\textwidth}{0.4pt}$0
 endsnippet
 
-context "math()"
 snippet ~ "Tilde" iA
 \tilde{$1}
 endsnippet
