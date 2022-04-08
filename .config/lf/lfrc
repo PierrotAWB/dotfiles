@@ -16,30 +16,33 @@ map A rename
 map a push A<a-b><a-b><a-f>
 map B bulkrename
 map b $setbg $f
-map I push A<c-a>
 map c push A<c-u>
-
 map D delete
-map P $process $f
-map V push :!nvim<space>
-
+map H cmd-left
+map I push A<c-a>
+map L cmd-right
 map o &mimeopen $f # dedicated keys for file opener actions
 map O $mimeopen --ask $f
-
+map P $process $f
+map V push :!nvim<space>
 map x $$f
 map X !$f
-
 map Z $zip -j z.zip $fx
 
 map <esc> push q
+
+map sw cd ~/.local/share/nvim/swap
+map ge cd /etc
+map gm cd /mnt
+map gt cd /tmp
 
 
 cmd open ${{
     case $(file --mime-type $f -b) in
         text/*) $EDITOR $fx ;;
-		application/pdf) setsid -f zathura $fx ;;
+		application/pdf|application/epub*|image/vnd.djvu) setsid -f zathura $fx ;;
 		application/zip) unzip $f ;;
-		image/*) sxiv -a $fx 2>/dev/null ;;
+		image/*) setsid -f sxiv -a $fx 2>/dev/null ;;
 		video/*) setsid -f mpv $f -quiet >/dev/null 2>&1 ;;
         *) for f in $fx; do setsid $OPENER $f > /dev/null 2>&1 & done;;
     esac
@@ -66,10 +69,11 @@ cmd zip ${{
 }}
 
 # Make directory.
-cmd mkdir ${{
-	set -f	
-	mkdir $1
-}}
+#cmd mkdir ${{
+#	set -f	
+#	mkdir "$1"
+#}}
 
+cmd mkdir $mkdir -p "$(echo $* | tr ' ' '\ ')"
 cmd bulkrename $vidir
 
