@@ -12,6 +12,7 @@ set splitright					" Opens vertical splits on right side.
 set termguicolors				" Enables 24-bit RGB colors.
 
 colorscheme iceberg
+
 " Fzf Buffers map gb :Buffers<CR>
 " Ripgrep 
 map g/ :Rg<CR>
@@ -40,23 +41,14 @@ let g:matchup_override_vimtex=1			" Cursor lag in vimtex.
 let g:vimtex_view_method='zathura'		" Default PDF viewer.
 
 call plug#begin(stdpath('data') . '/plugged')
+	Plug 'andymass/vim-matchup'		" vimtex syntax speed up.
 	Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
  	Plug 'junegunn/fzf.vim'
-	Plug 'SirVer/ultisnips'
 	Plug 'lervag/vimtex'
+	Plug 'neoclide/coc.nvim', {'branch': 'release'}	" LSP
+	Plug 'romainl/vim-cool'			" Unhighlight when done searching
+	Plug 'sbdchd/neoformat'
+	Plug 'SirVer/ultisnips'
 	Plug 'tpope/vim-commentary'		" Commenting
 	Plug 'tpope/vim-fugitive'		" Git
-	Plug 'tpope/vim-surround'		" Easier wrapping
-	Plug 'andymass/vim-matchup'		" vimtex syntax speed up.
-	Plug 'neoclide/coc.nvim', {'branch': 'release'}	" LSP
-	Plug 'sbdchd/neoformat'
-	Plug 'romainl/vim-cool'			" Unhighlight when done searching
-	Plug 'Raimondi/delimitMate'		" Automatic quote, bracket closing
 call plug#end()
-
-" Set CursorLine only on the currently focused window.
-augroup CursorLine
-  au!
-  au VimEnter,WinEnter,BufWinEnter * setlocal cursorline
-  au WinLeave * setlocal nocursorline
-augroup END
