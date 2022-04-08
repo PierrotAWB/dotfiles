@@ -1,0 +1,71 @@
+# Verbosity and settings that you pretty much just always are going to want.
+alias \
+	cp="cp -iv" \
+	mv="mv -iv" \
+	rm="rm -vI" \
+	bc="bc -ql" \
+	mkdir="mkdir -pv"
+
+# Colorize commands when possible.
+alias \
+	ls="ls -hN --color=auto --group-directories-first" \
+	grep="grep --color=auto" \
+	diff="diff --color=auto"
+
+# Git commands
+alias \
+	ga="git add" \
+	gaa="git add -A" \
+	gb="git branch" \
+	gc="git commit" \
+	gcp="git cherry-pick" \
+	gco="git checkout" \
+	gd="git diff" \
+	gdc="gd --cached" \
+	gd1="git diff HEAD^..HEAD" \
+	gd2="git diff HEAD^^..HEAD" \
+	gd3="git diff HEAD^^^..HEAD" \
+	gd4="git diff HEAD^^^^..HEAD" \
+	gf="git fetch" \
+	gl="git log" \
+	gm="git merge" \
+	gmt="git mergetool" \
+	gpl="git pull" \
+	gpu="git push" \
+	grb="git rebase" \
+	grl="git reflog" \
+	grev="git revert" \
+	gs="git status"
+
+# General commands
+alias \
+	dfh="df -h | egrep \"Use|/$\"" \
+	down="nmcli con down '$(nmcli con show --active | tail -1 | grep -oP '^.*?  ' | sed 's/[ ]*$//')'" \
+	duu="du -h | sort -rh" \
+	fan="sensors | egrep 'Left|Right'" \
+	fans="fan" \
+	flushcache="sudo systemd-resolve --flush-caches" \
+	lf="lfub" \
+	linux="ssh -Y a99wang@linux.student.cs.uwaterloo.ca" \
+	k="killall" \
+	mbsync="mbsync -c "$XDG_CONFIG_HOME"/mbsync/.mbsyncrc" \
+	mergepdf="pdfunite ./*/** output.pdf" \
+	mimetype="xdg-mime query filetype" \
+	mime=mimetype \
+	newsboat="newsboat -C $XDG_CONFIG_HOME/newsboat/config" \
+	networks="nmcli device wifi list" \
+	pbcopy='xclip -selection clipboard' \
+	pbpaste='xclip -selection clipboard -o' \
+	r="lfcd" \
+	R="R --quiet" \
+	sinks="pactl list short sinks" \
+	sty="sudo nvim /usr/local/share/texmf/tex/latex/Andrew/Andrew.sty" \
+	swapalt="setxkbmap -option altwin:swap_alt_win" \
+	sy="sudo systemctl" \
+	temp="sudo tlp-stat -t" \
+	tlmgr="$TEXMFDIST/scripts/texlive/tlmgr.pl --usermode" \
+	unlock-key="pass mutt-wizard-personal > /dev/null" \
+	uk="unlock-key" \
+	xbindkeys="xbindkeys -f $XDG_CONFIG_HOME/xbindkeysrc" \
+	youtube-dl="youtube-dl --config-location $XDG_CONFIG_HOME/youtube-dl/config" \
+	yd="youtube-dl"

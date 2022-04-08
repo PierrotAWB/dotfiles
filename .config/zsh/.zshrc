@@ -1,5 +1,10 @@
 autoload -U compinit; compinit
+zstyle ':completion:*' menu select
+zmodload zsh/complist
+_comp_options+=(globdots) # Include hidden files.
+
 export EDITOR='nvim'
+export KEYTIMEOUT=1
 
 # History in cache directory:
 HISTSIZE=10000000
@@ -10,144 +15,37 @@ autoload -U colors && colors
 PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_color%}$%b "
 setopt autocd
 
+# Disable `XOFF`, so <C-s> doesn't freeze terminal
+stty -ixon
+
 # vi mode
 bindkey -v
-export KEYTIMEOUT=1
 
 bindkey "^A" vi-beginning-of-line
 bindkey "^E" vi-end-of-line
 bindkey "^K" kill-line
 bindkey "^D" delete-char
-
-bindkey "^F" vi-forward-blank-word
-bindkey "^L" vi-forward-char
-bindkey "^B" vi-backward-blank-word
-bindkey "^H" vi-backward-char
-
-bindkey "^Z" undo
-
+bindkey -s '^F' 'cd "$(dirname "$(fzf)")"\n'
+bindkey -s '^O' 'lfcd\n'
 bindkey "^P" clear-screen
+bindkey -v '^?' backward-delete-char # Fix vi emulation backspace issues
+bindkey '^[[Z' reverse-menu-complete
 
+# Change cursor shape for different vi modes.
+function zle-keymap-select () {
+    case $KEYMAP in
+        vicmd) echo -ne '\e[1 q';;      # block
+        viins|main) echo -ne '\e[5 q';; # beam
+    esac
+}
+zle -N zle-keymap-select
+echo -ne '\e[5 q' # Use beam shape cursor on startup.
+preexec() { echo -ne '\e[5 q' ;} # Use beam shape cursor for each new prompt.
 
-# Use vim keys in tab complete menu:
-# bindkey -M menuselect 'k' vi-up-line-or-history
-# bindkey -M menuselect 'j' vi-down-line-or-history
- 
-# Disable `XOFF`, so <C-s> works in Vim
-stty -ixon
-
-# General
-alias ...="cd ../.."
-alias ....="cd ../../.."
-alias cl="clear"
-alias c="cl"
-alias config="cd $XDG_CONFIG_HOME"
-alias conf="config"
-alias clion="$XDG_CONFIG_HOME/JetBrains/CLion2020.1/bin/clion.sh"
-alias d="cd $XDG_CONFIG_HOME/dwm"
-alias d.="cd $XDG_CONFIG_HOME/dwm && sudo $EDITOR config.h" 
-alias e="exit"
-alias i3conf="$EDITOR ~/.config/i3/config"
-alias i3.="i3conf"
-alias j="jump-edit"
-alias l="ls"
-alias lf="lfub"
-alias l.="cd $XDG_CONFIG_HOME/lf && $EDITOR lfrc"
-alias ll="ls -l"
-alias lla="ls -al"
-alias lal="lla"
-alias linux="ssh -Y a99wang@linux.student.cs.uwaterloo.ca"
-alias k="killall"
-alias mbsync="mbsync -c "$XDG_CONFIG_HOME"/mbsync/.mbsyncrc"
-alias m="ncmpcpp"
-alias newsboat="newsboat -C $XDG_CONFIG_HOME/newsboat/config"
-alias networks="nmcli device wifi list"
-alias note="$EDITOR ~/documents/notes/scratchpad"
-#alias pdb="pdb3.6"
-alias pbcopy='xclip -selection clipboard'
-alias pbpaste='xclip -selection clipboard -o'
-alias r="lfcd"
-alias R="R --quiet"
-alias sy="sudo systemctl"
-alias s="cd ~/.local/bin"
-alias tlm="tllocalmgr" #TeX Live Manager
-alias todo="$EDITOR ~/documents/notes/todo"
-alias unlock-key="pass mutt-wizard-personal > /dev/null"
-alias uk="unlock-key"
-alias v="$EDITOR"
-alias v.="$EDITOR $XDG_CONFIG_HOME/nvim/init.vim"
-alias xre="$EDITOR $XDG_CONFIG_HOME/Xresources"
-alias youtube-dl="youtube-dl --config-location $XDG_CONFIG_HOME/youtube-dl/config"
-alias yd="youtube-dl"
-
-# Common directories
-alias books="cd ~/Documents/Books"
-alias dow="cd ~/Downloads"
-alias down="dow"
-alias downloads="dow"
-alias dl="dow"
-alias doc="cd ~/Documents"
-alias documents="doc"
-alias scripts="cd ~/.local/bin"
-
-# Git
-alias ga="git add"
-alias gaa="git add -A"
-alias gb="git branch"
-alias gc="git commit"
-alias gcp="git cherry-pick"
-alias gco="git checkout"
-alias gd="git diff"
-alias gdc="git diff --cached"
-
-alias gd1="git diff HEAD^..HEAD"
-alias gd2="git diff HEAD^^..HEAD"
-alias gd3="git diff HEAD^^^..HEAD"
-alias gd4="git diff HEAD^^^^..HEAD"
-
-alias gf="git fetch"
-alias gl="git log"
-alias gm="git merge"
-alias gmt="git mergetool"
-alias gpl="git pull"
-alias gpu="git push"
-alias grb="git rebase"
-alias grl="git reflog"
-alias grev="git revert"
-alias gs="git status"
-
-# zsh
-alias z="source $XDG_CONFIG_HOME/zsh/.zshrc"
-alias z.="$EDITOR $XDG_CONFIG_HOME/zsh/.zshrc"
-
-# misc
-alias dfh="df -h | egrep 'Filesystem|/dev/nvme0n1p4'"
-alias duu="du -h | sort -rh"
-alias fan="sensors | egrep 'Left|Right'"
-alias fans="fan"
-alias flushcache="sudo systemd-resolve --flush-caches"
-alias is="~/documents/programming/projects/ideabase/ideabase-sysadmin/ideasync"
-alias mergepdf="pdfunite ./*/** output.pdf"
-alias mimetype="xdg-mime query filetype"
-alias mime=mimetype
-alias mp="mbsync personal"
-alias sinks="pactl list short sinks"
-alias sink="sinks"
-alias sty="sudo nvim /usr/local/share/texmf/tex/latex/Andrew/Andrew.sty"
-alias swapalt="setxkbmap -option altwin:swap_alt_win"
-alias temp="sudo tlp stat -t"
-alias tlmgr="$TEXMFDIST/scripts/texlive/tlmgr.pl --usermode"
-alias xbindkeys="xbindkeys -f $XDG_CONFIG_HOME/xbindkeysrc"
-
-
-# Can almost certainly be compressed with AWK.
-alias down="nmcli con down '$(nmcli con show --active | tail -1 | grep -oP '^.*?  ' | sed 's/[ ]*$//')'"
-
-
-# Use lf to switch directories and bind it to ctrl-o
+# Wrap lf
 lfcd () {
     tmp="$(mktemp)"
-    lf -last-dir-path="$tmp" "$@"
+    lfub -last-dir-path="$tmp" "$@"
     if [ -f "$tmp" ]; then
         dir="$(cat "$tmp")"
         rm -f "$tmp" >/dev/null
@@ -155,7 +53,11 @@ lfcd () {
     fi
 }
 
-bindkey -s '^o' 'lfcd\n'
-
+[ -f "${XDG_CONFIG_HOME:-$HOME/.config}/zsh/aliasrc" ] && source "${XDG_CONFIG_HOME:-$HOME/.config}/zsh/aliasrc"
+[ -f "${XDG_CONFIG_HOME:-$HOME/.config}/zsh/shortcutrc" ] && source "${XDG_CONFIG_HOME:-$HOME/.config}/zsh/shortcutrc"
 [ -f $XDG_CONFIG_HOME/fzf/shell/key-bindings.zsh ] && source $XDG_CONFIG_HOME/fzf/shell/key-bindings.zsh
 [ -f $XDG_CONFIG_HOME/fzf/shell/completion.zsh ] && source $XDG_CONFIG_HOME/fzf/shell/completion.zsh
+[ -f $XDG_CONFIG_HOME/lf/icons ] && source "$XDG_CONFIG_HOME/lf/icons"
+
+# Load syntax highlighting; should be last.
+source /usr/share/zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh 2>/dev/null
