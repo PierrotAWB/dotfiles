@@ -1,16 +1,34 @@
 syntax enable					" Necessary for vimtex.
 filetype plugin indent on			" Necessary for vimtex.
 
+call plug#begin(stdpath('data') . '/plugged')
+	Plug 'andymass/vim-matchup'		" vimtex syntax speed up.
+	Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+ 	Plug 'junegunn/fzf.vim'
+	Plug 'junegunn/goyo.vim'		" Zen mode
+	Plug 'lervag/vimtex'
+	Plug 'neoclide/coc.nvim', {'branch': 'release'}	" LSP
+  	Plug 'preservim/nerdtree'		" File browsing
+	Plug 'romainl/vim-cool'			" Unhighlight when done searching
+	Plug 'sbdchd/neoformat'
+	Plug 'SirVer/ultisnips'
+	Plug 'tpope/vim-commentary'		" Commenting
+	Plug 'tpope/vim-fugitive'		" Git
+call plug#end()
+
 let mapleader = ","
 
 set clipboard=unnamedplus			" Copy to system clipboard by default.
+set cursorline					" Highlight current row.
+set foldmethod=indent				" Faster than syntax.
 set guicursor=i-ci-ve:hor50-blinkwait0-blinkoff100-blinkon100
 set mouse=nv					" Mouse on in normal and visual modes.
 set number					" Line number on focused row.
 set relativenumber				" Displays distance to adjacent rows.
 set scrolloff=10				" Permanent zz.
-set splitright					" Opens vertical splits on right side.
+set splitbelow splitright			" Better default splitting directions
 set termguicolors
+set undofile					" Undo persistence
 
 " Fzf Buffers map gb :Buffers<CR>
 " Ripgrep
@@ -20,8 +38,14 @@ map <space><space> :Files<CR>
 " Prevent accidental crashes
 map <C-z> <Nop>
 " Move lines, then re-indent
-nnoremap <C-j> :m .+1<CR>==
-nnoremap <C-k> :m .-2<CR>==
+nnoremap <C-Down> :m .+1<CR>==
+nnoremap <C-Up> :m .-2<CR>==
+
+" Better window navigation
+nmap <C-h> <C-w><C-h>
+nmap <C-j> <C-w><C-j>
+nmap <C-k> <C-w><C-k>
+nmap <C-l> <C-w><C-l>
 
 nmap ga :Git add
 " Prevent collision with commenting (gc).
@@ -29,18 +53,33 @@ nmap gC :Git commit
 nmap gl :Git log<CR>
 nmap gs :Git status<CR>
 
+nnoremap <leader>c :Commands<CR>
 " Compile current file.
-nnoremap <leader>c :w \| !compiler %<CR>
+nnoremap <leader>C :w \| !compiler %<CR>
+" Format code
+nnoremap <leader>f :call CocActionAsync('format')<CR>
+" NERDTreeFind
+nnoremap <leader>F :NERDTreeFind<CR>
+" Format code
+nnoremap <leader>h :History<CR>
 " Open preview (after compilation).
 nnoremap <leader>p :!opout %<CR><CR>
 " Re-wrap entire file
 nnoremap <leader>gq mzggvGgq`z
+" Make install
+nnoremap <leader>M :!sudo make install<CR>
+" Toggle NERDTree
+nnoremap <leader>n :NERDTreeToggle<CR>
 " Toggle spell check
 nnoremap <leader>sp :set spell!<CR>
-" Centre lone buffers
-nnoremap <silent><leader>z <cmd>Goyo<CR>
 " Source init.vim without exiting nvim
 nnoremap <leader>sv :source $MYVIMRC<CR>
+" Open terminal (horizontal split)
+nnoremap <leader>t :10split \| terminal<CR>
+" Open terminal (vertical split)
+nnoremap <leader>vt :vsplit \| :terminal<CR>
+" Centre lone buffers
+nnoremap <silent><leader>z <cmd>Goyo<CR>
 
 " Jumping and Navigation
 nmap <silent> gd <Plug>(coc-definition)
@@ -63,18 +102,7 @@ autocmd BufWritePre * let currPos = getpos(".")
 autocmd BufWritePre * %s/\s\+$//e
 autocmd BufWritePre * cal cursor(currPos[1], currPos[2])
 
-call plug#begin(stdpath('data') . '/plugged')
-	Plug 'andymass/vim-matchup'		" vimtex syntax speed up.
-	Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
- 	Plug 'junegunn/fzf.vim'
-	Plug 'junegunn/goyo.vim'		" Zen mode
-	Plug 'lervag/vimtex'
-	Plug 'neoclide/coc.nvim', {'branch': 'release'}	" LSP
-	Plug 'romainl/vim-cool'			" Unhighlight when done searching
-	Plug 'sbdchd/neoformat'
-	Plug 'SirVer/ultisnips'
-	Plug 'tpope/vim-commentary'		" Commenting
-	Plug 'tpope/vim-fugitive'		" Git
-call plug#end()
+" Disable continuation of comments on newline.
+autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
 colorscheme iceberg
