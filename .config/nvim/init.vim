@@ -18,6 +18,7 @@ call plug#end()
 
 let mapleader = ","
 
+set background=light
 set clipboard=unnamedplus			" Copy to system clipboard by default.
 set cursorline					" Highlight current row.
 set foldmethod=indent				" Faster than syntax.
@@ -53,6 +54,9 @@ nmap gC :Git commit
 nmap gl :Git log<CR>
 nmap gs :Git status<CR>
 
+" Toggle background darkness
+nnoremap <leader>b :call Toggle_dark()<CR>
+" Show commands
 nnoremap <leader>c :Commands<CR>
 " Compile current file.
 nnoremap <leader>C :w \| !compiler %<CR>
@@ -95,6 +99,14 @@ let g:matchup_matchparen_deferred=1		" Deferred highlighting helps cursor lag.
 let g:matchup_override_vimtex=1			" Cursor lag in vimtex.
 let g:vimtex_view_method='zathura'		" Default PDF viewer.
 
+fun! Toggle_dark()
+  if &background == "dark"
+    set background=light
+  else
+    set background=dark
+  endif
+endfun
+
 " Compile on save
 autocmd BufWritePost *.md silent! !compiler %
 " On save, delete trailing whitespace, then reset cursor position
@@ -105,4 +117,4 @@ autocmd BufWritePre * cal cursor(currPos[1], currPos[2])
 " Disable continuation of comments on newline.
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
-colorscheme iceberg
+colorscheme PaperColor
