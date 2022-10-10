@@ -11,6 +11,7 @@ call plug#begin(stdpath('data') . '/plugged')
   	Plug 'preservim/nerdtree'		" File browsing
 	Plug 'romainl/vim-cool'			" Unhighlight when done searching
 	Plug 'sbdchd/neoformat'
+	Plug 'Shatur/neovim-ayu'
 	Plug 'SirVer/ultisnips'
 	Plug 'tpope/vim-commentary'		" Commenting
 	Plug 'tpope/vim-fugitive'		" Git
@@ -117,4 +118,4 @@ autocmd BufWritePre * cal cursor(currPos[1], currPos[2])
 " Disable continuation of comments on newline.
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
-colorscheme PaperColor
+colorscheme ayu-mirage

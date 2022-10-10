@@ -61,7 +61,7 @@ function upwd() {
   cur_path='/'
   cur_short_path='/'
 
-  for directory in ${paths[@]::-1} 
+  for directory in ${paths[@]::-1}
   do
     cur_dir=''
     for (( j=0; j<${#directory}; j++ )); do
@@ -81,7 +81,7 @@ function upwd() {
 }
 
 function build_prompt {
-  PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}"
+  PS1="%B%{$fg[red]%}[%{$fg[blue]%}%n%{$fg[white]%}@%{$fg[blue]%}%M %{$fg[white]%}"
   PS1+=$(upwd)
   PS1+="%{$fg[red]%}]%{$reset_color%}$%b "
 }

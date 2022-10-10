@@ -1,62 +1,47 @@
 !! Transparency (0-1):
 *.alpha: 0.84
 
-!! Set a default font and font size as below: 
-!! *.font: Liberation Mono for Powerline:pixelsize=22:antialias=true:autohint=true;
-! Base16 OceanicNext
-! Scheme: https://github.com/voronianski/oceanic-next-color-scheme
-
-/* 8 normal colors */
-#define base00 #161821 /* black   */
-#define base01 #e27878 /* red     */
-#define base02 #b4be82 /* green   */
-#define base03 #e2a478 /* yellow  */
-#define base04 #84a0c6 /* blue    */
-#define base05 #a093c7 /* magenta */
-#define base06 #89b8c2 /* cyan    */
-#define base07 #c6c8d1 /* white   */
-
-/* 8 bright colors */
-#define base08 #6b7089 /* black   */
-#define base09 #e98989 /* red     */
-#define base0A #c0ca8e /* green   */
-#define base0B #e9b189 /* yellow  */
-#define base0C #91acd1 /* blue    */
-#define base0D #ada0d3 /* magenta */
-#define base0E #95c4ce /* cyan    */
-#define base0F #d2d4de /* white   */
-
-*.foreground:   base07
-#ifdef background_opacity
-*.background:   [background_opacity]base00
-#else
-*.background:   base00
-#endif
-*.cursorColor:  base05
-
-*.color0:       base00
-*.color1:       base08
-*.color2:       base0B
-*.color3:       base0A
-*.color4:       base0D
-*.color5:       base0E
-*.color6:       base0C
-*.color7:       base05
-
-*.color8:       base03
-*.color9:       base08
-*.color10:      base0B
-*.color11:      base0A
-*.color12:      base0D
-*.color13:      base0E
-*.color14:      base0C
-*.color15:      base07
-
-! Note: colors beyond 15 might not be loaded (e.g., xterm, urxvt),
-! use 'shell' template to set these if necessary
-*.color16:      base09
-*.color17:      base0F
-*.color18:      base01
-*.color19:      base02
-*.color20:      base04
-*.color21:      base06
+!
+! Generated with :
+! XRDB2Xreources.py
+!
+*.foreground:  #e6e1cf
+*.background:  #0f1419
+*.cursorColor: #f29718
+!
+! Black
+*.color0:      #000000
+*.color8:      #323232
+!
+! Red
+*.color1:      #ff3333
+*.color9:      #ff6565
+!
+! Green
+*.color2:      #b8cc52
+*.color10:     #eafe84
+!
+! Yellow
+*.color3:      #e7c547
+*.color11:     #fff779
+!
+! Blue
+*.color4:      #36a3d9
+*.color12:     #68d5ff
+!
+! Magenta
+*.color5:      #f07178
+*.color13:     #ffa3aa
+!
+! Cyan
+*.color6:      #95e6cb
+*.color14:     #c7fffd
+!
+! White
+*.color7:      #ffffff
+*.color15:     #ffffff
+!
+! Bold, Italic, Underline
+*.colorBD:     #e6e1cf
+!*.colorIT:
+!*.colorUL:
