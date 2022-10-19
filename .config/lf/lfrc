@@ -9,7 +9,7 @@ set cleaner '~/.config/lf/cleaner'
 set previewer '~/.config/lf/scope'
 
 
-map <c-f> $lf -remote "send $id select '$(fzf)'"
+map <c-f> $lf -remote "send $id select \"$(fzf)\""
 map <c-n> push :mkdir<space>
 
 map A rename
@@ -70,7 +70,7 @@ cmd zip ${{
 
 # Make directory.
 #cmd mkdir ${{
-#	set -f	
+#	set -f
 #	mkdir "$1"
 #}}
 
