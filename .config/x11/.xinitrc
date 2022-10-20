@@ -7,7 +7,9 @@ settheme
 x-setup &
 dunst &
 dwmblocks &
-mpd & 
+mpd &
 unclutter &
+
+fcitx5 &
 
 exec dwm
