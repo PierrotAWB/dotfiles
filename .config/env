@@ -28,7 +28,8 @@ export HISTFILE="$XDG_DATA_HOME/zsh/history"
 # MTP Probe
 export MTP_NO_PROBE="1"
 
+export CONTEST="$HOME/code/contest"
+
 
 # Source .zshrc for main configuration.
 source "$ZDOTDIR/.zshrc"
-

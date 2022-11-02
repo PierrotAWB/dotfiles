@@ -32,6 +32,8 @@ set splitbelow splitright			" Better default splitting directions
 set termguicolors
 set undofile					" Undo persistence
 
+:command IO :vsp input.in | :sp output.out
+
 " Fzf Buffers map gb :Buffers<CR>
 " Ripgrep
 map g/ :Rg<CR>
@@ -55,6 +57,8 @@ nmap gC :Git commit
 nmap gl :Git log<CR>
 nmap gs :Git status<CR>
 
+tnoremap <Esc> <C-\><C-n>
+
 " Toggle background darkness
 nnoremap <leader>b :call Toggle_dark()<CR>
 " Show commands
@@ -72,10 +76,12 @@ nnoremap <leader>p :!opout %<CR><CR>
 " Re-wrap entire file
 nnoremap <leader>gq mzggvGgq`z
 " Make install
+nnoremap <leader>m :!make -f $CONTEST/Makefile<CR>
 nnoremap <leader>M :!sudo make install<CR>
 " Toggle NERDTree
 nnoremap <leader>n :NERDTreeToggle<CR>
 " Toggle spell check
+nnoremap <leader>o :only<CR>
 nnoremap <leader>sp :set spell!<CR>
 " Source init.vim without exiting nvim
 nnoremap <leader>sv :source $MYVIMRC<CR>
