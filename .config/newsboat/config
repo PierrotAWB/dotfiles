@@ -33,7 +33,7 @@ color article white default bold
 browser brave
 macro , open-in-browser
 macro t set browser "qndl"; open-in-browser ; set browser linkhandler
-macro a set browser "youtube-dl --config-location /home/andrew/.config/youtube-dl/config" ; open-in-browser ; set browser linkhandler
+macro a set browser "yt-dlp" ; open-in-browser ; set browser linkhandler
 macro v set browser "setsid nohup mpv"; open-in-browser ; set browser linkhandler
 macro w set browser "lynx"; open-in-browser ; set browser linkhandler
 macro p set browser "dmenuhandler"; open-in-browser ; set browser linkhandler
