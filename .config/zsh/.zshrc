@@ -55,7 +55,8 @@ function lfcd() {
 
 # Unique pwd
 function upwd() {
-  [ "$PWD" = "$HOME" ] && printf "~" && echo && return
+  [ "$PWD" = "$HOME" ] && printf "~" && return
+  [ "$PWD" = "/" ] && printf "/" && return
 
   paths=(${(s:/:)PWD})
   cur_path='/'
@@ -81,17 +82,21 @@ function upwd() {
 }
 
 function build_prompt {
-  PS1="%B%{$fg[red]%}[%{$fg[blue]%}%n%{$fg[white]%}@%{$fg[blue]%}%M %{$fg[white]%}"
+  # %{\e[38;5;197m%}
+  PS1="%B%F{214}[%F{1}%n%F{214}@%M "
   PS1+=$(upwd)
-  PS1+="%{$fg[red]%}]%{$reset_color%}$%b "
+  PS1+="]%{$reset_color%}$%b %{$reset_color%}"
 }
 
 precmd() { build_prompt; }
 
 [ -f "${XDG_CONFIG_HOME:-$HOME/.config}/zsh/aliasrc" ] && source "${XDG_CONFIG_HOME:-$HOME/.config}/zsh/aliasrc"
 [ -f "${XDG_CONFIG_HOME:-$HOME/.config}/zsh/shortcutrc" ] && source "${XDG_CONFIG_HOME:-$HOME/.config}/zsh/shortcutrc"
-[ -f $XDG_CONFIG_HOME/fzf/shell/key-bindings.zsh ] && source $XDG_CONFIG_HOME/fzf/shell/key-bindings.zsh
-[ -f $XDG_CONFIG_HOME/fzf/shell/completion.zsh ] && source $XDG_CONFIG_HOME/fzf/shell/completion.zsh
 
 # Load syntax highlighting; should be last.
 source /usr/share/zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh 2>/dev/null
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+
+export TESSDATA_PREFIX="/usr/local/share/tessdata/"
