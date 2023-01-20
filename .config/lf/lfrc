@@ -17,6 +17,7 @@ map a push A<a-b><a-b><a-f>
 map B bulkrename
 map b $setbg $f
 map c push A<c-u>
+map C push :chmod<space>
 map D delete
 map H cmd-left
 map I push A<c-a>
@@ -39,10 +40,11 @@ map gt cd /tmp
 
 cmd open ${{
     case $(file --mime-type $f -b) in
-        text/*|application/octet-stream) $EDITOR $fx ;;
-	application/pdf|application/epub*|image/vnd.djvu) setsid -f zathura $fx ;;
+        text/*|application/octet-stream|application/json) $EDITOR $fx ;;
+	application/pdf|image/vnd.djvu) setsid zathura $fx ;;
+	application/epub*) open $fx ;;
 	application/zip) unzip $f ;;
-	image/*) setsid -f sxiv -a $fx 2>/dev/null ;;
+	image/*) open $fx 2>/dev/null ;;
 	video/*) setsid -f mpv $f -quiet >/dev/null 2>&1 ;;
         *) for f in $fx; do setsid $OPENER $f > /dev/null 2>&1 & done;;
     esac
@@ -60,19 +62,19 @@ cmd extract ${{
     esac
 }}
 
-cmd zip ${{
+cmd chmod &{{
+    set -f
+    chmod $1 $fx
+    lf -remote "send $id reload"
+}}
+
+cmd zip &{{
     set -f
     mkdir $1
     cp -r $fx $1
     zip -r $1.zip $1
     rm -rf $1
 }}
-
-# Make directory.
-#cmd mkdir ${{
-#	set -f
-#	mkdir "$1"
-#}}
 
 cmd mkdir $mkdir -p "$(echo $* | tr ' ' '\ ')"
 cmd bulkrename $vidir
