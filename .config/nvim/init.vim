@@ -8,6 +8,7 @@ call plug#begin(stdpath('data') . '/plugged')
 	Plug 'junegunn/goyo.vim'		" Zen mode
 	Plug 'lervag/vimtex'
 	Plug 'neoclide/coc.nvim', {'branch': 'release'}	" LSP
+	Plug 'PierrotAWB/corpus'		" Note taking
   	Plug 'preservim/nerdtree'		" File browsing
 	Plug 'romainl/vim-cool'			" Unhighlight when done searching
 	Plug 'sbdchd/neoformat'
@@ -92,6 +93,8 @@ nnoremap <leader>vt :vsplit \| :terminal<CR>
 " Centre lone buffers
 nnoremap <silent><leader>z <cmd>Goyo<CR>
 
+nnoremap <Space>c :Corpus<Space>
+
 " Jumping and Navigation
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gD :call CocAction('jumpDefinition', 'split')<CR>
@@ -125,3 +128,12 @@ autocmd BufWritePre * cal cursor(currPos[1], currPos[2])
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
 colorscheme ayu-mirage
+
+let g:CorpusDirectories={
+	\ 	'~/documents/notes/': {
+	\ 	  'autoreference': 1,
+	\ 	  'autotitle': 1,
+	\	  'base': './',
+	\	  'transform': 'local'
+	\	}
+	\ }
