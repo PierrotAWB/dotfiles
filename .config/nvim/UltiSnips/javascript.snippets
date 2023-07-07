@@ -1,0 +1,43 @@
+snippet rnfc "Function component" bA
+import React from 'react';
+import { View, StyleSheet } from 'react-native';
+
+function `!p snip.rv = snip.basename`(props) {
+  return (
+    <View style={styles.container}>$0</View>
+  );
+}
+
+const styles = StyleSheet.create({
+  container: {}
+});
+export default `!p snip.rv = snip.basename`;
+endsnippet
+
+snippet FlatList "FlatList" w
+<FlatList
+  data = {$1}
+  keyExtractor={$2}
+  renderItem={({ item }) => (
+      $3
+  )}
+></FlatList>
+endsnippet
+
+snippet sty "Style" w
+style = {styles.$0}
+endsnippet
+
+snippet useState ""
+const [$1, `!p snip.rv = "set" + t[1][:1].upper() + t[1][1:]`] = useState($2)
+endsnippet
+
+snippet rnss "Create stylesheet" bA
+const styles = StyleSheet.create({
+  $1
+});
+endsnippet
+
+snippet bc "Background colour" b
+backgroundColor: "${1:dodgerblue}",
+endsnippet

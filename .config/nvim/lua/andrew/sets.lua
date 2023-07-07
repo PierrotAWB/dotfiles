@@ -5,7 +5,7 @@ vim.g.loaded_netrwPlugin = 1
 vim.o.background = 'light'
 vim.o.colorcolumn = 80
 vim.o.cursorline = true
-vim.o.guicursor = "i-ci-ve:hor50-blinkwait0-blinkoff100-blinkon100"
+vim.o.guicursor = 'i-ci-ve:hor50-blinkwait0-blinkoff100-blinkon100'
 vim.o.termguicolors = true
 
 -- Gutter
@@ -29,3 +29,6 @@ vim.o.splitbelow = true
 vim.o.splitright = true
 vim.o.timeoutlen = 250
 vim.o.clipboard = 'unnamedplus'
+
+vim.g.UltiSnipsEditSplit = 'horizontal'
+vim.g.UltiSnipsExpandTrigger = '<nop>'
