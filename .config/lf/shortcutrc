@@ -1,0 +1,18 @@
+# Dotfile / script editing
+alias \
+	d="cd $XDG_CONFIG_HOME/dwm" \
+	d.="cd $XDG_CONFIG_HOME/dwm && sudo $EDITOR config.h"  \
+	l.="cd $XDG_CONFIG_HOME/lf && $EDITOR lfrc" \
+	j="jump-edit" \
+	v="$EDITOR" \
+	v.="$EDITOR $XDG_CONFIG_HOME/nvim/init.vim" \
+	z="source $XDG_CONFIG_HOME/zsh/.zshrc" \
+	z.="$EDITOR $XDG_CONFIG_HOME/zsh/.zshrc"
+
+# Common files / directories
+alias \
+	note="$EDITOR ~/documents/notes/scratchpad" \
+	scripts="cd ~/.local/bin" \
+	s="scripts" \
+	todo="$EDITOR ~/documents/notes/todo" \
+	xre="$EDITOR $XDG_CONFIG_HOME/Xresources"

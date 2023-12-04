@@ -1,0 +1,14 @@
+# Dotfile / script editing
+alias \
+      l.="cd $XDG_CONFIG_HOME/lf && $EDITOR lfrc" \
+      v="$EDITOR" \
+      v.="$EDITOR $XDG_CONFIG_HOME/nvim/init.lua" \
+      z="source $XDG_CONFIG_HOME/zsh/.zshrc" \
+      z.="$EDITOR $XDG_CONFIG_HOME/zsh/.zshrc"
+
+# Common files / directories
+alias \
+      note="$EDITOR ~/Documents/notes/scratchpad.md" \
+      scripts="cd ~/.local/bin" \
+      s="scripts" \
+      todo="$EDITOR ~/Documents/notes/todo.md"

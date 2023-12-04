@@ -1,0 +1,82 @@
+set shell sh
+
+set shellopts '-eu'
+set ifs "\n"
+set icons
+set scrolloff 10
+set hiddenfiles ".*:*.aux:*.log"
+set cleaner '~/.config/lf/cleaner'
+set previewer '~/.config/lf/scope'
+
+map <c-f> $lf -remote "send $id select \"$(fzf)\""
+map <c-n> push :mkdir<space>
+map <c-p> push :prob<space>
+
+map A rename
+map a push A<a-b><a-b><a-f>
+map B bulkrename
+map b $setbg $f
+map c push A<c-u>
+map C push :chmod<space>
+map D delete
+map H cmd-left
+map I push A<c-a>
+map L cmd-right
+map o &mimeopen $f # dedicated keys for file opener actions
+map O $mimeopen --ask $f
+map P $process $f
+map V push :!nvim<space>
+map x $$f
+map X !$f
+map Z $zip -j z.zip $fx
+
+map <esc> push q
+
+map sw cd ~/.local/share/nvim/swap
+map gh cd ~
+map ge cd /etc
+map gm cd /mnt
+map gt cd /tmp
+
+cmd open ${{
+    case $(file --mime-type $f -b) in
+        text/*|application/octet-stream|application/json) $EDITOR $fx ;;
+	application/pdf|image/vnd.djvu) setsid zathura $fx ;;
+	application/epub*) open $fx ;;
+	application/zip) unzip $f ;;
+	image/*) open $fx 2>/dev/null ;;
+	video/*) setsid -f mpv $f -quiet >/dev/null 2>&1 ;;
+        *) for f in $fx; do setsid $OPENER $f > /dev/null 2>&1 & done;;
+    esac
+}}
+
+cmd extract ${{
+    set -f
+    case $f in
+        *.tar.bz|*.tar.bz2|*.tbz|*.tbz2) tar xjvf $f;;
+        *.tar.gz|*.tgz) tar xzvf $f;;
+        *.tar.xz|*.txz) tar xJvf $f;;
+        *.zip) unzip $f;;
+        *.rar) unrar x $f;;
+        *.7z) 7z x $f;;
+    esac
+}}
+
+cmd chmod &{{
+    set -f
+    chmod $1 $fx
+    lf -remote "send $id reload"
+}}
+
+cmd zip &{{
+    set -f
+    mkdir $1
+    cp -r $fx $1
+    zip -r $1.zip $1
+    rm -rf $1
+}}
+
+cmd mkdir $mkdir -p "$(echo $* | tr ' ' '\ ')"
+cmd bulkrename $vidir
+cmd prob $mkdir -p "$(echo $* | tr ' ' '\ ')" && cd "$(echo $* | tr ' ' '\ ')" && touch input.in output.out main.cpp && $EDITOR main.cpp
+
