@@ -9,7 +9,7 @@ export KEYTIMEOUT=1
 # History in cache directory:
 HISTSIZE=10000000
 SAVEHIST=10000000
-HISTFILE=~/.cache/zsh/history
+HISTFILE=${XDG_CONFIG_HOME:-$HOME/.config}/zsh/history
 
 autoload -U colors && colors
 
