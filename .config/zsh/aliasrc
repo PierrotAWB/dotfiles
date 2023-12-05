@@ -44,7 +44,6 @@ alias \
 	fan="sensors | egrep 'Left|Right'" \
 	fans="fan" \
 	flushcache="sudo systemd-resolve --flush-caches" \
-	lf="lfub" \
 	linux="ssh -Y a99wang@linux.student.cs.uwaterloo.ca" \
 	k="killall" \
 	mergepdf="pdfunite ./*/** output.pdf" \
