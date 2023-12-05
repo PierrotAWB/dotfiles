@@ -82,7 +82,6 @@ function upwd() {
 }
 
 function build_prompt {
-  # %{\e[38;5;197m%}
   PS1="%B%F{214}[%F{1}%n%F{214}@%M "
   PS1+=$(upwd)
   PS1+="]%{$reset_color%}$%b %{$reset_color%}"
@@ -90,10 +89,11 @@ function build_prompt {
 
 precmd() { build_prompt; }
 
+
 [ -f "${XDG_CONFIG_HOME:-$HOME/.config}/zsh/aliasrc" ] && source "${XDG_CONFIG_HOME:-$HOME/.config}/zsh/aliasrc"
 [ -f "${XDG_CONFIG_HOME:-$HOME/.config}/zsh/shortcutrc" ] && source "${XDG_CONFIG_HOME:-$HOME/.config}/zsh/shortcutrc"
 
 # Load syntax highlighting; should be last.
-source /usr/share/zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh 2>/dev/null
+source "${XDG_DATA_HOME:-$HOME/.local/share}/zsh/plugins/F-Sy-H/F-Sy-H.plugin.zsh" 2>/dev/null
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
