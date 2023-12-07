@@ -48,6 +48,13 @@ Map('n', 'gds', function()
         jump_to_single_result_action = require('fzf-lua.actions').file_split,
     })
 end)
+Map('n', 'gdt', function()
+    require('fzf-lua').lsp_definitions({
+        sync = true,
+        jump_to_single_result = true,
+        jump_to_single_result_action = require('fzf-lua.actions').file_tabedit,
+    })
+end)
 Map('n', '<leader>b', "<cmd>lua require('fzf-lua').buffers()<CR>")
 Map('n', 'gr', "<cmd>lua require('fzf-lua').lsp_references()<CR>")
 Map('n', 'gi', "<cmd>lua require('fzf-lua').lsp_implementations()<CR>")

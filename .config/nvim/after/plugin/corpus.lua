@@ -11,4 +11,10 @@ vim.g.CorpusDirectories = {
         base = './',
         transform = 'local',
     },
+    ['~/Documents/startup'] = {
+        autoreference = 0,
+        autotitle = 1,
+        base = './',
+        transform = 'local',
+    },
 }
