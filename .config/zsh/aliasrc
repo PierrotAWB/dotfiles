@@ -8,7 +8,7 @@ alias \
 # Colorize commands when possible.
 alias \
     ls="gls -hN --color=auto --group-directories-first" \
-    grep="ggrep --color=auto" \
+    grep="rg --color=auto" \
     diff="gdiff --color=auto"
 
 # Git commands
