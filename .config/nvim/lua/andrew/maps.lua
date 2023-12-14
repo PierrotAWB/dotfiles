@@ -35,6 +35,10 @@ Map('n', '<C-z>', '<Nop>')
 
 -- LSP (Using fzf-lua) (jump ../../after/plugin/fzf-lua.lua)
 
+-- Vimtex
+Map('n', '\\ll', ":VimtexCompile<CR>")
+Map('n', '\\lv', ":VimtexView<CR>")
+
 -- Fugitive
 Map('n', 'ga', ':Git add ', { silent = false })
 Map('n', 'gC', ':Git commit ', { silent = false })

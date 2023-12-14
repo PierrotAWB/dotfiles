@@ -23,6 +23,13 @@ return require('packer').startup(function(use)
     use 'tpope/vim-fugitive'   -- Git
     use 'wincent/corpus'       --  Note-taking
     use 'SirVer/ultisnips'
+    use 'lervag/vimtex'
+    use 'zdcthomas/yop.nvim'
+
+    use {
+        "windwp/nvim-autopairs",
+        config = function() require("nvim-autopairs").setup {} end
+    }
 
     -- Colors
     use 'Alexis12119/nightly.nvim'
