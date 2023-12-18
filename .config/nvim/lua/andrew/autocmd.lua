@@ -24,7 +24,7 @@ vim.api.nvim_create_autocmd("BufEnter", {
         vim.opt_local.tabstop = 2
     end,
     group = js_group,
-    pattern = { "*.js", "*.ts" }
+    pattern = { "*.js", "*.jsx", "*.ts", "*.tsx" }
 })
 
 vim.api.nvim_create_autocmd("BufEnter", {
@@ -41,3 +41,5 @@ vim.api.nvim_create_autocmd("TextYankPost", {
     end,
     group = highlight_yank,
 })
+
+vim.cmd [[ autocmd BufNewFile,BufRead *.tex set filetype=tex ]]

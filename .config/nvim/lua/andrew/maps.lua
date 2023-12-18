@@ -63,6 +63,7 @@ Map('n', '<leader>tf', ':NvimTreeFindFile<CR>')
 Map('n', '<leader>toc', '<Plug>(coc-codeaction-source)')
 Map('n', '<leader>u', ':UndotreeToggle<CR>')
 Map('n', '<leader>vt', ':80vsplit | terminal<CR>')
+Map('n', '<leader>w', ':wqa<CR>')
 Map('n', '<leader>z', ":ZenMode<CR>")
 
 Map('t', '<Esc>', '<C-\\><C-n>')

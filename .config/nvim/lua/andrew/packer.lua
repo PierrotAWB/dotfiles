@@ -21,8 +21,8 @@ return require('packer').startup(function(use)
     use 'romainl/vim-cool'     -- Unhighlight when done searching
     use 'tpope/vim-commentary' -- Commenting
     use 'tpope/vim-fugitive'   -- Git
-    use 'wincent/corpus'       --  Note-taking
-    use 'SirVer/ultisnips'
+    use 'wincent/corpus'       -- Note-taking
+    use { 'SirVer/ultisnips', opt = false }
     use 'lervag/vimtex'
     use 'zdcthomas/yop.nvim'
 

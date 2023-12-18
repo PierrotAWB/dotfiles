@@ -62,9 +62,10 @@ cmp.setup.filetype('gitcommit', {
 
 -- If you want insert `(` after select function or method item
 cmp.event:on(
-  'confirm_done',
-  cmp_autopairs.on_confirm_done()
+    'confirm_done',
+    cmp_autopairs.on_confirm_done()
 )
+
 
 -- -- Set up lspconfig.
 -- local capabilities = require('cmp_nvim_lsp').default_capabilities()
