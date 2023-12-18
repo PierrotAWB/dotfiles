@@ -12,6 +12,11 @@ vim.o.termguicolors = true
 vim.o.number = true
 vim.o.relativenumber = true
 
+-- Indent
+vim.o.autoindent = true
+vim.o.smartindent = true
+vim.cmd [[filetype plugin indent on]]
+
 -- Search
 vim.o.ignorecase = true
 vim.o.smartcase = true
@@ -30,9 +35,11 @@ vim.o.splitright = true
 vim.o.timeoutlen = 250
 vim.o.clipboard = 'unnamedplus'
 
+-- Ultisnips
 vim.g.UltiSnipsEditSplit = 'horizontal'
 vim.g.UltiSnipsExpandTrigger = '<nop>'
 vim.g.UltiSnipsJumpForwardTrigger = '<nop>'
 vim.g.UltiSnipsJumpBackwardTrigger = '<nop>'
 
+-- Vimtex
 vim.g.vimtex_view_method = 'skim'
