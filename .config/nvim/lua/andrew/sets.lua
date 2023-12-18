@@ -32,3 +32,7 @@ vim.o.clipboard = 'unnamedplus'
 
 vim.g.UltiSnipsEditSplit = 'horizontal'
 vim.g.UltiSnipsExpandTrigger = '<nop>'
+vim.g.UltiSnipsJumpForwardTrigger = '<nop>'
+vim.g.UltiSnipsJumpBackwardTrigger = '<nop>'
+
+vim.g.vimtex_view_method = 'skim'
