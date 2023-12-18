@@ -9,7 +9,7 @@ alias \
 alias \
     ls="gls -hN --color=auto --group-directories-first" \
     grep="rg --color=auto" \
-    diff="gdiff --color=auto"
+    diff="diff --color=auto"
 
 # Git commands
 alias \
