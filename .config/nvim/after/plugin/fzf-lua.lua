@@ -17,6 +17,13 @@ require('fzf-lua').setup({
             ["ctrl-t"]  = actions.buf_tabedit,
         },
     },
+    previewers = {
+        bat = {
+            cmd = "bat",
+            args = "--style=numbers,changes --color always",
+            theme = 'Coldark-Dark', -- or your preferred theme
+        },
+    },
     files = { fzf_opts = { ["--ansi"] = false } },
     fzf_opts = { ['--layout'] = 'default' },
     winopts = { preview = { default = "bat" } },
