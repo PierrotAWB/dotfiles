@@ -3,7 +3,7 @@ vim.g.loaded_netrwPlugin = 1
 
 -- General appearance
 vim.o.background = 'light'
-vim.o.colorcolumn = 80
+vim.o.colorcolumn = '80'
 vim.o.cursorline = true
 vim.o.guicursor = 'i-ci-ve:hor50-blinkwait0-blinkoff100-blinkon100'
 vim.o.termguicolors = true
@@ -11,6 +11,11 @@ vim.o.termguicolors = true
 -- Gutter
 vim.o.number = true
 vim.o.relativenumber = true
+
+-- Indent
+vim.o.autoindent = true
+vim.o.smartindent = true
+vim.cmd [[filetype plugin indent on]]
 
 -- Search
 vim.o.ignorecase = true
@@ -23,6 +28,8 @@ vim.o.tabstop = 4
 
 -- Misc.
 vim.o.foldmethod = 'indent'
+vim.o.foldlevelstart = 99
+vim.o.foldlevel = 99
 vim.o.mouse = "nv"
 vim.o.scrolloff = 10
 vim.o.splitbelow = true
@@ -30,5 +37,11 @@ vim.o.splitright = true
 vim.o.timeoutlen = 250
 vim.o.clipboard = 'unnamedplus'
 
+-- Ultisnips
 vim.g.UltiSnipsEditSplit = 'horizontal'
 vim.g.UltiSnipsExpandTrigger = '<nop>'
+vim.g.UltiSnipsJumpForwardTrigger = '<nop>'
+vim.g.UltiSnipsJumpBackwardTrigger = '<nop>'
+
+-- Vimtex
+vim.g.vimtex_view_method = 'skim'

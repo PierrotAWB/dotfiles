@@ -21,8 +21,24 @@ return require('packer').startup(function(use)
     use 'romainl/vim-cool'     -- Unhighlight when done searching
     use 'tpope/vim-commentary' -- Commenting
     use 'tpope/vim-fugitive'   -- Git
-    use 'wincent/corpus'       --  Note-taking
-    use 'SirVer/ultisnips'
+    use 'wincent/corpus'       -- Note-taking
+    use { 'SirVer/ultisnips', opt = false }
+    use 'lervag/vimtex'
+    use 'zdcthomas/yop.nvim'
+
+    use {
+        "windwp/nvim-autopairs",
+        config = function() require("nvim-autopairs").setup {} end
+    }
+    use {
+        "windwp/nvim-ts-autotag",
+        config = function() require("nvim-ts-autotag").setup {} end
+    }
+
+    use {
+        'nvimdev/dashboard-nvim',
+        requires = { 'nvim-tree/nvim-web-devicons' },
+    }
 
     -- Colors
     use 'Alexis12119/nightly.nvim'
@@ -31,23 +47,7 @@ return require('packer').startup(function(use)
     use 'PierrotAWB/neovim-ayu'
 
     -- LSP
-    use {
-        'VonHeikemen/lsp-zero.nvim',
-        branch = 'v2.x',
-        requires = {
-            { 'neovim/nvim-lspconfig' },
-            {
-                'williamboman/mason.nvim',
-                run = function()
-                    pcall(vim.cmd, 'MasonUpdate')
-                end,
-            },
-            { 'williamboman/mason-lspconfig.nvim' },
-
-            -- Autocompletion
-            { 'hrsh7th/nvim-cmp' },
-            { 'hrsh7th/cmp-nvim-lsp' },
-            { 'L3MON4D3/LuaSnip' },
-        }
-    }
+    use 'hrsh7th/nvim-cmp'     -- Autocompletion plugin
+    use 'hrsh7th/cmp-nvim-lsp' -- LSP source for nvim-cmp
+    use "williamboman/mason.nvim"
 end)

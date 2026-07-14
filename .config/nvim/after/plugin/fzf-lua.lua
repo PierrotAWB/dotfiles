@@ -17,6 +17,17 @@ require('fzf-lua').setup({
             ["ctrl-t"]  = actions.buf_tabedit,
         },
     },
+    default = {
+        global_git_icons = false,
+        global_file_icons = false,
+    },
+    previewers = {
+        bat = {
+            cmd = "bat",
+            args = "--style=numbers,changes --color always",
+            theme = 'Coldark-Dark', -- or your preferred theme
+        },
+    },
     files = { fzf_opts = { ["--ansi"] = false } },
     fzf_opts = { ['--layout'] = 'default' },
     winopts = { preview = { default = "bat" } },
@@ -24,8 +35,6 @@ require('fzf-lua').setup({
     helptags = { previewer = "help_native" },
     tags = { previewer = "bat" },
     btags = { previewer = "bat" },
-    global_git_icons = false,
-    global_file_icons = false,
 })
 
 Map('n', 'gd', function()
@@ -41,14 +50,23 @@ Map('n', 'gD', function()
         jump_to_single_result_action = require('fzf-lua.actions').file_vsplit,
     })
 end)
-Map('n', 'gds', function()
+Map('n', 'gr', function()
+    require('fzf-lua').lsp_references({
+        sync = true,
+        jump_to_single_result = true,
+    })
+end)
+Map('n', 'gdx', function()
     require('fzf-lua').lsp_definitions({
         sync = true,
         jump_to_single_result = true,
         jump_to_single_result_action = require('fzf-lua.actions').file_split,
     })
 end)
-Map('n', '<leader>b', "<cmd>lua require('fzf-lua').buffers()<CR>")
-Map('n', 'gr', "<cmd>lua require('fzf-lua').lsp_references()<CR>")
-Map('n', 'gi', "<cmd>lua require('fzf-lua').lsp_implementations()<CR>")
-Map('n', '<leader>ca', "<cmd>lua require('fzf-lua').lsp_code_actions()<CR>")
+Map('n', 'gdt', function()
+    require('fzf-lua').lsp_definitions({
+        sync = true,
+        jump_to_single_result = true,
+        jump_to_single_result_action = require('fzf-lua.actions').file_tabedit,
+    })
+end)
