@@ -52,7 +52,7 @@ require('dashboard').setup {
             enable = true,
             limit = 8,
             icon = ' ',
-            label = 'Recently Projects:',
+            label = 'Recent Projects:',
             action = function(path)
                 vim.cmd('tcd ' .. vim.fn.fnameescape(path))
             end,

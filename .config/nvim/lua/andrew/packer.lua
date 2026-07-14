@@ -40,6 +40,11 @@ return require('packer').startup(function(use)
         requires = { 'nvim-tree/nvim-web-devicons' },
     }
 
+    use {
+        'sindrets/diffview.nvim',
+        requires = { 'nvim-tree/nvim-web-devicons' },
+    }
+
     -- Colors
     use 'Alexis12119/nightly.nvim'
     use { 'catppuccin/nvim', as = 'catppuccin' }
