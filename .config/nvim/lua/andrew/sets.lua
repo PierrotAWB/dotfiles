@@ -7,6 +7,7 @@ vim.o.colorcolumn = '80'
 vim.o.cursorline = true
 vim.o.guicursor = 'i-ci-ve:hor50-blinkwait0-blinkoff100-blinkon100'
 vim.o.termguicolors = true
+vim.o.fillchars = 'eob: ' -- Hide ~ on empty lines below the buffer
 
 -- Gutter
 vim.o.number = true
