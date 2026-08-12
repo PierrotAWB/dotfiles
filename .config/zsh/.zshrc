@@ -137,7 +137,7 @@ gcml() {
 [ -f "${XDG_CONFIG_HOME:-$HOME/.config}/zsh/shortcutrc" ] && source "${XDG_CONFIG_HOME:-$HOME/.config}/zsh/shortcutrc"
 
 # Load syntax highlighting; should be last.
-source "${XDG_DATA_HOME:-$HOME/.local/share}/zsh/plugins/F-Sy-H/F-Sy-H.plugin.zsh" 2>/dev/null
+source "${XDG_DATA_HOME:-$HOME/.local/share}/zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh" 2>/dev/null
 
 # Widgets
 for f in "${XDG_CONFIG_HOME:-$HOME/.config}/zsh/widgets/"*.zsh(N); do
