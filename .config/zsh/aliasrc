@@ -8,44 +8,110 @@ alias \
 # Colorize commands when possible.
 alias \
     ls="gls -hN --color=auto --group-directories-first" \
-    grep="rg --color=auto" \
+    grep="rg --color=auto --no-ignore" \
     diff="diff --color=auto"
+
 
 # Git commands
 alias \
 	ga="git add" \
 	gaa="git add -A" \
 	gb="git branch" \
+    gbsc="git branch --show-current" \
+    gbb="git branch --show-current" \
 	gc="git commit" \
+	gcf="git commit --fixup=HEAD" \
+    gcfd="git clean -fd" \
+    gcl="git clone" \
 	gcp="git cherry-pick" \
+	gcpa="git cherry-pick --abort" \
+	gcpc="git cherry-pick --continue" \
 	gco="git checkout" \
-	gd="git diff" \
+    gd="git diff" \
 	gdc="gd --cached" \
 	gd1="git diff HEAD^..HEAD" \
 	gd2="git diff HEAD^^..HEAD" \
 	gd3="git diff HEAD^^^..HEAD" \
 	gd4="git diff HEAD^^^^..HEAD" \
 	gf="git fetch" \
-	gl="git log" \
+	gfo="git fetch origin" \
+    gfomm="git fetch origin main:main" \
+    glf="git log --pretty=format:'%C(auto)%h%x09%an%x09%ad%x09%s %C(auto)%d' --date=short" \
+	glo="git log" \
+	glog="git log --oneline --graph --decorate --all" \
 	gm="git merge" \
+    gma="git merge --abort" \
 	gmt="git mergetool" \
 	gpl="git pull" \
 	gpu="git push" \
+	gr="git fetch origin && git rebase --autostash @{u}" \
 	grb="git rebase" \
+    grb2="env GIT_SEQUENCE_EDITOR=true git rebase -i --autosquash HEAD~2" \
 	grba="git rebase --abort" \
 	grbc="git rebase --continue" \
 	grl="git reflog" \
 	grev="git revert" \
-	gs="git status" \
-	gst="git stash" \
+    gsh="git show" \
+	gst="git stash push" \
 	gsl="git stash list" \
 	gsa="git stash apply"
+
+alias \
+    msc="mutagen sync create" \
+    msl="mutagen sync list" \
+    msp="mutagen sync pause" \
+    msr="mutagen sync resume" \
+    mst="mutagen sync terminate"
+
+alias \
+    ds="daytona ssh" \
+    dss="daytona sandbox start" \
+    dsd="pnpm daytona:snapshot:dev"
+
+# gs="git status" \
+# This is needed to take precedence over ghostscript
+gs() {
+  git status "$@"
+}
+
+gcb() {
+  git checkout -b "$1" "${2:-main}"
+}
+
+gl() {
+  git log --color=always --decorate=short --pretty=format:'%C(auto)%h %s %d' "$@" | \
+    sed -E 's/\[([A-Z]+-[A-Z0-9]+)\]/\1/; s/([A-Z]+-[A-Z0-9]+):? */[\1] /' | \
+    less -RFX
+}
+
+alias \
+    ni="npm install" \
+    nrd="pnpm dev:ultralite --compose" \
+    nrb="npm run build" \
+    nre="npm run email" \
+    ns="npm start" \
+    nbs="npm run build && npm start"
+
+alias \
+    p="pnpm" \
+    pa="pnpm --filter replo-admin dev" \
+    pd="pnpm dev" \
+    pg="pnpm gen" \
+    pi="pnpm install" \
+    pl="pnpm load:initial-data" \
+    pt="pnpm run tsc --force & pnpm lint:biome & pnpm lint:oxlint"
+
+alias c="claude" \
+      cr="claude --resume" \
+      c.="cursor ."
 
 # General commands
 alias \
     ...="../.." \
     ....="../../.." \
-    agentloop="python -m venv venv && source local.env && export AWS_PROFILE=simloop" \
+    .....="../../../.." \
+    ......="../../../../.." \
+    ......="../../../../../.." \
 	duu="du -h | sort -rh" \
 	flushcache="sudo systemd-resolve --flush-caches" \
 	linux="ssh -Y a99wang@linux.student.cs.uwaterloo.ca" \
@@ -53,4 +119,5 @@ alias \
     py="python3" \
     python="python3" \
 	r="lfcd" \
-	sty="sudo nvim /usr/local/share/texmf/tex/latex/Andrew/Andrew.sty" 
+	sty="sudo nvim /usr/local/share/texmf/tex/latex/Andrew/Andrew.sty" \
+    svba="source .venv/bin/activate"
