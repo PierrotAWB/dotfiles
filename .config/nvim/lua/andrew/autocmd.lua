@@ -41,3 +41,21 @@ vim.api.nvim_create_autocmd("TextYankPost", {
     end,
     group = highlight_yank,
 })
+
+-- Clear editor backgrounds so the terminal's own background shows through
+local transparent_bg = au("TransparentBackground")
+vim.api.nvim_create_autocmd("ColorScheme", {
+    callback = function()
+        for _, group in ipairs({
+            "Normal", "NormalNC", "NormalFloat", "FloatBorder",
+            "SignColumn", "LineNr", "CursorLineNr", "EndOfBuffer",
+            "NvimTreeNormal", "NvimTreeNormalNC", "NvimTreeEndOfBuffer",
+        }) do
+            local hl = vim.api.nvim_get_hl(0, { name = group })
+            hl.bg = nil
+            hl.ctermbg = nil
+            vim.api.nvim_set_hl(0, group, hl)
+        end
+    end,
+    group = transparent_bg,
+})

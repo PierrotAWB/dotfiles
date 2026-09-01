@@ -7,8 +7,21 @@ local function short_branch()
     end
 end
 
+-- Strip section backgrounds so the terminal's background shows through,
+-- like the TransparentBackground autocmd; 'a' (the mode block) keeps its accent as fg
+local theme = require 'lualine.themes.ayu_mirage'
+for _, section in pairs(theme) do
+    for key, part in pairs(section) do
+        if key == 'a' then
+            part.fg = part.bg
+        end
+        part.bg = nil
+    end
+end
+
 require('lualine').setup {
     options = {
+        theme = theme,
         disabled_filetypes = { 'packer', 'NvimTree', 'NvimTree_1' },
     },
     sections = {
