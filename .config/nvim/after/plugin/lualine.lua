@@ -7,15 +7,12 @@ local function short_branch()
     end
 end
 
--- Strip section backgrounds so the terminal's background shows through,
--- like the TransparentBackground autocmd; 'a' (the mode block) keeps its accent as fg
+-- Only the middle (c) section is transparent; the mode blocks and side
+-- segments keep their ayu colors
 local theme = require 'lualine.themes.ayu_mirage'
 for _, section in pairs(theme) do
-    for key, part in pairs(section) do
-        if key == 'a' then
-            part.fg = part.bg
-        end
-        part.bg = nil
+    if section.c then
+        section.c = { fg = section.c.fg }
     end
 end
 
