@@ -49,6 +49,7 @@ vim.api.nvim_create_autocmd("ColorScheme", {
         for _, group in ipairs({
             "Normal", "NormalNC", "NormalFloat", "FloatBorder",
             "SignColumn", "LineNr", "CursorLineNr", "EndOfBuffer",
+            "StatusLine", "StatusLineNC", "TabLineFill",
             "NvimTreeNormal", "NvimTreeNormalNC", "NvimTreeEndOfBuffer",
         }) do
             local hl = vim.api.nvim_get_hl(0, { name = group })
